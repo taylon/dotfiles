@@ -1,0 +1,37 @@
+'atom-text-editor[data-grammar="text html handlebars"]:not([mini])':
+  'tab': 'emmet:expand-abbreviation-with-tab'
+
+'body':
+  'ctrl-}': 'pane:show-next-item'
+  'ctrl-{': 'pane:show-previous-item'
+
+'.platform-linux atom-workspace atom-text-editor':
+  # Line navigation
+  'ctrl-right': 'editor:move-to-end-of-screen-line'
+  'ctrl-shift-right': 'editor:select-to-end-of-line'
+
+  'ctrl-left': 'editor:move-to-first-character-of-line'
+  'ctrl-shift-left': 'editor:select-to-first-character-of-line'
+
+  # Word Navigation
+  'alt-right': 'editor:move-to-end-of-word'
+  'alt-shift-right': 'editor:select-to-end-of-word'
+
+  'alt-left': 'editor:move-to-beginning-of-word'
+  'alt-shift-left': 'editor:select-to-beginning-of-word'
+
+  'alt-backspace': 'editor:delete-to-beginning-of-word'
+  'alt-delete': 'editor:delete-to-end-of-word'
+
+  # Subword Navigation
+  'cmd-right': 'editor:move-to-next-subword-boundary'
+  'cmd-shift-right': 'editor:select-to-next-subword-boundary'
+
+  'cmd-left': 'editor:move-to-previous-subword-boundary'
+  'cmd-shift-left': 'editor:select-to-previous-subword-boundary'
+
+  'cmd-backspace': 'editor:delete-to-beginning-of-subword'
+  'cmd-delete': 'editor:delete-to-end-of-subword'
+
+'.platform-darwin atom-text-editor':
+  'alt-cmd-m': 'bracket-matcher:select-inside-brackets'

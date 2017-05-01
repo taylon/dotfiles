@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+DEV_PATH="$HOME/Development"
+DOTFILES_PATH="$DEV_PATH/dotfiles"
+
+# Bash
+ln -s $DOTFILES_PATH/bash/bashrc $HOME/.bashrc
+ln -s $DOTFILES_PATH/bash/bash_aliases $HOME/.bash_aliases
+ln -s $DOTFILES_PATH/bash/bash_profile $HOME/.bash_profile
+
+# Fish
+ln -s $DOTFILES_PATH/fish $HOME/.config/fish
+
+# Tmux
+TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
+ln -s $TMUX_COFIG_PATH/tmux.conf $HOME/tmux.conf
+ln -s $TMUX_COFIG_PATH/tmuxinator $HOME/.tmuxinator
+
+# Systemd (probably should be applied only on Arch Linux)
+ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
+
+# Tilix
+ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
+
+# Git
+ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
+
+# Atom
+# ln -s $DOTFILES_PATH/atom/config/init.coffee $HOME/.atom/init.coffee
+# ln -s $DOTFILES_PATH/atom/config/config.cson $HOME/.atom/config.cson
+# ln -s $DOTFILES_PATH/atom/config/packages.cson $HOME/.atom/packages.cson
+# ln -s $DOTFILES_PATH/atom/config/keymap.cson $HOME/.atom/keymap.cson
+# ln -s $DOTFILES_PATH/atom/config/snippets.cson $HOME/.atom/snippets.cson
+# ln -s $DOTFILES_PATH/atom/config/styles.less $HOME/.atom/styles.less
+
+# Executables
+BIN_PATH="$HOME/.bin"
+ln -s $DOTFILES_PATH/bin $BIN_PATH
+# ln -s $DOTFILES_PATH/atom/update-script/atom-update $DOTFILES_PATH/bin/atom-update

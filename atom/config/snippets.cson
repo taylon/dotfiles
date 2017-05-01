@@ -1,0 +1,9 @@
+'.source.go':
+  'Log':
+    prefix: 'log'
+    body: 'log.Println("$1")'
+
+'.source.python':
+  'Print':
+    prefix: 'log'
+    body: 'print(${1:"$2"})'

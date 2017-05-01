@@ -1,0 +1,26 @@
+{
+  "name": "Fodao",
+  "use-theme-colors": false,
+
+  "background-color": "#272C34",
+  "comment": "#ABB2BF",
+  "foreground-color": "#ABB2BF",
+  "palette": [
+      "#000000",
+      "#E12121",
+      "#7ACC31",
+      "#D1AD1E",
+      "#61AFEF",
+      "#C678DD",
+      "#5AC2CF",
+      "#ABB2BF",
+      "#5C6370",
+      "#E12121",
+      "#7BCC31",
+      "#D1AC1D",
+      "#268AD2",
+      "#C678DD",
+      "#5AC1CE",
+      "#ABB2BF"
+  ]
+}

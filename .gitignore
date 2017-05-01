@@ -1,0 +1,13 @@
+# Fish
+fishd.*
+fish_history
+fish/credentials.fish
+
+# Tmux
+tmux/tmuxinator/*.yml
+
+# Scripts
+setup_scripts/pkg_install.log*
+
+# General
+TODO

@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Work in progress
+
+source ./libs/print.sh
+source ./libs/logger.sh
+source ./libs/apt.sh
+
+# apt::install "curl" "Curl"
+# apt::install "wget" "Wget"
+# apt::install "vim" "VIM"
+# apt::install "git" "Git"
+# apt::install "shellcheck" "ShellCheck"
+# apt::install "autojump" "Autojump"
+#
+# # apt::install_with_repo "ppa:fish-shell/release-2" "fish" "Fish Shell"
+# # chsh -s /usr/bin/fish
+
+# apt::install_with_repo "ppa:webupd8team/terminix" "tilix" "Tilix"
+
+# n-install, n and lastest Node.js
+# source ./manual_installs/n_node.sh

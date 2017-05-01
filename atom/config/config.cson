@@ -1,0 +1,22 @@
+"*":
+  core:
+    autoHideMenuBar: true
+    closeDeletedFileTabs: true
+    disabledPackages: [
+      "metrics"
+      "exception-reporting"
+      "welcome"
+      "wrap-guide"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontFamily: "Ubuntu Mono"
+    fontSize: 18
+    showIndentGuide: true
+  "linter-ui-default":
+    tooltipFollows: "Keyboard"
+  "package-sync":
+    createOnChange: true
+    forceOverwrite: true
+  welcome:
+    showOnStartup: false

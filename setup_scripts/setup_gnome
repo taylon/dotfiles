@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+
+# gsettings list-recursively |grep "<Alt>space"
+
+# Swap win/alt/ctrl
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin']"
+
+# Set ctrl-tab to switch windows (instead of alt-tab)
+gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Control>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Control>Tab']"
+
+# Remap Alt+F4
+gsettings set org.gnome.desktop.wm.keybindings close "['<Control>q']"
+
+# Disable lock screen shortcut
+gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver ""
+
+# Set ctrl-space as a keybind to wingpanel - only if using wingpanel (ElementaryOS for example)
+# gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Control>space', '<Alt>F2']"
+
+# Set ctrl-space as a keybind to gnome-shell's overview (it also takes care of Elementary's wingspanel)
+gsettings set org.gnome.mutter overlay-key ""
+gsettings set org.gnome.shell.keybindings toggle-overview "['<Control>space']"
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Control>space']"
+
+# Limit Alt-Tab to current workspace
+# gsettings set org.gnome.shell.app-switcher current-workspace-only true
+
+# Atom will use Super-Left/Right and Super-Shift-Left/Right to subword navigation
+# so lets disable everything that uses it the Window Manager
+gsettings set org.gnome.mutter.keybindings toggle-tiled-left []
+gsettings set org.gnome.mutter.keybindings toggle-tiled-right []
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left []
+gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right []
+
+# Gnome-terminal (We don't use it anymore but let's keep it here just in case)
+# On elementary edit file /usr/share/applications/gnome-terminal.desktop and
+# comment line "showOnly" to enable the icon in wingpanel
+# gsettings set org.gnome.terminal.legacy.keybindings close-tab "<Primary>w"
+# gsettings set org.gnome.terminal.legacy.keybindings new-tab "<Primary>t"
+# gsettings set org.gnome.terminal.legacy.keybindings next-tab "<Primary>braceright"
+# gsettings set org.gnome.terminal.legacy.keybindings prev-tab "<Primary>bracerleft"

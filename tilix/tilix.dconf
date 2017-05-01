@@ -1,0 +1,47 @@
+[profiles]
+default='c3376b19-9964-4858-b19d-e8e788665d3f'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'c3376b19-9964-4858-b19d-e8e788665d3f']
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+visible-name='Default'
+
+[profiles/c3376b19-9964-4858-b19d-e8e788665d3f]
+foreground-color='#ABB2BF'
+visible-name='Taylon'
+dim-color-set=false
+palette=['#000000', '#E12121', '#7ACC31', '#D1AD1E', '#61AFEF', '#C678DD', '#5AC2CF', '#ABB2BF', '#5C6370', '#E12121', '#7BCC31', '#D1AC1D', '#268AD2', '#C678DD', '#5AC1CE', '#ABB2BF']
+badge-color-set=false
+cursor-shape='ibeam'
+cursor-colors-set=false
+highlight-colors-set=false
+use-system-font=false
+bold-color-set=false
+font='Ubuntu Mono 13'
+use-theme-colors=false
+terminal-title='${id}: ${title}'
+background-color='#272C34'
+background-transparency-percent=0
+dim-transparency-percent=0
+
+[/]
+prompt-on-close=true
+sidebar-on-right=true
+terminal-title-style='none'
+theme-variant='light'
+session-name=''
+app-title='${appName} ${sessionName}'
+window-style='normal'
+
+[keybindings]
+session-close='<Primary>w'
+terminal-find='<Primary>f'
+session-switch-to-terminal-down='<Primary>Down'
+win-switch-to-previous-session='<Primary>braceleft'
+session-add-right='<Primary>r'
+session-add-down='<Primary>d'
+win-switch-to-next-session='<Primary>braceright'
+app-new-session='<Primary>t'
+session-switch-to-terminal-right='<Primary>Right'
+session-switch-to-terminal-up='<Primary>Up'
+terminal-copy='<Primary><Shift>c'
+session-switch-to-terminal-left='<Primary>Left'

@@ -1,0 +1,32 @@
+[core]
+	editor = vim
+
+[user]
+	name = Taylon Silmer
+	email = taylonsilva@gmail.com
+
+[color]
+	ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = magenta
+
+[alias]
+	l = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	c = commit
+	ca = commit --amend
+	co = checkout
+	s = status
+	a = add
+	aa = add --all
+	d = diff
+
+[advice]
+	statusHints = false

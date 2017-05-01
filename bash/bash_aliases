@@ -1,0 +1,7 @@
+# IP addresses
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+# Always enable colored grep output
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
