@@ -20,7 +20,7 @@
 
 [alias]
 	l = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	c = commit
+	c = commit -m
 	ca = commit --amend
 	co = checkout
 	s = status
