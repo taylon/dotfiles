@@ -1,5 +1,6 @@
 [core]
 	editor = vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [user]
 	name = Taylon Silmer
@@ -17,6 +18,20 @@
   added = green
   changed = yellow
   untracked = magenta
+
+[color "diff"]
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
 
 [alias]
 	l = log --graph --decorate --pretty=oneline --abbrev-commit --all
