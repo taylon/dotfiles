@@ -7,6 +7,7 @@ packages: [
   "dash"
   "editorconfig"
   "file-icons"
+  "go-plus"
   "highlight-selected"
   "intentions"
   "language-docker"

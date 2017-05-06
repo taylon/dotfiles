@@ -15,10 +15,17 @@ set PATH $PATH $HOME/.bin
 # status --is-interactive; and source (rbenv init -|psub)
 
 # Golang
-# if test -f /usr/local/go/bin/go
-#   set -gx GOPATH $HOME/Development/go
-#   set PATH $PATH /usr/local/go/bin $GOPATH/bin
-# end
+set -gx GOROOT /usr/lib/go
+if test -d $GOROOT
+  set -gx GOPATH $HOME/Development/go
+  if test ! -d $GOPATH
+    mkdir -p $GOPATH/bin
+    mkdir -p $GOPATH/src
+    mkdir -p $GOPATH/pkg
+  end
+
+  set PATH $PATH $GOROOT/bin $GOPATH/bin
+end
 
 # TODO: Apply this only on Arch Linux
 # SSH Agent on systemd
