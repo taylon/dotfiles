@@ -13,6 +13,11 @@
     fontFamily: "Ubuntu Mono"
     fontSize: 18
     showIndentGuide: true
+  "go-plus":
+    navigator:
+      mode: "guru"
+    panel:
+      currentHeight: "25.601983002832863vh"
   "linter-ui-default":
     tooltipFollows: "Keyboard"
   "package-sync":
