@@ -3,6 +3,14 @@
     prefix: 'log'
     body: 'log.Println("$1")'
 
+  'Type':
+    prefix: 'tp'
+    body: """
+      type $1 ${2:struct} {
+        $3
+      }
+    """
+
 '.source.python':
   'Print':
     prefix: 'log'
