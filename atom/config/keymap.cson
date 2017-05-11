@@ -34,4 +34,15 @@
   'cmd-delete': 'editor:delete-to-end-of-subword'
 
 '.platform-darwin atom-text-editor':
-  'alt-cmd-m': 'bracket-matcher:select-inside-brackets'
+  # Subword Navigation
+  'ctrl-right': 'editor:move-to-next-subword-boundary'
+  'ctrl-shift-right': 'editor:select-to-next-subword-boundary'
+
+  'ctrl-left': 'editor:move-to-previous-subword-boundary'
+  'ctrl-shift-left': 'editor:select-to-previous-subword-boundary'
+
+  'ctrl-backspace': 'editor:delete-to-beginning-of-subword'
+  'ctrl-delete': 'editor:delete-to-end-of-subword'
+
+  # Bracket Matcher
+  'cmd-m': 'bracket-matcher:select-inside-brackets'
