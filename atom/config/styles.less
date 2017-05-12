@@ -6,9 +6,11 @@ atom-text-editor {
 
   // Highlights trailing whitespace except on the cursor line
   div.line:not(.cursor-line) {
-    .trailing-whitespace {
-      background-color: @background-color-error;
-      color: contrast(@background-color-error);
+    .syntax--source:not(.syntax--go) {
+      .trailing-whitespace {
+        background-color: @background-color-error;
+        color: contrast(@background-color-error);
+      }
     }
   }
 
