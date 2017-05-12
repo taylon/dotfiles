@@ -13,6 +13,7 @@ packages: [
   "highlight-selected"
   "hyperclick"
   "intentions"
+  "jumpy"
   "language-docker"
   "language-fish-shell"
   "language-ini"
