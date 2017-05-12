@@ -14,10 +14,18 @@
     fontSize: 18
     showIndentGuide: true
   "go-plus":
+    autocomplete:
+      snippetMode: "nameAndType"
+    format:
+      tool: "goreturns"
     navigator:
       mode: "guru"
     panel:
       currentHeight: "25.601983002832863vh"
+      displayMode: "closed"
+      focusOnFailure: false
+    test:
+      coverageDisplayMode: "gutter"
   "linter-ui-default":
     tooltipFollows: "Keyboard"
   "package-sync":
