@@ -25,10 +25,15 @@ atom-text-editor {
     color: rgba(255, 255, 255, .07);
   }
 
-  // Make the gutter slightly darker
-  // .gutter {
-  //   background-color: darken(#282c34, 0.6%);
-  // }
+  .gutter {
+    // Make the gutter slightly darker
+    background-color: darken(#282c34, 0.7%);
+
+    .line-number.uncovered {
+      color: #e06c75 !important;
+      background-color: inherit;
+    }
+  }
 
   .jumpy-label {
     // Regular labels
