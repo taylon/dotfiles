@@ -8,6 +8,8 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl
 # Set ctrl-tab to switch windows (instead of alt-tab)
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Control>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "['<Shift><Control>Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Control>Above_Tab']"
+gsettings set org.gnome.desktop.wm.keybindings switch-group-backward "['<Shift><Control>Above_Tab']"
 
 # Remap Alt+F4
 gsettings set org.gnome.desktop.wm.keybindings close "['<Control>q']"
