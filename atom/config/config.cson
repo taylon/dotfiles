@@ -31,5 +31,3 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
-  welcome:
-    showOnStartup: false
