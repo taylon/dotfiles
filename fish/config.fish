@@ -5,10 +5,10 @@ set PATH $PATH $HOME/.bin
 # set -gx N_PREFIX $HOME/n
 # if not contains $N_PREFIX/bin $PATH; set PATH $PATH $N_PREFIX/bin; end
 
-# Autojump - Only for Debian based distros
-# if test -f /usr/share/autojump/autojump.fish
-#   source /usr/share/autojump/autojump.fish
-# end
+# Autojump
+if test -f /usr/share/autojump/autojump.fish
+  source /usr/share/autojump/autojump.fish
+end
 
 # rbenv
 # set -gx PATH $PATH $HOME/.rbenv/bin
