@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
+secs=5
+while [ $secs -gt 0 ]; do
+   echo -ne "Rebooting in $secs\r"
+   sleep 1
+   : $((secs--))
+done
+
 systemctl reboot --firmware-setup
