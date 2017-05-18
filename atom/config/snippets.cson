@@ -11,6 +11,15 @@
       }
     """
 
+  'Method':
+    prefix: 'funcm'
+    body: """
+      // $5 ..
+      func ($1 ${2:*$3}) $5(${6:${7:arg} ${8:argType}})$9 {
+        $10
+      }
+    """
+
 '.source.python':
   'Print':
     prefix: 'log'
