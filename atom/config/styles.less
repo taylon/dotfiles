@@ -24,6 +24,7 @@ atom-text-editor {
   }
 
   .indent-guide {
+    // Make ident guide slightly lighter
     color: rgba(255, 255, 255, .07);
   }
 
@@ -45,10 +46,33 @@ atom-text-editor {
   }
 }
 
+// Fix font-smoothing in MacOS
+.platform-darwin atom-text-editor {
+  -webkit-font-smoothing: antialiased;
+}
+
+// Remove file path from status bar
 status-bar .file-info {
   display: none;
 }
 
-.platform-darwin atom-text-editor {
-  -webkit-font-smoothing: antialiased;
+// Customization for the Pristine-UI theme
+atom-panel.modal {
+  atom-text-editor[mini] {
+    -webkit-font-smoothing: auto;
+  }
+}
+
+.tree-view {
+  overflow-x: hidden;
+
+  .list-tree {
+    &:before {
+      content: none;
+    }
+
+    .list-item.file.entry:after {
+      content: none;
+    }
+  }
 }
