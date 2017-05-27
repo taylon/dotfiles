@@ -9,6 +9,10 @@
       "wrap-guide"
     ]
     telemetryConsent: "no"
+    themes: [
+      "pristine-ui"
+      "one-dark-syntax"
+    ]
   editor:
     fontFamily: "Ubuntu Mono"
     fontSize: 18
@@ -26,15 +30,18 @@
       focusOnFailure: false
     test:
       coverageDisplayMode: "gutter"
+  jumpy:
+    matchPattern: "([A-Za-z0-9.$*_\\-\\/]+)|[a-z0-9]{2,}"
   "linter-ui-default":
+    panelHeight: 89
     tooltipFollows: "Keyboard"
   "package-sync":
     createOnChange: true
     forceOverwrite: true
-  jumpy:
-    matchPattern: "([A-Za-z0-9.$*_\\-\\/]+)|[a-z0-9]{2,}"
   tabs:
     alwaysShowTabBar: false
     enableVcsColoring: true
   "tree-view":
     squashDirectoryNames: true
+  whitespace:
+    ensureSingleTrailingNewline: false
