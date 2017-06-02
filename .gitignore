@@ -11,3 +11,10 @@ setup_scripts/pkg_install.log*
 
 # General
 TODO
+
+# VIM
+vim/.backups
+vim/.swaps
+vim/.undo
+vim/viminfo
+vim/plugged
