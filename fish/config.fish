@@ -2,8 +2,8 @@
 set PATH $PATH $HOME/.bin
 
 # n
-# set -gx N_PREFIX $HOME/n
-# if not contains $N_PREFIX/bin $PATH; set PATH $PATH $N_PREFIX/bin; end
+set -gx N_PREFIX $HOME/.node
+set PATH $N_PREFIX/bin $PATH 
 
 # Autojump
 if test -f /usr/share/autojump/autojump.fish
