@@ -25,6 +25,7 @@ packages: [
   "language-nginx"
   "language-systemd"
   "language-terraform"
+  "language-viml"
   "linter"
   "linter-coffeelint"
   "linter-ember-template"
