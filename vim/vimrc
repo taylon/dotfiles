@@ -1,0 +1,35 @@
+" Set GUI Font
+set guifont=Ubuntu\ Mono:h18
+
+" Enable line numbers
+set number
+
+" Highlighting the last used search pattern.
+set hlsearch
+
+" Maps common commands to avoid typos
+cab W w
+cab Q q
+cab Wq wq
+cab wQ wq
+cab WQ wq
+cab Qa qa
+cab Wqa wqa
+
+" Plugins configuration
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'joshdick/onedark.vim'
+Plug 'scrooloose/nerdcommenter'
+
+call plug#end()
+
+" Set color scheme
+colorscheme onedark
+
+" NERDCommenter
+let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
+let g:NERDDefaultAlign = 'left' " Align delimiters flush left instead of following code indentation
+map <C-_> <leader>c<Space> " Remap the NERDComToggleComment command to Ctrl+/
