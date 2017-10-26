@@ -68,6 +68,11 @@ call plug#end()
 " Set color scheme
 colorscheme onedark
 
+" Enable 24-bit (true-color) mode
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 " NERDCommenter
 let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
 let g:NERDDefaultAlign = 'left' " Align delimiters flush left instead of following code indentation
