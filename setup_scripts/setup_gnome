@@ -17,10 +17,7 @@ gsettings set org.gnome.desktop.wm.keybindings close "['<Control>q']"
 # Disable lock screen shortcut
 gsettings set org.gnome.settings-daemon.plugins.media-keys screensaver ""
 
-# Set ctrl-space as a keybind to wingpanel - only if using wingpanel (ElementaryOS for example)
-# gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Control>space', '<Alt>F2']"
-
-# Set ctrl-space as a keybind to gnome-shell's overview (it also takes care of Elementary's wingspanel)
+# Set ctrl-space as a keybind to gnome-shell's overview
 gsettings set org.gnome.mutter overlay-key ""
 gsettings set org.gnome.shell.keybindings toggle-overview "['<Control>space']"
 gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "['<Control>space']"
@@ -36,8 +33,6 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left []
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right []
 
 # Gnome-terminal (We don't use it anymore but let's keep it here just in case)
-# On elementary edit file /usr/share/applications/gnome-terminal.desktop and
-# comment line "showOnly" to enable the icon in wingpanel
 # gsettings set org.gnome.terminal.legacy.keybindings close-tab "<Primary>w"
 # gsettings set org.gnome.terminal.legacy.keybindings new-tab "<Primary>t"
 # gsettings set org.gnome.terminal.legacy.keybindings next-tab "<Primary>braceright"
