@@ -3,7 +3,7 @@ set PATH $PATH $HOME/.bin
 
 # n
 set -gx N_PREFIX $HOME/.node
-set PATH $N_PREFIX/bin $PATH 
+set PATH $N_PREFIX/bin $PATH
 
 # Autojump
 if test -f /usr/share/autojump/autojump.fish
@@ -37,9 +37,9 @@ source /home/taylon/.config/fish/credentials.fish
 set -gx EDITOR vim
 
 # Set Vi mode
-fish_vi_key_bindings
-set fish_cursor_default line blink
-set fish_cursor_insert line blink
-set fish_cursor_visual block
+# fish_vi_key_bindings
+# set fish_cursor_default line blink
+# set fish_cursor_insert line blink
+# set fish_cursor_visual block
 
 set fish_greeting
