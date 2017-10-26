@@ -26,12 +26,16 @@ ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
 ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
 
 # Atom
-# ln -s $DOTFILES_PATH/atom/config/init.coffee $HOME/.atom/init.coffee
-# ln -s $DOTFILES_PATH/atom/config/config.cson $HOME/.atom/config.cson
-# ln -s $DOTFILES_PATH/atom/config/packages.cson $HOME/.atom/packages.cson
-# ln -s $DOTFILES_PATH/atom/config/keymap.cson $HOME/.atom/keymap.cson
-# ln -s $DOTFILES_PATH/atom/config/snippets.cson $HOME/.atom/snippets.cson
-# ln -s $DOTFILES_PATH/atom/config/styles.less $HOME/.atom/styles.less
+ln -s $DOTFILES_PATH/atom/config/init.coffee $HOME/.atom/init.coffee
+ln -s $DOTFILES_PATH/atom/config/config.cson $HOME/.atom/config.cson
+ln -s $DOTFILES_PATH/atom/config/packages.cson $HOME/.atom/packages.cson
+ln -s $DOTFILES_PATH/atom/config/keymap.cson $HOME/.atom/keymap.cson
+ln -s $DOTFILES_PATH/atom/config/snippets.cson $HOME/.atom/snippets.cson
+ln -s $DOTFILES_PATH/atom/config/styles.less $HOME/.atom/styles.less
+
+# Vim
+ln -s $DOTFILES_PATH/vim $HOME/.vim
+ln -s $DOTFILES_PATH/vim/vimrc $HOME/.vimrc
 
 # Executables
 BIN_PATH="$HOME/.bin"
