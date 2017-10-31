@@ -1,7 +1,7 @@
 # Fish
 fishd.*
 fish_history
-fish/credentials.fish
+fish/private.fish
 
 # Tmux
 tmux/tmuxinator/*.yml
