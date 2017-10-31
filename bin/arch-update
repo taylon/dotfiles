@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Include lib for printing with colors
+source /home/taylon/Development/dotfiles/bash/libs/print.sh
+
+# Make sure that I read latest news before update =p
+read -n 1 -p "Did you read the latest news at: https://www.archlinux.org/ ? [y/N] " answer
+
+if [[ $answer =~ ^[Yy]$ ]]; then
+  mirrorlist_path="/etc/pacman.d/mirrorlist"
+
+  # Remove old bkp file
+  if [ -f "$mirrorlist_path.bkp" ]; then
+    rm -f /etc/pacman.d/mirrorlist.bkp
+  fi
+
+  # Backup current mirrorlist
+  cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
+
+  # Update mirrorlist
+  print::note "Generating new mirrorlist..."
+  # reflector --latest 100 --protocol http --protocol https --sort rate --country 'United States' --country 'Brazil' --save "$mirrorlist_path"
+  print::sucess "mirrorlist sucessfully updated!"
+
+  # Update!
+  # pacman -Syu
+fi
+
