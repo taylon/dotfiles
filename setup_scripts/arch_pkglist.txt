@@ -12,6 +12,7 @@ gnome-tweak-tool
 diff-so-fancy
 autojump
 the_silver_searcher
+httpie
 
 AUR:
 
