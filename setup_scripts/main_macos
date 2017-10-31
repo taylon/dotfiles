@@ -1,0 +1,115 @@
+#!/usr/bin/env bash
+
+
+# Install Golang and create GOPATH folders
+# https://golang.org/dl/
+mkdir -p $HOME/Development/go/src
+mkdir -p $HOME/Development/go/bin
+mkdir -p $HOME/Development/go/pkg
+
+
+# Setup MacOS's NightShift
+
+
+# Install homebrew (https://brew.sh/)
+brew tap caskroom/drivers
+brew tap caskroom/fonts
+
+# Install with Cask:
+brew cask install google-chrome
+brew cask install sizeup
+brew cask install iterm2
+brew cask install atom # (package-sync for initial setup)
+brew cask install google-backup-and-sync
+brew cask install slack
+brew cask install razer-synapse
+brew cask install font-ubuntu
+brew cask install docker
+
+# Install with brew:
+brew install coreutils
+brew install gnu-sed —-with-default-names
+brew install findutils --with-default-names
+brew install gnu-tar --with-default-names
+brew install gnu-which --with-default-names
+brew install wget --with-iri
+brew install vim --with-override-system-vi
+brew install less
+brew install make
+brew install n
+brew install shellcheck
+brew install fish
+brew install git
+brew install openssh
+brew install diff-so-fancy
+brew install the_silver_searcher
+brew install autojump
+brew install bash
+brew install httpie
+
+# Remove outdated versions from the cellar
+brew cleanup
+
+# Install trash-cli after setting up n/node
+npm install --global trash-cli
+
+# Stuff from App Store
+# - MonthlyCal
+
+
+# Add bash and fish to /etc/shells
+echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
+
+# Set fish as default shell
+chsh -s /usr/local/bin/fish
+
+
+# MacOS settings:
+
+# Avoid creating .DS_Store files on network volumes
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+
+# Ask for password immediately after lock
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Menu bar: Set preferred date format
+defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
+
+# Menu bar: Enable desired icons
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.volume" -int 1
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.clock" -int 1
+defaults write com.apple.systemuiserver "NSStatusItem Visible com.apple.menuextra.battery" -int 1
+defaults write com.apple.systemuiserver menuExtras -array \
+  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+  "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
+# Finder: Show hidden files by default
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+# Finder: Set Development as the default location for new Finder windows
+defaults write com.apple.finder NewWindowTarget -string "PfLo"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/Development/"
+
+# Dock: Automatically hide and show the Dock
+defaults write com.apple.dock autohide -bool true
+
+# Dock: Set Auto Show/Hide Delay
+defaults write com.apple.Dock autohide-delay -float 0
+
+# iTerm: Setup config directory
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "/Users/tsilmer/dotfiles/iterm"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+
+
+

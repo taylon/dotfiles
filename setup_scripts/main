@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Create VIM's backup, swap and undo history folders
+mkdir $HOME/Development/dotfiles/vim/.backups
+mkdir $HOME/Development/dotfiles/vim/.swaps
+mkdir $HOME/Development/dotfiles/vim/.undo
+
+# Create folder for N
+mkdir -p $HOME/.node/bin

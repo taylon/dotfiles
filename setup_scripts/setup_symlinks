@@ -10,16 +10,17 @@ ln -s $DOTFILES_PATH/bash/bash_profile $HOME/.bash_profile
 
 # Fish
 ln -s $DOTFILES_PATH/fish $HOME/.config/fish
+touch $HOME/.config/fish/private.fish
 
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
 ln -s $TMUX_COFIG_PATH/tmux.conf $HOME/tmux.conf
 ln -s $TMUX_COFIG_PATH/tmuxinator $HOME/.tmuxinator
 
-# Systemd (probably should be applied only on Arch Linux)
+# Systemd (Arch only)
 ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
 
-# Tilix
+# Tilix (Arch only)
 ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
 
 # Git

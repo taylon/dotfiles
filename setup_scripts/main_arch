@@ -2,11 +2,6 @@
 
 # Install packages from arch_pkglist.txt
 
-# Create VIM's backup, swap and undo history folders
-mkdir $HOME/Development/dotfiles/vim/.backups
-mkdir $HOME/Development/dotfiles/vim/.swaps
-mkdir $HOME/Development/dotfiles/vim/.undo
-
 # Setup Gnome
 
 # Setup symlinks
@@ -16,4 +11,3 @@ dconf load /com/gexperts/Tilix/ < ~/Development/dotfiles/tilix/tilix.conf
 
 # Improve font-rendering
 https://gist.github.com/cryzed/e002e7057435f02cc7894b9e748c5671
-
