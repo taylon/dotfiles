@@ -16,5 +16,6 @@ TODO
 vim/.backups
 vim/.swaps
 vim/.undo
+vim/.netrwhist
 vim/viminfo
 vim/plugged
