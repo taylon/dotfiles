@@ -19,10 +19,10 @@ if [[ $answer =~ ^[Yy]$ ]]; then
 
   # Update mirrorlist
   print::note "Generating new mirrorlist..."
-  # reflector --latest 100 --protocol http --protocol https --sort rate --country 'United States' --country 'Brazil' --save "$mirrorlist_path"
+  reflector --latest 100 --protocol http --protocol https --sort rate --country 'United States' --country 'Brazil' --save "$mirrorlist_path"
   print::sucess "mirrorlist sucessfully updated!"
 
   # Update!
-  # pacman -Syu
+  pacman -Syu
 fi
 
