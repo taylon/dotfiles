@@ -7,3 +7,7 @@ mkdir $HOME/Development/dotfiles/vim/.undo
 
 # Create folder for N
 mkdir -p $HOME/.node/bin
+
+# Setup SSH keys
+# Host github.com
+#   IdentityFile ~/.ssh/
