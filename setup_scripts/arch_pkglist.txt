@@ -13,6 +13,9 @@ diff-so-fancy
 autojump
 the_silver_searcher
 httpie
+mlocate
+docker
+docker-compose
 
 AUR:
 
