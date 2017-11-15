@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    js:
+      default_beautifier: "ESLint Fixer"
   core:
     autoHideMenuBar: true
     closeDeletedFileTabs: true
@@ -40,6 +43,11 @@
   "package-sync":
     createOnChange: true
     forceOverwrite: true
+  "prettier-atom":
+    formatOnSaveOptions:
+      enabled: true
+      isDisabledIfNoConfigFile: true
+    useEslint: true
   tabs:
     alwaysShowTabBar: false
     enableVcsColoring: true

@@ -38,6 +38,7 @@ packages: [
   "merge-conflicts"
   "package-sync"
   "pigments"
+  "prettier-atom"
   "pristine-ui"
   "toggle-quotes"
 ]
