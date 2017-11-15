@@ -21,14 +21,15 @@ use-theme-colors=false
 terminal-title='${id}: ${title}'
 background-color='#272C34'
 background-transparency-percent=0
-dim-transparency-percent=0
+dim-transparency-percent=34
 
 [/]
 prompt-on-close=true
 sidebar-on-right=true
 terminal-title-style='none'
-theme-variant='light'
+theme-variant='dark'
 session-name=''
+enable-wide-handle=true
 app-title='${appName} ${sessionName}'
 window-style='normal'
 
@@ -37,8 +38,8 @@ session-close='<Primary>w'
 terminal-find='<Primary>f'
 session-switch-to-terminal-down='<Primary>Down'
 win-switch-to-previous-session='<Primary>braceleft'
-session-add-right='<Primary>r'
-session-add-down='<Primary>d'
+session-add-right='<Primary>d'
+session-add-down='<Primary><Shift>d'
 win-switch-to-next-session='<Primary>braceright'
 app-new-session='<Primary>t'
 session-switch-to-terminal-right='<Primary>Right'
