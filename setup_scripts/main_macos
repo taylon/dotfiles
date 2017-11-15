@@ -112,7 +112,3 @@ defaults write com.apple.Dock autohide-delay -float 0
 # iTerm: Setup config directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "/Users/tsilmer/dotfiles/iterm"
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
-
-
-
-

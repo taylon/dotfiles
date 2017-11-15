@@ -36,4 +36,3 @@ sudo pacman -Syu
 
 # Update packages from AUR as well
 yaourt -Syu --aur
-
