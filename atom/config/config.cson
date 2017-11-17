@@ -4,6 +4,8 @@
       default_beautifier: "ESLint Fixer"
   "atom-ide-ui":
     "atom-ide-diagnostics-ui": {}
+  "bracket-matcher":
+    highlightMatchingLineNumber: true
   core:
     autoHideMenuBar: true
     closeDeletedFileTabs: true

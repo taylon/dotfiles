@@ -32,9 +32,20 @@ atom-text-editor {
     // Make the gutter slightly darker
     background-color: darken(#282c34, 0.7%);
 
+    // Customize the color for lines that are uncovered by tests
     .line-number.uncovered {
       color: #e06c75 !important;
       background-color: inherit;
+    }
+
+    // Customize bracket-matcher's highlightMatchingLineNumber
+    .line-number.bracket-matcher {
+      background-color: #3e4450;
+      color: white !important;
+    }
+
+    .line-number.cursor-line-no-selection {
+      background-color: transparent;
     }
   }
 
