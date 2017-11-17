@@ -2,6 +2,8 @@
   "atom-beautify":
     js:
       default_beautifier: "ESLint Fixer"
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui": {}
   core:
     autoHideMenuBar: true
     closeDeletedFileTabs: true
@@ -10,6 +12,7 @@
       "exception-reporting"
       "welcome"
       "wrap-guide"
+      "linter"
     ]
     telemetryConsent: "no"
     themes: [
@@ -33,6 +36,9 @@
       focusOnFailure: false
     test:
       coverageDisplayMode: "gutter"
+  "ide-flowtype":
+    autoDownloadFlowBinaries: false
+    tryFlowBin: true
   jumpy:
     matchPattern: "([A-Za-z0-9.$*_\\-\\/]+)|[a-z0-9]{2,}"
   "linter-jshint":
