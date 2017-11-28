@@ -16,6 +16,7 @@ httpie
 mlocate
 docker
 docker-compose
+yarn
 
 AUR:
 
