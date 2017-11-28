@@ -19,6 +19,8 @@
       "welcome"
       "wrap-guide"
       "linter"
+      "ember-snippets"
+      "atom-qunit-snippets"
     ]
     telemetryConsent: "no"
     themes: [
@@ -49,8 +51,10 @@
     matchPattern: "([A-Za-z0-9.$*_\\-\\/]+)|[a-z0-9]{2,}"
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
+  "linter-tslint":
+    enableSemanticRules: true
   "linter-ui-default":
-    panelHeight: 89
+    panelHeight: 181
     tooltipFollows: "Keyboard"
   "package-sync":
     createOnChange: true
@@ -59,7 +63,6 @@
     formatOnSaveOptions:
       enabled: true
       isDisabledIfNoConfigFile: true
-    useEslint: true
   tabs:
     alwaysShowTabBar: false
     enableVcsColoring: true
