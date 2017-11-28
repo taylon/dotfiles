@@ -11,6 +11,7 @@ packages: [
   "editorconfig"
   "ember-snippets"
   "emmet"
+  "expand-selection-to-quotes"
   "file-icons"
   "go-debug"
   "go-plus"

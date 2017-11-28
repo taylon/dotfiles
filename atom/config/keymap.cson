@@ -1,5 +1,7 @@
 'atom-text-editor[data-grammar="text html handlebars"]:not([mini])':
   'tab': 'emmet:expand-abbreviation-with-tab'
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-shift-m': 'expand-selection-to-quotes:toggle'
 
 'body':
   'ctrl-}': 'pane:show-next-item'
@@ -32,6 +34,10 @@
 
   'cmd-backspace': 'editor:delete-to-beginning-of-subword'
   'cmd-delete': 'editor:delete-to-end-of-subword'
+
+  # Bracket Matcher
+  'ctrl-m': 'bracket-matcher:select-inside-brackets'
+  'ctrl-alt-,': 'bracket-matcher:go-to-matching-bracket'
 
 '.platform-darwin atom-text-editor':
   # Subword Navigation
