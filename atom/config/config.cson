@@ -9,6 +9,10 @@
   core:
     autoHideMenuBar: true
     closeDeletedFileTabs: true
+    customFileTypes:
+      "source.dockerfile": [
+        "Dockerfile-dev"
+      ]
     disabledPackages: [
       "metrics"
       "exception-reporting"
