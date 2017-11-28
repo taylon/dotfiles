@@ -24,3 +24,9 @@
   'Print':
     prefix: 'log'
     body: 'print(${1:"$2"})'
+
+
+'.source.js':
+  'Import':
+    prefix: 'im'
+    body: "import ${1:\\{ $2 \\}} from '$3';"
