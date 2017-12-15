@@ -11,6 +11,7 @@ packages: [
   "busy-signal"
   "color-picker"
   "dash"
+  "double-tag"
   "editorconfig"
   "ember-snippets"
   "emmet"
@@ -28,6 +29,7 @@ packages: [
   "language-babel"
   "language-docker"
   "language-fish-shell"
+  "language-graphql"
   "language-ini"
   "language-nginx"
   "language-systemd"
@@ -47,5 +49,7 @@ packages: [
   "pigments"
   "prettier-atom"
   "pristine-ui"
+  "rainbow-delimiters"
+  "tab-through"
   "toggle-quotes"
 ]
