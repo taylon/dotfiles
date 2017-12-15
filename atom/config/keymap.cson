@@ -1,12 +1,28 @@
-'atom-text-editor[data-grammar="text html handlebars"]:not([mini])':
-  'tab': 'emmet:expand-abbreviation-with-tab'
+# 'atom-text-editor[data-grammar="text html handlebars"]:not([mini])':
+#   'tab': 'emmet:expand-abbreviation-with-tab'
+
 'atom-workspace atom-text-editor:not([mini])':
   'ctrl-shift-m': 'expand-selection-to-quotes:toggle'
+
+'atom-text-editor':
+  'ctrl-b': 'datatip:toggle'
 
 'body':
   'ctrl-}': 'pane:show-next-item'
   'ctrl-{': 'pane:show-previous-item'
 
+  # Enable some Vi style navigation
+  'alt-j' : 'core:move-down'
+  'alt-k' : 'core:move-up'
+  'alt-l' : 'core:move-right'
+  'alt-h' : 'core:move-left'
+
+'body atom-text-editor.autocomplete-active':
+  # Use tab to navigate through autocomplete suggestions
+  'shift-tab': 'autocomplete-plus:move-up'
+  'tab': 'autocomplete-plus:move-down'
+
+# Linux
 '.platform-linux atom-workspace atom-text-editor':
   # Line navigation
   'ctrl-right': 'editor:move-to-end-of-screen-line'
@@ -39,6 +55,7 @@
   'ctrl-m': 'bracket-matcher:select-inside-brackets'
   'ctrl-alt-,': 'bracket-matcher:go-to-matching-bracket'
 
+# MacOS
 '.platform-darwin atom-text-editor':
   # Subword Navigation
   'ctrl-right': 'editor:move-to-next-subword-boundary'
