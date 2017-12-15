@@ -17,6 +17,7 @@ mlocate
 docker
 docker-compose
 yarn
+zeal
 
 AUR:
 
