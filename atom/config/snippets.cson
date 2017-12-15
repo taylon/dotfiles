@@ -26,7 +26,16 @@
     body: 'print(${1:"$2"})'
 
 
-'.source.js':
+'.source.js, .source.tsx':
   'Import':
     prefix: 'im'
     body: "import ${1:\\{ $2 \\}} from '$3';"
+
+'.source.ts, .source.tsx':
+  'Interface':
+    prefix: 'interface'
+    body: """
+      interface I$1 ${2:extends ${3:React.Props<$4>}} {
+        $5
+      }
+    """
