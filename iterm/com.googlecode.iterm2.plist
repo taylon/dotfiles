@@ -16,6 +16,8 @@
 	<string>D408BD8F-72F8-4716-B688-59F68B28E2FF</string>
 	<key>DimInactiveSplitPanes</key>
 	<true/>
+	<key>FlashTabBarInFullscreen</key>
+	<false/>
 	<key>GlobalKeyMap</key>
 	<dict>
 		<key>0x19-0x60000</key>
@@ -149,6 +151,8 @@
 	<string>~/Development/dotfiles/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -182,10 +186,12 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1689 329 570 385 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>-776 767 620 392 -1440 540 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>826 681 770 429 0 0 2560 1440 </string>
+	<string>-1154 859 770 429 -1440 540 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>-1440 540 1440 877 -1440 540 1440 877 </string>
+	<string>-1226 540 1074 877 -1440 540 1440 900 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1517,7 +1523,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-30T12:45:02Z</date>
+	<date>2018-01-12T09:41:21Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -1537,7 +1543,7 @@
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>iTerm Version</key>
-	<string>3.1.4</string>
+	<string>3.1.5</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
