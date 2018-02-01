@@ -34,7 +34,7 @@ if test $OSAMI = $macos_uname
   set autojump_path "/usr/local/share/autojump/autojump.fish"
 
   # Set Go's instalation path
-  set golang_path "/usr/local/go"
+  set golang_path "/usr/local/opt/go/libexec"
 end
 
 # Source Autojump's init script
