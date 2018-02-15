@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# No need to have Postgres instaled just for psql so let's use that in a container
+
+docker run -it --rm postgres psql "$@"

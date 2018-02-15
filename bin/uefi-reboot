@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# I optimized the boot speed so much that I can't get to the mobo firmware
+# directly, so this script should help...
+
 secs=5
 while [ $secs -gt 0 ]; do
    echo -ne "Rebooting in $secs\r"
