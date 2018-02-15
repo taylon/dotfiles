@@ -1,7 +1,4 @@
 "*":
-  "atom-beautify":
-    js:
-      default_beautifier: "ESLint Fixer"
   "atom-ide-ui":
     "atom-ide-diagnostics-ui": {}
   "autocomplete-plus":
@@ -27,6 +24,7 @@
       "linter-coffeelint"
       "linter"
       "atom-import-cost"
+      "emmet"
     ]
     telemetryConsent: "no"
     themes: [
@@ -75,7 +73,6 @@
   "linter-tslint":
     enableSemanticRules: true
   "linter-ui-default":
-    panelHeight: 181
     tooltipFollows: "Keyboard"
   "package-sync":
     createOnChange: true
@@ -84,6 +81,7 @@
     formatOnSaveOptions:
       enabled: true
       isDisabledIfNoConfigFile: true
+    useEslint: true
     useStylelint: true
   tabs:
     alwaysShowTabBar: false
