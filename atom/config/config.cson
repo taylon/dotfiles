@@ -22,18 +22,19 @@
       "atom-qunit-snippets"
       "ide-flowtype"
       "linter-coffeelint"
-      "linter"
       "atom-import-cost"
       "emmet"
+      "linter"
     ]
     telemetryConsent: "no"
     themes: [
       "pristine-ui"
       "one-dark-syntax"
     ]
+    useTreeSitterParsers: true
   editor:
     fontFamily: "Ubuntu Mono"
-    fontSize: 19
+    fontSize: 20
     showIndentGuide: true
   "go-plus":
     autocomplete:
@@ -48,6 +49,7 @@
       focusOnFailure: false
     test:
       coverageDisplayMode: "gutter"
+      runTestsOnSave: false
   "ide-flowtype":
     autoDownloadFlowBinaries: false
     tryFlowBin: true
