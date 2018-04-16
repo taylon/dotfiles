@@ -12,19 +12,20 @@ mkdir -p $HOME/Development/go/pkg
 
 
 # Install homebrew (https://brew.sh/)
-brew tap caskroom/drivers
+# brew tap caskroom/drivers
 brew tap caskroom/fonts
 
 # Install with Cask:
+# brew cask install razer-synapse
 brew cask install google-chrome
 brew cask install sizeup
 brew cask install iterm2
 brew cask install atom # (package-sync for initial setup)
 brew cask install google-backup-and-sync
 brew cask install slack
-brew cask install razer-synapse
 brew cask install font-ubuntu
 brew cask install docker
+brew cask install franz
 
 # Install with brew:
 brew install coreutils
@@ -48,6 +49,8 @@ brew install bash
 brew install httpie
 brew install awscli
 brew install terraform
+brew install pipenv
+brew install bpython
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -18,6 +18,8 @@ docker
 docker-compose
 yarn
 zeal
+bpython
+pipenv
 
 AUR:
 
@@ -28,3 +30,4 @@ nodejs-n
 la-capitaine-icon-theme
 capitaine-cursors
 fonts-meta-extended-lt
+franz-bin
