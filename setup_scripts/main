@@ -11,3 +11,8 @@ mkdir -p $HOME/.node/bin
 # Setup SSH keys
 # Host github.com
 #   IdentityFile ~/.ssh/
+
+
+# NPM stuff - Do this after setting up N/Node
+npm install -g bash-language-server
+npm install -g trash-cli

@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 # Install Golang and create GOPATH folders
 # https://golang.org/dl/
 mkdir -p $HOME/Development/go/src
@@ -26,6 +25,7 @@ brew cask install slack
 brew cask install font-ubuntu
 brew cask install docker
 brew cask install franz
+# brew cask install lastpass
 
 # Install with brew:
 brew install coreutils
@@ -52,12 +52,11 @@ brew install terraform
 brew install python3
 brew install pipenv
 brew install bpython
+brew install exa
+
 
 # Remove outdated versions from the cellar
 brew cleanup
-
-# Install trash-cli after setting up n/node
-npm install --global trash-cli
 
 # Stuff from App Store
 # - MonthlyCal

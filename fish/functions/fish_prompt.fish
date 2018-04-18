@@ -64,6 +64,8 @@ function fish_prompt
   set -g __fish_git_prompt_showstashstate 1
   set -g __fish_git_prompt_showuntrackedfiles 1
 
+  printf '\n'
+
   set_color $fish_color_cwd
   printf '%s' (my_prompt_pwd)
   set_color normal
