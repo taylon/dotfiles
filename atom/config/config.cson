@@ -1,6 +1,9 @@
 "*":
   "atom-ide-ui":
+    "atom-ide-code-format":
+      formatOnSave: true
     "atom-ide-diagnostics-ui": {}
+    use: {}
   "autocomplete-plus":
     confirmCompletion: "enter"
     useCoreMovementCommands: false
@@ -75,6 +78,7 @@
   "linter-tslint":
     enableSemanticRules: true
   "linter-ui-default":
+    panelHeight: 282
     tooltipFollows: "Keyboard"
   "package-sync":
     createOnChange: true
