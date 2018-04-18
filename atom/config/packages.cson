@@ -23,6 +23,7 @@ packages: [
   "go-signature-statusbar"
   "highlight-selected"
   "hyperclick"
+  "ide-bash"
   "ide-flowtype"
   "ide-json"
   "ide-python"

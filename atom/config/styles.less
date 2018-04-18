@@ -20,6 +20,12 @@ atom-text-editor {
         color: #75715e;
       }
     }
+
+    // Smooth scrolling
+    & > div > .scroll-view > div,
+    & > div > .gutter-container > div {
+      transition: -webkit-transform .30s ease;
+    }
   }
 
   .indent-guide {
