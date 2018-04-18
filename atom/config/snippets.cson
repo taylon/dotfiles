@@ -20,16 +20,18 @@
       }
     """
 
+
 '.source.python':
   'Print':
     prefix: 'log'
     body: 'print(${1:"$2"})'
 
 
-'.source.js, .source.tsx':
+'.source.js':
   'Import':
     prefix: 'im'
     body: "import ${1:\\{ $2 \\}} from '$3';"
+
 
 '.source.ts, .source.tsx':
   'Interface':
@@ -39,3 +41,7 @@
         $5
       }
     """
+
+  'Import':
+    prefix: 'im'
+    body: "import ${1:\\{ $2 \\}} ${3:as $4}from '$5';"
