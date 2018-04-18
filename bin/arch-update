@@ -32,7 +32,4 @@ sudo reflector --latest 100 --protocol http --protocol https --sort rate --count
 print::sucess "mirrorlist sucessfully updated!"
 
 # Update!
-sudo pacman -Syu
-
-# Update packages from AUR as well
-yaourt -Syu --aur
+aurman -Syu
