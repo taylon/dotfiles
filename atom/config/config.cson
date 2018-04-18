@@ -89,6 +89,11 @@
       isDisabledIfNoConfigFile: true
     useEslint: true
     useStylelint: true
+  scrolloff:
+    horizontalMargin: 999
+    verticalMargin: 999
+  "tab-through":
+    skipChars: "(){}\"'`.,;"
   tabs:
     alwaysShowTabBar: false
     enableVcsColoring: true
