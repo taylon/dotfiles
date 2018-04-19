@@ -53,6 +53,7 @@ brew install python3
 brew install pipenv
 brew install bpython
 brew install exa
+brew install tldr
 
 
 # Remove outdated versions from the cellar

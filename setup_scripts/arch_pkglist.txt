@@ -32,3 +32,4 @@ capitaine-cursors
 fonts-meta-extended-lt
 franz-bin
 exa-git
+tldr-cpp-client
