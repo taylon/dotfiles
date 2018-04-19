@@ -5,7 +5,7 @@ alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 
 # exa
-alias ls exa
+alias ls 'exa -a'
 
 # trash-cli
 alias rm trash

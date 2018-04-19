@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "name": "hyper-one-dark-vivid",
+    "version": "1.0.0",
+    "description": "Hyper.app theme based on Atom One Dark (vivid)",
+    "main": "index.js",
+    "author": {
+      "name": "Brandon Smith"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/brandon93s/hyper-one-dark-vivid"
+    },
+    "license": "MIT",
+    "keywords": [
+      "Hyper",
+      "Theme",
+      "Colors",
+      "Atom",
+      "Dark",
+      "One",
+      "Vivid"
+    ],
+    "_registry": "npm",
+    "_loc": "/home/taylon/.hyper_plugins/cache/v1/npm-hyper-one-dark-vivid-1.0.0-d52bd2433eea10c18dab8631e83ae07fb7c5244d/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# One Dark (Vivid) Theme for Hyper\n\n[Hyper](https://hyper.is) theme inspired by the [Atom One Dark](https://github.com/atom/one-dark-syntax) theme but with more **vivid** colors.\n\n![Empty Shell](https://i.imgur.com/Gm0zpps.png)\n![Git Diff](https://i.imgur.com/8qZYKpN.png)\n\n## Install\n\n1. Open Hyper's preferences with `Ctrl+,` or edit manually from `~/.hyper.js`\n\n2. Add `hyper-one-dark-vivid` to list of plugins:\n```js\nplugins: [\n  'hyper-one-dark-vivid'\n],\n```\n3. Reload Hyper with `Ctrl+Shift+F5`\n\n\n## License\n\nMIT © [Brandon Smith](https://github.com/brandon93s)",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2018 Brandon Smith\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE."
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/hyper-one-dark-vivid/-/hyper-one-dark-vivid-1.0.0.tgz#d52bd2433eea10c18dab8631e83ae07fb7c5244d",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/hyper-one-dark-vivid/-/hyper-one-dark-vivid-1.0.0.tgz",
+    "hash": "d52bd2433eea10c18dab8631e83ae07fb7c5244d",
+    "registry": "npm",
+    "packageName": "hyper-one-dark-vivid"
+  },
+  "registry": "npm",
+  "hash": "d52bd2433eea10c18dab8631e83ae07fb7c5244d"
+}

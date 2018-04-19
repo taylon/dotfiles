@@ -1,0 +1,58 @@
+{
+  "manifest": {
+    "name": "hyperterm-paste",
+    "version": "1.1.2",
+    "description": "Makes pasting into hyperterm safe",
+    "main": "src/index.js",
+    "scripts": {
+      "test": "standard && mocha",
+      "lint:fix": "standard --fix",
+      "prepublish": "npm test"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/krzkaczor/hyperterm-paste.git"
+    },
+    "keywords": [
+      "hyperterm",
+      "paste"
+    ],
+    "author": {
+      "name": "Krzysztof Kaczor"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/krzkaczor/hyperterm-paste/issues"
+    },
+    "homepage": "https://github.com/krzkaczor/hyperterm-paste#readme",
+    "devDependencies": {
+      "chai": "3.5.0",
+      "mocha": "3.0.0",
+      "standard": "10.0.3"
+    },
+    "standard": {
+      "env": [
+        "mocha"
+      ],
+      "globals": [
+        "config"
+      ]
+    },
+    "_registry": "npm",
+    "_loc": "/home/taylon/.hyper_plugins/cache/v1/npm-hyperterm-paste-1.1.2-0ad2783be24dcb45564b27acc20723aec2cf3f26/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# hyperterm-paste\nMakes pasting into hyperterm safe and easy\n\n\n[![npm](https://img.shields.io/npm/dm/hyperterm-paste.svg)](https://www.npmjs.com/package/hyperterm-paste)\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)\n\n\n![Pasting into hyperterm](https://raw.githubusercontent.com/krzkaczor/hyperterm-paste/master/demo.gif)\n\n```\nhpm install hyperterm-paste\n```\n\n### Description\nNow pasting from browser into terminal will never run shell command by itself!\n\nTransformations applied to input:\n - remove leading `$`\n - remove leading whitespaces\n - multiline input will be concatenated to one line by adding `&&`\n - trailing newline will be removed which prevents from execution\n\n#### Custom separators\nBy default plugin will use `&&` for new lines which is fine for `bash` and `zsh` shells. If you use something more exotic you can specify custom separator as env in your config `.hyper.js` file:\n\n```\nenv: {\n  \"HYPER_PASTE_SEPARATOR\": \" & \"\n},\n```\n \n### Escape hatch\nYou can still make \"raw\" paste by using `ctrl` + `shift` + `v`\n",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2016 Krzysztof Kaczor\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/hyperterm-paste/-/hyperterm-paste-1.1.2.tgz#0ad2783be24dcb45564b27acc20723aec2cf3f26",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/hyperterm-paste/-/hyperterm-paste-1.1.2.tgz",
+    "hash": "0ad2783be24dcb45564b27acc20723aec2cf3f26",
+    "registry": "npm",
+    "packageName": "hyperterm-paste"
+  },
+  "registry": "npm",
+  "hash": "0ad2783be24dcb45564b27acc20723aec2cf3f26"
+}

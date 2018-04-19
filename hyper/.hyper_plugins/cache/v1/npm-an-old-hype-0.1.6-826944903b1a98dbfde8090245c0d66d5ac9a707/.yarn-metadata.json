@@ -1,0 +1,51 @@
+{
+  "manifest": {
+    "name": "an-old-hype",
+    "version": "0.1.6",
+    "description": "Hyper theme inspired by a galaxy far far away...",
+    "main": "index.js",
+    "scripts": {
+      "test": "standard && ava"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://erikmueller@github.com/erikmueller/an-old-hype.git"
+    },
+    "keywords": [
+      "hyper",
+      "terminal",
+      "term",
+      "hyperterm",
+      "hyperterm-theme",
+      "theme",
+      "starwars"
+    ],
+    "author": {
+      "name": "erikmueller"
+    },
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/erikmueller/an-old-hype/issues"
+    },
+    "homepage": "https://github.com/erikmueller/an-old-hype#readme",
+    "devDependencies": {
+      "ava": "0.17.0",
+      "standard": "8.6.0"
+    },
+    "_registry": "npm",
+    "_loc": "/home/taylon/.hyper_plugins/cache/v1/npm-an-old-hype-0.1.6-826944903b1a98dbfde8090245c0d66d5ac9a707/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# An old Hype\n\n[![CircleCI](https://circleci.com/gh/erikmueller/an-old-hype.svg?style=svg)](https://circleci.com/gh/erikmueller/an-old-hype)\n\n> Hyper theme inspired by a galaxy far far away...\n\nBased on [An Old Hope](https://github.com/JesseLeite/an-old-hope-syntax-atom) - a splendid atom syntax theme by Jesse Leite\n\n## Features\n\n* __Transparent background__ - Opacity can be customized\n* __Visible divider__ - lets you see where tiled terminals begin and end\n* __6 theme styles to choose from__\n    * `vader`\n    * `yoda`\n    * `threePO`\n    * `r2`\n    * `luke` (default)\n    * `falcon`\n\n## Settings\n\nYou can customize the __background opacity__ and the __style__ as well as the __active tab marker__.\nTo do so, provide a `themeSettings` object in the `config` property of your `~/.hyper.js`:\n\n```js\n\nconfig: {\n    ...\n    // Customize the theme\n    themeSettings: {\n        // Do not make background transparent (default is 0.9)\n        opacity: 1,\n        // Switch from luke's orange uniform to master yoda (check the available styles above)\n        style: 'yoda',\n        // Change the character that mars a tab active\n        tabActiveMarker: '💁'\n    },\n    ...\n}\n```\n\n## Screenshot\n\n![](screen.png)\n\n`oh-my-zsh` with the `pure` prompt and `Hasklig` font\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/an-old-hype/-/an-old-hype-0.1.6.tgz#826944903b1a98dbfde8090245c0d66d5ac9a707",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/an-old-hype/-/an-old-hype-0.1.6.tgz",
+    "hash": "826944903b1a98dbfde8090245c0d66d5ac9a707",
+    "registry": "npm",
+    "packageName": "an-old-hype"
+  },
+  "registry": "npm",
+  "hash": "826944903b1a98dbfde8090245c0d66d5ac9a707"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hyperterm-paste",
+  "version": "1.1.2",
+  "description": "Makes pasting into hyperterm safe",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "standard && mocha",
+    "lint:fix": "standard --fix",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krzkaczor/hyperterm-paste.git"
+  },
+  "keywords": [
+    "hyperterm",
+    "paste"
+  ],
+  "author": "Krzysztof Kaczor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/krzkaczor/hyperterm-paste/issues"
+  },
+  "homepage": "https://github.com/krzkaczor/hyperterm-paste#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "3.0.0",
+    "standard": "10.0.3"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ],
+    "globals": [
+      "config"
+    ]
+  }
+}
