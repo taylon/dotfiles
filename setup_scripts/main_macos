@@ -21,22 +21,22 @@ brew cask install sizeup
 brew cask install iterm2
 brew cask install atom # (package-sync for initial setup)
 brew cask install google-backup-and-sync
-brew cask install slack
 brew cask install font-ubuntu
 brew cask install docker
 brew cask install franz
-# brew cask install lastpass
+brew cask install dash
+brew cask install bartender
 
 # Install with brew:
 brew install coreutils
-brew install gnu-sed —-with-default-names
+brew install gnu-sed --with-default-names
 brew install findutils --with-default-names
 brew install gnu-tar --with-default-names
 brew install gnu-which --with-default-names
-brew install wget --with-iri
+brew install wget
 brew install vim --with-override-system-vi
 brew install less
-brew install make
+brew install make --with-default-names
 brew install n
 brew install shellcheck
 brew install fish
@@ -51,13 +51,13 @@ brew install awscli
 brew install terraform
 brew install python3
 brew install pipenv
-brew install bpython
 brew install exa
 brew install tldr
 
-
 # Remove outdated versions from the cellar
 brew cleanup
+
+pip3 install bpython
 
 # Stuff from App Store
 # - MonthlyCal
