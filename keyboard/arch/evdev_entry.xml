@@ -1,0 +1,8 @@
+<!-- Add this under the <layoutList> tag in the /usr/share/X11/xkb/rules/evdev.xml file -->
+
+<variant>
+  <configItem>
+    <name>colemak_moddh_matrix</name>
+    <description>English (Colemak Mod-DH - Matrix)</description>
+  </configItem>
+</variant>
