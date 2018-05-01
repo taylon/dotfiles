@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 18,
+    fontSize: 20,
 
     // font family with optional fallbacks
-    fontFamily: 'Ubuntu Mono',
+    fontFamily: 'Operator Mono Book',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -123,6 +123,22 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    hypercwd: {
+      initialWorkingDirectory: '~/Development'
+    },
+
+    paneNavigation: {
+      hotkeys: {
+        navigation: {
+          up: 'ctrl+up',
+          down: 'ctrl+down',
+          left: 'ctrl+left',
+          right: 'ctrl+right'
+        },
+      },
+      showIndicators: false,
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -134,8 +150,11 @@ module.exports = {
   plugins: [
     'hyper-one-dark-vivid',
     'hyperterm-paste',
-    // 'hyperfullscreen',
     'hyper-search',
+    'hyperminimal',
+    'hypercwd',
+    'hyper-tab-icons',
+    'hyper-pane',
   ],
 
   // in development, you can create a directory under
@@ -144,7 +163,14 @@ module.exports = {
   localPlugins: [],
 
   keymaps: {
-    "editor:copy": "ctrl+c",
-    "editor:paste": "ctrl+v",
+    'editor:copy': 'ctrl+c',
+    'editor:paste': 'ctrl+v',
+    "editor:break": "command+c",
+
+    'pane:splitVertical': 'ctrl+d',
+    'pane:splitHorizontal': 'ctrl+shift+d',
+    'pane:close': 'ctrl+w',
+
+    'tab:new': 'ctrl+t',
   },
 };

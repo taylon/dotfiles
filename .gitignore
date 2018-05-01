@@ -20,3 +20,6 @@ vim/.undo
 vim/.netrwhist
 vim/viminfo
 vim/plugged
+
+# Hyper
+hyper/.hyper_plugins/*
