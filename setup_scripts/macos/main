@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Launchctl script to remap caps on login
+launchctl load ~/Library/LaunchAgents/com.user.loginscript.plist
+
 # Install Golang and create GOPATH folders
 # https://golang.org/dl/
 mkdir -p $HOME/Development/go/src
