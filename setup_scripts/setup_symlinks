@@ -24,8 +24,8 @@ ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
 ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
 
 # Hyper
-ln -s $DOTFILES_PATH/hyper/.hyper.js $HOME/.hyper.js
-ln -s $DOTFILES_PATH/hyper/.hyper_plugins $HOME/.hyper_plugins
+ln -s $DOTFILES_PATH/hyper/.hyper_linux.js $HOME/.hyper.js
+ln -s $DOTFILES_PATH/hyper/.hyper_macos.js $HOME/.hyper.js
 
 # Git
 ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
