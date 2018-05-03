@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# Hyper
+ln -s $DOTFILES_PATH/hyper/.hyper_macos.js $HOME/.hyper.js
+
+# ColemakDH-Matrix layout
+ln -s $DOTFILES_PATH/keyboard/macos/ColemakDH-Matrix.bundle /Library/Keyboard\ Layouts/ColemakDH-Matrix.bundle

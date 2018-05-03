@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Systemd (Arch only)
+ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
+
+# Tilix (Arch only)
+# ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
+
+# Hyper
+ln -s $DOTFILES_PATH/hyper/.hyper_linux.js $HOME/.hyper.js

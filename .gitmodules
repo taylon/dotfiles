@@ -1,3 +1,0 @@
-[submodule "atom/update_script"]
-	path = atom/update_script
-	url = git@github.com:taylon/atom-update.git

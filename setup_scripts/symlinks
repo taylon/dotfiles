@@ -17,16 +17,6 @@ TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
 ln -s $TMUX_COFIG_PATH/tmux.conf $HOME/tmux.conf
 ln -s $TMUX_COFIG_PATH/tmuxinator $HOME/.tmuxinator
 
-# Systemd (Arch only)
-ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
-
-# Tilix (Arch only)
-ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
-
-# Hyper
-ln -s $DOTFILES_PATH/hyper/.hyper_linux.js $HOME/.hyper.js
-ln -s $DOTFILES_PATH/hyper/.hyper_macos.js $HOME/.hyper.js
-
 # Git
 ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
 
@@ -45,4 +35,3 @@ ln -s $DOTFILES_PATH/vim/vimrc $HOME/.vimrc
 # Executables
 BIN_PATH="$HOME/.bin"
 ln -s $DOTFILES_PATH/bin $BIN_PATH
-# ln -s $DOTFILES_PATH/atom/update-script/atom-update $DOTFILES_PATH/bin/atom-update

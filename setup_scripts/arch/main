@@ -14,7 +14,7 @@ sudo cat $DOTFILES_PATH/keyboard/arch/xkb_colemak_moddh_matrix >> /usr/share/X11
 # Setup symlinks
 
 # Load Tilix configuration
-dconf load /com/gexperts/Tilix/ < $DOTFILES_PATH/tilix/tilix.conf
+# dconf load /com/gexperts/Tilix/ < $DOTFILES_PATH/tilix/tilix.conf
 
 # Improve font-rendering
 # https://gist.github.com/cryzed/e002e7057435f02cc7894b9e748c5671
