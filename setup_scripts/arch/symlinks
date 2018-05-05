@@ -8,3 +8,6 @@ ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
 
 # Hyper
 ln -s $DOTFILES_PATH/hyper/.hyper_linux.js $HOME/.hyper.js
+
+# Xmodmap - It fixes the issue with capslock not keyrepeating
+ln -s $DOTFILES_PATH/keyboard/arch/Xmodmap $HOME/.Xmodmap
