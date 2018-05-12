@@ -11,3 +11,6 @@ ln -s $DOTFILES_PATH/hyper/.hyper_linux.js $HOME/.hyper.js
 
 # Xmodmap - It fixes the issue with capslock not keyrepeating
 ln -s $DOTFILES_PATH/keyboard/arch/Xmodmap $HOME/.Xmodmap
+
+# Customize mouse buttons
+ln -s $DOTFILES_PATH/mouse/arch/imwheelrc $HOME/.imwheelrc

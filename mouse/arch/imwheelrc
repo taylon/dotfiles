@@ -1,0 +1,5 @@
+# https://wiki.archlinux.org/index.php/Imwheel
+# https://help.ubuntu.com/community/ManyButtonsMouseHowto
+
+"^atom$"
+  None, Right, Control_L|backslash

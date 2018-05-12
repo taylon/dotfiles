@@ -35,6 +35,9 @@ gsettings set org.gnome.mutter.keybindings toggle-tiled-right "['<Alt><Control><
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-left []
 gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right []
 
+# Set mouse acceleration because trackball =p
+org.gnome.desktop.peripherals.mouse accel-profile 'default'
+
 # Gnome-terminal (We don't use it anymore but let's keep it here just in case)
 # gsettings set org.gnome.terminal.legacy.keybindings close-tab "<Primary>w"
 # gsettings set org.gnome.terminal.legacy.keybindings new-tab "<Primary>t"
