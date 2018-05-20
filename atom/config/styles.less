@@ -1,8 +1,8 @@
 atom-text-editor {
   // Makes the cursor pulse instead of blink
-  .cursor {
-    transition: opacity .5s;
-  }
+  // .cursor {
+  //   transition: opacity .5s;
+  // }
 
   // Highlights trailing whitespace except on the cursor line
   div.line:not(.cursor-line) {
@@ -13,29 +13,23 @@ atom-text-editor {
     }
   }
 
-  &.editor {
+  // &.editor {
     // HTML-specific
-    .syntax--html {
-      .syntax--doctype {
-        color: #75715e;
-      }
-    }
+    // .syntax--html {
+    //   .syntax--doctype {
+    //     color: #75715e;
+    //   }
+    // }
+  // }
 
-    // Smooth scrolling
-    & > div > .scroll-view > div,
-    & > div > .gutter-container > div {
-      transition: -webkit-transform .30s ease;
-    }
-  }
-
-  .indent-guide {
+  // .indent-guide {
     // Make ident guide slightly lighter
-    color: rgba(255, 255, 255, .07);
-  }
+    // color: rgba(255, 255, 255, .07);
+  // }
 
   .gutter {
     // Make the gutter slightly darker
-    background-color: darken(#282c34, 0.7%);
+    // background-color: darken(hsl(218,19%,14%), 0.7%);
 
     // Customize the color for lines that are uncovered by tests
     .line-number.uncovered {
@@ -44,21 +38,19 @@ atom-text-editor {
     }
 
     // Customize bracket-matcher's highlightMatchingLineNumber
-    .line-number.bracket-matcher {
-      background-color: #3e4450;
-      color: white !important;
-    }
+    // .line-number.bracket-matcher {
+    //   background-color: #3e4450;
+    //   color: white !important;
+    // }
 
-    .line-number.cursor-line-no-selection {
-      background-color: transparent;
-    }
+    // .line-number.cursor-line-no-selection {
+    //   background-color: transparent;
+    // }
   }
 
   .jumpy-label {
     // Regular labels
     background-color: rgba(51, 196, 113, 1);
-    // color: white|;
-    // padding: 3px;
   }
 }
 

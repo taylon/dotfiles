@@ -1,12 +1,17 @@
 "*":
+  "atom-alignment":
+    alignBy: [
+      "=>"
+      ":="
+      ":"
+      "="
+      ","
+    ]
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
     "atom-ide-diagnostics-ui": {}
     use: {}
-  "autocomplete-plus":
-    confirmCompletion: "enter"
-    useCoreMovementCommands: false
   "bracket-matcher":
     highlightMatchingLineNumber: true
   core:
@@ -32,11 +37,10 @@
     telemetryConsent: "no"
     themes: [
       "pristine-ui"
-      "one-dark-syntax"
+      "yaod-syntax"
     ]
-    useTreeSitterParsers: true
   editor:
-    fontFamily: "Ubuntu Mono"
+    fontFamily: "Operator Mono Book"
     fontSize: 20
     showIndentGuide: true
   "go-plus":
@@ -80,6 +84,8 @@
   "linter-ui-default":
     panelHeight: 282
     tooltipFollows: "Keyboard"
+  "markdown-preview":
+    useGitHubStyle: true
   "package-sync":
     createOnChange: true
     forceOverwrite: true
@@ -97,5 +103,4 @@
   tabs:
     alwaysShowTabBar: false
     enableVcsColoring: true
-  whitespace:
-    ensureSingleTrailingNewline: false
+  whitespace: {}

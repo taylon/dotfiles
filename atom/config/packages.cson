@@ -1,5 +1,6 @@
 packages: [
   "advanced-open-file"
+  "atom-alignment"
   "atom-django"
   "atom-handlebars"
   "atom-ide-debugger-python"
@@ -24,6 +25,7 @@ packages: [
   "highlight-selected"
   "hyperclick"
   "ide-bash"
+  "ide-css"
   "ide-flowtype"
   "ide-json"
   "ide-python"
@@ -44,7 +46,6 @@ packages: [
   "linter-ember-template"
   "linter-eslint"
   "linter-flake8"
-  "linter-jshint"
   "linter-shellcheck"
   "linter-stylelint"
   "linter-tslint"
@@ -57,4 +58,5 @@ packages: [
   "scrolloff"
   "tab-through"
   "toggle-quotes"
+  "yaod-syntax"
 ]
