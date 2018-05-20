@@ -3,10 +3,11 @@
 # gsettings list-recursively |grep "<Alt>space"
 
 # Set Colemak Mod-DH as the default keyboard layout
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+colemak_moddh_matrix'), ('xkb', 'us+alt-intl')]"
+# gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us+colemak_moddh_matrix'), ('xkb', 'us')]"
 
-# Swap win/alt/ctrl and caps/backspace
-gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin', 'caps:backspace']"
+# Swap win/ctrl
+# gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl_lwin', 'caps:backspace']"
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lwin_lctl']"
 
 # Set ctrl-tab to switch windows (instead of alt-tab)
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "['<Control>Tab']"
@@ -37,9 +38,3 @@ gsettings set org.gnome.desktop.wm.keybindings move-to-monitor-right []
 
 # Set mouse acceleration because trackball =p
 org.gnome.desktop.peripherals.mouse accel-profile 'default'
-
-# Gnome-terminal (We don't use it anymore but let's keep it here just in case)
-# gsettings set org.gnome.terminal.legacy.keybindings close-tab "<Primary>w"
-# gsettings set org.gnome.terminal.legacy.keybindings new-tab "<Primary>t"
-# gsettings set org.gnome.terminal.legacy.keybindings next-tab "<Primary>braceright"
-# gsettings set org.gnome.terminal.legacy.keybindings prev-tab "<Primary>bracerleft"

@@ -21,6 +21,8 @@ zeal
 bpython
 pipenv
 wget
+exa
+teensy-loader-cli
 
 AUR:
 
@@ -32,6 +34,5 @@ la-capitaine-icon-theme
 capitaine-cursors
 fonts-meta-extended-lt
 franz-bin
-exa-git
 tldr-cpp-client
-imwheel
+python-pyuserinput-git

@@ -12,6 +12,7 @@ setup_scripts/pkg_install.log*
 # General
 TODO
 .DS_Store
+keyboard/qmk_keymap/dist/
 
 # VIM
 vim/.backups
