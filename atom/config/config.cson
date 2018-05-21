@@ -64,18 +64,26 @@
     javascriptSupport: false
   jumpy:
     customKeys: [
-      "a"
       "s"
-      "d"
-      "q"
-      "w"
-      "e"
-      "z"
-      "x"
-      "c"
-      "f"
+      "t"
       "r"
+      "a"
+      "d"
+      "f"
+      "p"
+      "w"
+      "g"
+      "e"
+      "n"
+      "i"
+      "h"
+      "o"
+      "u"
+      "y"
+      "l"
+      "m"
       "v"
+      "k"
     ]
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
