@@ -55,7 +55,6 @@ packages: [
   "prettier-atom"
   "pristine-ui"
   "rainbow-delimiters"
-  "scrolloff"
   "tab-through"
   "toggle-quotes"
   "yaod-syntax"
