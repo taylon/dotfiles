@@ -8,8 +8,10 @@
   'ctrl-b': 'datatip:toggle'
 
 'body':
-  'ctrl-}': 'pane:show-next-item'
-  'ctrl-{': 'pane:show-previous-item'
+  'ctrl-tab': 'pane:show-next-item'
+  'ctrl-shift-tab': 'pane:show-previous-item'
+  'ctrl-tab ^ctrl': 'unset!'
+  'ctrl-shift-tab ^ctrl': 'unset!'
 
   'ctrl-+': 'unset!'
   'ctrl--': 'unset!'

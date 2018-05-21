@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Right hand
     TG(LEDS)       , KC_6        , KC_7                    , KC_8                    , KC_9           , KC_0      , KC_TRANSPARENT ,
     KC_TRANSPARENT , KC_J        , KC_L                    , LT(SYMBOLS, KC_U)       , KC_Y           , KC_SCOLON , KC_BSLASH      ,
-    KC_M           , SFT_T(KC_N) , GUI_T(KC_E)             , ALT_T(KC_I)             , LCTL_T(KC_O)    , KC_QUOTE  ,
+    KC_M           , SFT_T(KC_N) , GUI_T(KC_E)             , ALT_T(KC_I)             , LCTL_T(KC_O)   , KC_QUOTE  ,
     KC_TRANSPARENT , KC_K        , KC_H                    , KC_COMMA                , KC_DOT         , KC_SLASH  , KC_MINUS       ,
-    KC_UP          , KC_DOWN     , LGUI(LSFT(KC_LBRACKET)) , LGUI(LSFT(KC_RBRACKET)) , KC_TRANSPARENT ,
+    KC_UP          , KC_DOWN     , LCTL(LSFT(KC_TAB))      , LCTL(KC_TAB)            , KC_TRANSPARENT ,
 
     KC_TRANSPARENT, KC_TRANSPARENT ,
     KC_TRANSPARENT,
