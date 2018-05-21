@@ -8,3 +8,6 @@ ln -s $DOTFILES_PATH/keyboard/macos/ColemakDH-Matrix.bundle /Library/"Keyboard L
 
 # Remap capslock to backspace
 ln -s $DOTFILES_PATH/keyboard/macos/remap_caps.plist $HOME/Library/LaunchAgents/com.user.loginscript.plist
+
+# On MacOS teensy loader is installed with a name different from Arch, so let's link it for consistency
+ln -s /usr/local/bin/teensy_loader_cli /usr/local/bin/teensy-loader-cli

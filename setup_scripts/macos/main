@@ -11,11 +11,10 @@ mkdir -p $HOME/Development/go/pkg
 
 
 # Install homebrew (https://brew.sh/)
-# brew tap caskroom/drivers
+brew tap caskroom/drivers
 brew tap caskroom/fonts
 
 # Install with Cask:
-# brew cask install razer-synapse
 brew cask install google-chrome
 brew cask install sizeup
 brew cask install iterm2
@@ -27,6 +26,7 @@ brew cask install franz
 brew cask install dash
 brew cask install bartender
 brew cask install radiant-player
+brew cask install logitech-options
 
 # Install with brew:
 brew install coreutils
@@ -54,6 +54,7 @@ brew install python3
 brew install pipenv
 brew install exa
 brew install tldr
+brew install teensy_loader_cli
 
 # Remove outdated versions from the cellar
 brew cleanup
