@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
 
 # Setup MacOS's NightShift
-# Remove Mission Control's shortcut for space switching (that will be used by Atom)
 # Remove system shortcuts that will be used for something else:
 #   - Mission Control > Move Left/Right a space - ^left/right
 #   - Mission Control > Mission Control - ^up
-#   - Mission Control > Application Windows - ^up
+#   - Mission Control > Application Windows - ^down
 
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
