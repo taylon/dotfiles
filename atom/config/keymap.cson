@@ -4,6 +4,8 @@
 'atom-workspace atom-text-editor:not([mini])':
   'ctrl-shift-m': 'expand-selection-to-quotes:toggle'
 
+  'alt-cmd-[': 'editor:toggle-current-row-folding'
+
 'atom-text-editor':
   'ctrl-b': 'datatip:toggle'
 
