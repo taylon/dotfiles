@@ -30,7 +30,11 @@ enum {
   // Symbols
   TD_PRN = 0,
   TD_CBR,
-  TD_BRACKET
+  TD_BRACKET,
+
+  // Shortcuts
+  TD_INDENT,
+  TD_FOLD
 };
 
 // Tap Dance Definitions
@@ -39,16 +43,20 @@ qk_tap_dance_action_t tap_dance_actions[] = {
   [TD_PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
   [TD_CBR] = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_RCBR),
   [TD_BRACKET] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_RBRACKET),
+
+  // Shortcuts
+  [TD_INDENT] = ACTION_TAP_DANCE_DOUBLE(LGUI(KC_RBRACKET), LGUI(KC_LBRACKET)),
+  [TD_FOLD] = ACTION_TAP_DANCE_DOUBLE(LALT(LGUI(KC_LBRACKET)), LALT(LGUI(KC_RBRACKET))),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = KEYMAP(
     // Left hand
-    KC_ESCAPE      , KC_1           , KC_2           , KC_3             , KC_4            , KC_5 , TG(QWERTY)     ,
-    KC_DELETE      , KC_Q           , KC_W           , LT(NUMPAD, KC_F) , LT(MOUSE, KC_P) , KC_B , KC_TRANSPARENT ,
-    KC_BSPACE      , LCTL_T(KC_A)    , ALT_T(KC_R)   , GUI_T(KC_S)      , SFT_T(KC_T)     , KC_G ,
-    KC_TRANSPARENT , KC_Z           , KC_X           , KC_C             , KC_D            , KC_V , KC_TRANSPARENT ,
+    KC_ESCAPE      , KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT   , KC_TRANSPARENT  , KC_TRANSPARENT , TG(QWERTY)     ,
+    KC_DELETE      , KC_Q           , KC_W           , LT(NUMPAD, KC_F) , LT(MOUSE, KC_P) , KC_B           , KC_TRANSPARENT ,
+    KC_BSPACE      , LCTL_T(KC_A)   , ALT_T(KC_R)    , GUI_T(KC_S)      , SFT_T(KC_T)     , KC_G           ,
+    KC_TRANSPARENT , KC_Z           , KC_X           , KC_C             , KC_D            , KC_V           , KC_TRANSPARENT ,
     KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT , KC_LEFT          , KC_RIGHT        ,
 
     KC_MEDIA_PLAY_PAUSE, KC_TRANSPARENT ,
@@ -56,15 +64,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ENTER, KC_TAB, KC_TRANSPARENT ,
 
     // Right hand
-    TG(LEDS)       , KC_6        , KC_7                    , KC_8                    , KC_9           , KC_0      , KC_TRANSPARENT ,
-    KC_TRANSPARENT , KC_J        , KC_L                    , LT(SYMBOLS, KC_U)       , KC_Y           , KC_SCOLON , KC_BSLASH      ,
-    KC_M           , SFT_T(KC_N) , GUI_T(KC_E)             , ALT_T(KC_I)             , LCTL_T(KC_O)   , KC_QUOTE  ,
-    KC_TRANSPARENT , KC_K        , KC_H                    , KC_COMMA                , KC_DOT         , KC_SLASH  , KC_MINUS       ,
-    KC_UP          , KC_DOWN     , LCTL(LSFT(KC_TAB))      , LCTL(KC_TAB)            , KC_TRANSPARENT ,
+    TG(LEDS)       , KC_TRANSPARENT , KC_TRANSPARENT     , TD(TD_INDENT)     , KC_TRANSPARENT , TD(TD_FOLD) , KC_TRANSPARENT ,
+    KC_TRANSPARENT , KC_J           , KC_L               , LT(SYMBOLS, KC_U) , KC_Y           , KC_SCOLON   , KC_BSLASH      ,
+    KC_M           , SFT_T(KC_N)    , GUI_T(KC_E)        , ALT_T(KC_I)       , LCTL_T(KC_O)   , KC_QUOTE    ,
+    KC_TRANSPARENT , KC_K           , KC_H               , KC_COMMA          , KC_DOT         , KC_SLASH    , KC_MINUS       ,
+    KC_UP          , KC_DOWN        , LCTL(LSFT(KC_TAB)) , LCTL(KC_TAB)      , KC_TRANSPARENT ,
 
     KC_TRANSPARENT, KC_TRANSPARENT ,
     KC_TRANSPARENT,
-    KC_TRANSPARENT, KC_TRANSPARENT, KC_SPACE
+    KC_CAPSLOCK, LSFT(KC_ENTER), KC_SPACE
   ) ,
 
   [NUMPAD] = KEYMAP(
@@ -139,7 +147,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_MS_BTN3
   ) ,
 
-
   [LEDS] = KEYMAP(
     // Left hand
     KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT , KC_TRANSPARENT ,
@@ -187,6 +194,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT ,
     KC_TRANSPARENT , KC_TRANSPARENT , KC_SPACE
   ),
+
 };
 
 // From here it is all default stuff from the Ergodox EZ
