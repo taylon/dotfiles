@@ -1,12 +1,4 @@
 "*":
-  "atom-alignment":
-    alignBy: [
-      "=>"
-      ":="
-      ":"
-      "="
-      ","
-    ]
   "atom-ide-ui":
     "atom-ide-code-format":
       formatOnSave: true
