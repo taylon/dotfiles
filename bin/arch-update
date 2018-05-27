@@ -9,8 +9,12 @@ if [[ $(id -u) -eq 0 ]]; then
   exit 1
 fi
 
-# Make sure that I read latest news before update =p
-read -n 1 -p "Did you read the latest news at: https://www.archlinux.org/ ? [y/N] " answer
+# Print latest Arch news
+rsstail -1 -n 2 -pdH -u https://www.archlinux.org/feeds/news/
+echo
+
+# Confirm that we should continue after reading news
+read -n 1 -p "Should we continue? [y/N] " answer
 echo
 if [[ ! $answer =~ ^[Yy]$ ]]; then
   exit 0

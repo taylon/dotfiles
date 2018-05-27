@@ -36,3 +36,4 @@ fonts-meta-extended-lt
 franz-bin
 tldr-cpp-client
 python-pyuserinput-git
+rsstail
