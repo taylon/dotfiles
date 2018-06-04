@@ -9,6 +9,10 @@
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+# Save screenshots to the Downloads folder
+mkdir $HOME/Downloads/Screenshots
+defaults write com.apple.screencapture location -string "$HOME/Downloads/screenshots"
+
 # Ask for password immediately after lock
 defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
@@ -21,7 +25,11 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write com.apple.dock mru-spaces -bool false
 
 # Keyboard: Disable press-and-hold for keys in favor of key repeat
-# defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+# Set fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 2
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
 
 # Menu bar: Set preferred date format
 defaults write com.apple.menuextra.clock DateFormat -string "EEE d MMM  HH:mm"
