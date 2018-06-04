@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+APP="$1"
+EASING="0"
+
+declare -A POSITIONS=(
+ [browser]="1285,600"
+ [atom]="3100,800"
+ [terminal]="=-450,550"
+ [music]="1300,670"
+ [chat]="500,370"
+)
+
+/usr/local/bin/cliclick -e "$EASING" m:${POSITIONS[$APP]}
