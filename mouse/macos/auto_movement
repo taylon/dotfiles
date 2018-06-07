@@ -7,7 +7,7 @@ declare -A POSITIONS=(
  [browser]="1285,600"
  [atom]="3100,800"
  [terminal]="=-450,550"
- [music]="1300,670"
+ [music]="800,498"
  [chat]="500,370"
 )
 
