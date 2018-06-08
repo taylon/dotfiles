@@ -1,13 +1,11 @@
 'atom-workspace':
   'ctrl-shift-A': 'application:add-project-folder'
 
+  # Used for debugging attachment
+  'shift-cmd-A': 'unset!'
+
 'atom-workspace atom-text-editor:not([mini])':
-  'ctrl-shift-m': 'expand-selection-to-quotes:toggle'
-
   'alt-cmd-[': 'editor:toggle-current-row-folding'
-
-'atom-text-editor':
-  'ctrl-b': 'datatip:toggle'
 
 'body':
   'ctrl-tab': 'pane:show-next-item'
@@ -15,13 +13,9 @@
   'ctrl-tab ^ctrl': 'unset!'
   'ctrl-shift-tab ^ctrl': 'unset!'
 
+  # Avoid accidentaly changing font size
   'ctrl-+': 'unset!'
   'ctrl--': 'unset!'
-
-# 'body atom-text-editor.autocomplete-active':
-#   # Use tab to navigate through autocomplete suggestions
-#   'shift-tab': 'autocomplete-plus:move-up'
-#   'tab': 'autocomplete-plus:move-down'
 
 # Linux
 '.platform-linux atom-workspace atom-text-editor':
@@ -54,9 +48,11 @@
 
   # Bracket Matcher
   'ctrl-m': 'bracket-matcher:select-inside-brackets'
-  'ctrl-alt-,': 'bracket-matcher:go-to-matching-bracket'
 
 # MacOS
+'.platform-darwin':
+  'cmd-p': 'unset!'
+
 '.platform-darwin atom-text-editor':
   # Subword Navigation
   'ctrl-right': 'editor:move-to-next-subword-boundary'
@@ -70,3 +66,7 @@
 
   # Bracket Matcher
   'cmd-m': 'bracket-matcher:select-inside-brackets'
+
+  # Used to select to beginning of line, we use other keybind for that and this one
+  # is conflicting with add project folder
+  'ctrl-shift-A': 'unset!'

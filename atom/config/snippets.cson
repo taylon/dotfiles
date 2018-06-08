@@ -24,7 +24,7 @@
 '.source.python':
   'Print':
     prefix: 'log'
-    body: 'print(${1:"$2"})'
+    body: "print('$1')"
 
 
 '.source.js':
@@ -45,3 +45,32 @@
   'Import':
     prefix: 'im'
     body: "import ${1:\\{ $2 \\}} ${3:as $4}from '$5';"
+
+  'ES6 function':
+    prefix: 'func'
+    body: """
+      ${1:const} ${2:name} = ($3): $4 => {
+        $5
+      }
+    """
+
+'.source.ts, .source.tsx, .source.js':
+  'Log':
+    prefix: 'log'
+    body: "console.log('$1');"
+
+  'for':
+    prefix: 'for'
+    body: """
+      for (let ${1:i} = 0; ${2:condition}; ${1:i}++) {
+        $3
+      }
+    """
+
+  'if':
+    prefix: 'if'
+    body: """
+      if ($1) {
+        $2
+      }
+    """
