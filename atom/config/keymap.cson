@@ -6,6 +6,7 @@
 
 'atom-workspace atom-text-editor:not([mini])':
   'alt-cmd-[': 'editor:toggle-current-row-folding'
+  'alt-cmd-{': 'editor:fold-all-except-current'
 
 'body':
   'ctrl-tab': 'pane:show-next-item'
