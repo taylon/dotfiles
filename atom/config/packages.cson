@@ -30,6 +30,7 @@ packages: [
   "ide-json"
   "ide-python"
   "ide-typescript"
+  "indent-guide-improved"
   "intentions"
   "jumpy"
   "language-babel"

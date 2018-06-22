@@ -13,15 +13,6 @@ atom-text-editor {
     }
   }
 
-  // &.editor {
-    // HTML-specific
-    // .syntax--html {
-    //   .syntax--doctype {
-    //     color: #75715e;
-    //   }
-    // }
-  // }
-
   // .indent-guide {
     // Make ident guide slightly lighter
     // color: rgba(255, 255, 255, .07);
@@ -62,6 +53,20 @@ atom-text-editor {
 // Remove file path from status bar
 status-bar .file-info {
   display: none;
+}
+
+.indent-guide-improved {
+  @default-color: fade(hsl(220, 14%, 71%), 11%);
+  background-color: @default-color;
+  transition: background-color .5s;
+
+  &.indent-guide-stack {
+    background-color: @default-color;
+
+    &.indent-guide-active {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  }
 }
 
 // Customization for the Pristine-UI theme

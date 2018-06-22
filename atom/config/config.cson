@@ -36,7 +36,6 @@
   editor:
     fontFamily: "Operator Mono"
     fontSize: 20
-    showIndentGuide: true
   "go-plus":
     autocomplete:
       snippetMode: "nameAndType"
