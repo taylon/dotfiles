@@ -19,6 +19,7 @@ packages: [
   "emmet"
   "expand-selection-to-quotes"
   "file-icons"
+  "find-scroll-marker"
   "go-debug"
   "go-plus"
   "go-signature-statusbar"
@@ -42,6 +43,7 @@ packages: [
   "language-systemd"
   "language-terraform"
   "language-viml"
+  "lint-scroll-marker"
   "linter"
   "linter-coffeelint"
   "linter-eslint"
@@ -55,6 +57,7 @@ packages: [
   "prettier-atom"
   "pristine-ui"
   "rainbow-delimiters"
+  "scroll-marker"
   "toggle-quotes"
   "yaod-syntax"
 ]
