@@ -34,7 +34,7 @@
 	newHighlight = "green bold 22"
 
 [alias]
-	l = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	l = log --graph --decorate --pretty=oneline --abbrev-commit --all -n 20
 	c = commit -m
 	ca = commit --amend
 	co = checkout
