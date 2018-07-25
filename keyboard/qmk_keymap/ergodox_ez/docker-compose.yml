@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  qmk_build:
+    build: .
+    volumes:
+     - .:/qmk/layouts/community/ergodox/taylon
+     - ./dist:/qmk/.build
