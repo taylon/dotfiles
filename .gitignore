@@ -9,11 +9,6 @@ tmux/tmuxinator/*.yml
 # Scripts
 setup_scripts/pkg_install.log*
 
-# General
-TODO
-.DS_Store
-keyboard/qmk_keymap/dist/
-
 # VIM
 vim/.backups
 vim/.swaps
@@ -21,3 +16,12 @@ vim/.undo
 vim/.netrwhist
 vim/viminfo
 vim/plugged
+
+# QMK
+keyboard/qmk_keymap/dist/
+keyboard/qmk_keymap/ergodox_ez/dist/
+*.hex
+
+# General
+TODO
+.DS_Store
