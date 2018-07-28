@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  dactyl:
+    build: .
+    volumes:
+     - ./dactyl:/qmk/keyboards/handwired/dactyl/keymaps/taylon/
+     - ./dist:/qmk/.build
+    command: [
+      "make", "handwired/dactyl:taylon"
+    ]
+
+  ergodox:
+    build: .
+    volumes:
+     - ./ergodox_ez:/qmk/layouts/community/ergodox/taylon
+     - ./dist:/qmk/.build
+    command: [
+      "make", "keyboard=ergodox_ez", "keymap=taylon"
+    ]

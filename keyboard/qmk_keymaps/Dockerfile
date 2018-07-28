@@ -21,4 +21,5 @@ RUN apt-get update && apt-get install --no-install-recommends -y build-essential
 RUN git clone https://github.com/qmk/qmk_firmware.git qmk
 WORKDIR /qmk
 
-CMD make clean ; make keyboard=ergodox_ez keymap=taylon
+RUN make git-submodule
+RUN make clean

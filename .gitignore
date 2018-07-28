@@ -18,8 +18,7 @@ vim/viminfo
 vim/plugged
 
 # QMK
-keyboard/qmk_keymap/dist/
-keyboard/qmk_keymap/ergodox_ez/dist/
+keyboard/qmk_keymaps/dist/
 *.hex
 
 # General
