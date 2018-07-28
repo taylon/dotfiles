@@ -20,7 +20,14 @@
 
 # Linux
 '.platform-linux atom-workspace atom-text-editor':
+  # Line movement
+  'shift-cmd-up': 'editor:move-line-up'
+  'shift-cmd-down': 'editor:move-line-down'
+
   # Line navigation
+  'ctrl-up': 'core:move-to-top'
+  'ctrl-down': 'core:move-to-bottom'
+
   'ctrl-right': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-right': 'editor:select-to-end-of-line'
 
