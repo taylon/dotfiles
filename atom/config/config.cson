@@ -27,6 +27,7 @@
       "atom-import-cost"
       "emmet"
       "linter"
+      "linter-ui-default"
     ]
     telemetryConsent: "no"
     themes: [
@@ -50,6 +51,8 @@
     test:
       coverageDisplayMode: "gutter"
       runTestsOnSave: false
+  "highlight-selected":
+    showResultsOnScrollBar: true
   "ide-flowtype":
     autoDownloadFlowBinaries: false
     tryFlowBin: true
