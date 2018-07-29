@@ -11,6 +11,7 @@ ln -s $DOTFILES_PATH/bash/bash_profile $HOME/.bash_profile
 # Fish
 ln -s $DOTFILES_PATH/fish $HOME/.config/fish
 touch $HOME/.config/fish/private.fish
+ln -s $DOTFILES_PATH/fish/fishfile $HOME/.fisherman_plugins/fishfile
 
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"

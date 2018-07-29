@@ -1,3 +1,7 @@
+# Common variables that I use often
+set -gx DEV_PATH "$HOME/Development"
+set -gx DOTFILES_PATH "$DEV_PATH/dotfiles"
+
 # Set some variables to identify OS
 set -l macos_uname "Darwin"
 set -gx OSAMI (uname)
@@ -47,6 +51,17 @@ set PATH $PATH $GOROOT/bin $GOPATH/bin
 
 # TODO: Apply this only on Arch Linux
 # SSH Agent on systemd
-#set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+# set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
+# Setup Fisherman to save plugins in a different folder
+set -U fish_path $HOME/.fisherman_plugins
+
+set fish_function_path $fish_path/functions $fish_function_path
+set fish_complete_path $fish_path/completions $fish_complete_path
+
+for file in $fish_path/conf.d/*.fish
+  builtin source $file 2> /dev/null
+end
+
+# Disable greeting message
 set fish_greeting

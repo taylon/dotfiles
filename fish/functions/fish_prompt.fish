@@ -19,30 +19,6 @@ function my_prompt_pwd --description "Print the current working directory, short
     }'
 end
 
-function my_vim_mode --description "Display the current Vi mode"
-    # Do nothing if not in vi mode
-    if test "$fish_key_bindings" = "fish_vi_key_bindings"
-        or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
-        switch $fish_bind_mode
-            case default
-                set_color red --bold
-            case insert
-                set_color white --bold
-            case replace-one
-                set_color white --bold
-            case visual
-                set_color magenta --bold
-        end
-
-        echo ' > '
-        set_color normal
-    else
-      set_color white --bold
-      echo ' > '
-      set_color normal
-    end
-end
-
 function fish_prompt
   set -g __fish_git_prompt_color_branch yellow --bold
   set -g __fish_git_prompt_color_prefix yellow --bold
@@ -72,7 +48,8 @@ function fish_prompt
 
   printf '%s' (__fish_git_prompt)
 
-  printf '%s' (my_vim_mode)
+  set_color white --bold
+  printf ' > '
 
   set_color normal
 end
