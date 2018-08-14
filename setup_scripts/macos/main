@@ -13,6 +13,7 @@ mkdir -p $HOME/Development/go/pkg
 # Install homebrew (https://brew.sh/)
 brew tap caskroom/drivers
 brew tap caskroom/fonts
+brew tap fisherman/tap
 
 # Install with Cask:
 brew cask install google-chrome
@@ -41,6 +42,7 @@ brew install make --with-default-names
 brew install n
 brew install shellcheck
 brew install fish
+brew install fisherman
 brew install git
 brew install openssh
 brew install diff-so-fancy
