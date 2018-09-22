@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Include lib for printing with colors
-source /home/taylon/Development/dotfiles/bash/libs/print.sh
+# shellcheck source=/dev/null
+source $DOTFILES_PATH/bash/libs/print.sh
 
 ACTION="$1"
 KBD="$2"

@@ -13,8 +13,8 @@ services:
   ergodox:
     build: .
     volumes:
-     - ./ergodox_ez:/qmk/layouts/community/ergodox/taylon
+     - ./ergodox_ez:/qmk/keyboards/ergodox_ez/keymaps/taylon/
      - ./dist:/qmk/.build
     command: [
-      "make", "keyboard=ergodox_ez", "keymap=taylon"
+      "make", "ergodox_ez:taylon"
     ]

@@ -35,9 +35,7 @@ function fish_prompt
   set -g __fish_git_prompt_color_dirtystate ffc200 --bold
   set -g __fish_git_prompt_color_stagedstate 31e02f --bold
   set -g __fish_git_prompt_color_stashstate cyan
-  set -g __fish_git_prompt_color_upstream_behind red --bold
-  set -g __fish_git_prompt_color_upstream_ahead red --bold
-  set -g __fish_git_prompt_color_upstream_diverged red --bold
+  set -g __fish_git_prompt_color_upstream red
 
   set -g __fish_git_prompt_char_stagedstate '•'
   set -g __fish_git_prompt_char_dirtystate '•'
@@ -46,9 +44,9 @@ function fish_prompt
   set -g __fish_git_prompt_char_conflictedstate '✘'
   set -g __fish_git_prompt_char_stashstate '#'
   set -g __fish_git_prompt_char_cleanstate '✔'
-  set -g __fish_git_prompt_char_upstream_behind '⇣'
-  set -g __fish_git_prompt_char_upstream_ahead '⇡'
-  set -g __fish_git_prompt_char_upstream_diverged '⇕'
+  set -g __fish_git_prompt_char_upstream_behind ' ↡'
+  set -g __fish_git_prompt_char_upstream_ahead ' ↟'
+  set -g __fish_git_prompt_char_upstream_diverged '⬍'
 
   printf '\n'
 
