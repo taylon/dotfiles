@@ -8,7 +8,7 @@ ACTION="$1"
 KBD="$2"
 
 check_keyboard_type() {
-  if [[ $KBD != "ergodox" && $KBD != "dactyl" ]]; then
+  if [[ $KBD != "ergodox" && $KBD != "dactyl" && $KBD != "atreus62" ]]; then
     print::fail "You must specify a supported keyboard type"
     exit 1
   fi
@@ -35,6 +35,8 @@ case $ACTION in
         hex_file="ergodox_ez_taylon.hex"
       elif [[ $KBD == "dactyl" ]]; then
         hex_file="handwired_dactyl_taylon.hex"
+      elif [[ $KBD == "atreus62" ]]; then
+        hex_file="atreus62_taylon.hex"
       fi
 
       teensy-loader-cli -v -mmcu=atmega32u4 -w ./dist/$hex_file

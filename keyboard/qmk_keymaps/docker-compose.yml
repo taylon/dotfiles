@@ -18,3 +18,12 @@ services:
     command: [
       "make", "ergodox_ez:taylon"
     ]
+
+  atreus62:
+    build: .
+    volumes:
+     - ./atreus62:/qmk/keyboards/atreus62/keymaps/taylon/
+     - ./dist:/qmk/.build
+    command: [
+      "make", "atreus62:taylon"
+    ]
