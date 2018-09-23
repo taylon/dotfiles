@@ -4,8 +4,9 @@ services:
   dactyl:
     build: .
     volumes:
-     - ./dactyl:/qmk/keyboards/handwired/dactyl/keymaps/taylon/
-     - ./dist:/qmk/.build
+      - ./dactyl:/qmk/keyboards/handwired/dactyl/keymaps/taylon/
+      - ./shared:/qmk/keyboards/handwired/dactyl/keymaps/shared/
+      - ./dist:/qmk/.build
     command: [
       "make", "handwired/dactyl:taylon"
     ]
@@ -13,8 +14,9 @@ services:
   ergodox:
     build: .
     volumes:
-     - ./ergodox_ez:/qmk/keyboards/ergodox_ez/keymaps/taylon/
-     - ./dist:/qmk/.build
+      - ./ergodox_ez:/qmk/keyboards/ergodox_ez/keymaps/taylon/
+      - ./shared:/qmk/keyboards/ergodox_ez/keymaps/shared/
+      - ./dist:/qmk/.build
     command: [
       "make", "ergodox_ez:taylon"
     ]
@@ -22,8 +24,9 @@ services:
   atreus62:
     build: .
     volumes:
-     - ./atreus62:/qmk/keyboards/atreus62/keymaps/taylon/
-     - ./dist:/qmk/.build
+      - ./atreus62:/qmk/keyboards/atreus62/keymaps/taylon/
+      - ./shared:/qmk/keyboards/atreus62/keymaps/shared/
+      - ./dist:/qmk/.build
     command: [
       "make", "atreus62:taylon"
     ]

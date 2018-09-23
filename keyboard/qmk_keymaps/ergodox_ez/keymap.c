@@ -5,48 +5,17 @@
 #include "keymap_german.h"
 #include "keymap_nordic.h"
 
+// Ergodox EZ won't include base.h because we are keeping too many specific things
+// from the default config
+#include "../shared/layers.h"
+#include "../shared/tap_dance.h"
+
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
   VRSN,
   RGB_SLD,
-};
-
-// Layers
-enum {
-  BASE = 0,
-  NUMPAD,
-  SYMBOLS,
-  MOUSE,
-  LEDS,
-  QWERTY,
-};
-
-// Tap Dance Declarations
-enum {
-  // Symbols
-  TD_PRN = 0,
-  TD_CBR,
-  TD_BRACKET,
-
-  // Shortcuts
-  TD_INDENT,
-  TD_FOLD,
-  TD_COPY_CUT,
-};
-
-// Tap Dance Definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-  // Symbols
-  [TD_PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
-  [TD_CBR] = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_RCBR),
-  [TD_BRACKET] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_RBRACKET),
-
-  // Shortcuts
-  [TD_INDENT] = ACTION_TAP_DANCE_DOUBLE(LGUI(KC_RBRACKET), LGUI(KC_LBRACKET)),
-  [TD_FOLD] = ACTION_TAP_DANCE_DOUBLE(LALT(LGUI(KC_LBRACKET)), LALT(LGUI(KC_LEFT_CURLY_BRACE))),
-  [TD_COPY_CUT] = ACTION_TAP_DANCE_DOUBLE(LGUI(KC_C), LGUI(KC_X)),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -197,6 +166,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
+
 // From here it is all default stuff from the Ergodox EZ
 
 const uint16_t PROGMEM fn_actions[] = {
@@ -229,18 +199,21 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       if (record->event.pressed) {
         eeconfig_init();
       }
+
       return false;
       break;
     case VRSN:
       if (record->event.pressed) {
         SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
       }
+
       return false;
       break;
     case RGB_SLD:
       if (record->event.pressed) {
         rgblight_mode(1);
       }
+
       return false;
       break;
 
@@ -312,6 +285,6 @@ uint32_t layer_state_set_user(uint32_t state) {
       default:
         break;
     }
-    return state;
 
+    return state;
 };

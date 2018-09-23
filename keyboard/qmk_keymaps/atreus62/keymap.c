@@ -1,53 +1,8 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-enum custom_keycodes {
-  PLACEHOLDER = SAFE_RANGE, // can always be here
-  VRSN,
-};
+#include "../shared/base.h"
 
-// Layers
-enum {
-  BASE = 0,
-  NUMPAD,
-  SYMBOLS,
-  MOUSE,
-  LAYER_HUB,
-  QWERTY,
-  RESET_LAYER,
-};
-
-// Tap Dance Declarations
-enum {
-  // Layers
-  TD_LAYER_HUB = 0,
-
-  // Symbols
-  TD_PRN,
-  TD_CBR,
-  TD_BRACKET,
-
-  // Shortcuts
-  TD_INDENT,
-  TD_FOLD,
-  TD_COPY_CUT,
-};
-
-// Tap Dance Definitions
-qk_tap_dance_action_t tap_dance_actions[] = {
-  // Layers
-  [TD_LAYER_HUB] = ACTION_TAP_DANCE_DUAL_ROLE(KC_ESCAPE, LAYER_HUB),
-
-  // Symbols
-  [TD_PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
-  [TD_CBR] = ACTION_TAP_DANCE_DOUBLE(KC_LCBR, KC_RCBR),
-  [TD_BRACKET] = ACTION_TAP_DANCE_DOUBLE(KC_LBRACKET, KC_RBRACKET),
-
-  // Shortcuts
-  [TD_INDENT] = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_RBRACKET), LCTL(KC_LBRACKET)),
-  [TD_FOLD] = ACTION_TAP_DANCE_DOUBLE(LALT(LGUI(KC_LBRACKET)), LALT(LGUI(KC_LEFT_CURLY_BRACE))),
-  [TD_COPY_CUT] = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_C), LCTL(KC_X)),
-};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT(
@@ -95,7 +50,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,   KC_Q,    KC_W,    KC_E,    KC_R,     KC_T,                          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_RBRC ,
     KC_BSLS,  KC_A,    KC_S,    KC_D,    KC_F,     KC_G,                          KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENTER ,
     KC_LSFT,  KC_Z,    KC_X,    KC_C,    KC_V,     KC_B,                          KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_LBRC ,
-    KC_LCTL,  KC_LGUI, KC_LALT, KC_LEFT, KC_RIGHT, KC_BSPC,  KC_DELT,  KC_ENTER,  KC_SPC,  KC_EQL,  KC_MINS, KC_QUOT, KC_ENT,  TO(BASE)
+    KC_LCTL,  KC_LGUI, KC_LALT, KC_LEFT, KC_RIGHT, KC_BSPC,  KC_DELT,  KC_ENTER,  KC_SPC,  KC_UP,   KC_DOWN, KC_QUOT, KC_ENT,  TO(BASE)
   ),
 
   [RESET_LAYER] = LAYOUT(
@@ -106,19 +61,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT,   TO(BASE), RESET,   KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT, KC_TRANSPARENT
   ),
 };
-
-const uint16_t PROGMEM fn_actions[] = {
-  [1] = ACTION_LAYER_TAP_TOGGLE(1)
-};
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-    case VRSN:
-      if (record->event.pressed) {
-        SEND_STRING (QMK_KEYBOARD "/" QMK_KEYMAP " @ " QMK_VERSION);
-      }
-      return false;
-      break;
-  }
-  return true;
-}
