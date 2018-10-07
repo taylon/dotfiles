@@ -2,13 +2,12 @@
 #include "debug.h"
 #include "action_layer.h"
 #include "version.h"
-#include "keymap_german.h"
-#include "keymap_nordic.h"
 
 // Ergodox EZ won't include base.h because we are keeping too many specific things
 // from the default config
 #include "../shared/layers.h"
 #include "../shared/tap_dance.h"
+#include "../shared/keylogger.h"
 
 
 enum custom_keycodes {
@@ -193,6 +192,8 @@ void matrix_init_user(void) {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  log_keyaction(keycode, record);
+
   switch (keycode) {
     // dynamically generate these.
     case EPRM:
@@ -218,11 +219,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       break;
 
   }
+
   return true;
 }
 
 uint32_t layer_state_set_user(uint32_t state) {
-
     uint8_t layer = biton32(state);
 
     ergodox_board_led_off();

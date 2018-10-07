@@ -1,5 +1,6 @@
 #include "layers.h"
 #include "tap_dance.h"
+#include "keylogger.h"
 
 
 enum custom_keycodes {
@@ -12,6 +13,8 @@ const uint16_t PROGMEM fn_actions[] = {
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  log_keyaction(keycode, record);
+
   switch (keycode) {
     case VRSN:
       if (record->event.pressed) {
