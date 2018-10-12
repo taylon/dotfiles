@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
-# Include lib for printing with colors
 source /home/taylon/Development/dotfiles/bash/libs/print.sh
 
-# We will update using Yaourt as well and that should not run as root
+# We will update using aurman and that should not run as root
 if [[ $(id -u) -eq 0 ]]; then
   print::fail "Do not run this as root!"
   exit 1
@@ -20,20 +19,24 @@ if [[ ! $answer =~ ^[Yy]$ ]]; then
   exit 0
 fi
 
-mirrorlist_path="/etc/pacman.d/mirrorlist"
+read -n 1 -p "Should we update the mirrorlist? [y/N] " answer
+echo
+if [[ $answer =~ ^[Yy]$ ]]; then
+  mirrorlist_path="/etc/pacman.d/mirrorlist"
 
-# Remove old bkp file
-if [ -f "$mirrorlist_path.bkp" ]; then
-  sudo rm -f /etc/pacman.d/mirrorlist.bkp
+  # Remove old bkp file
+  if [ -f "$mirrorlist_path.bkp" ]; then
+    sudo rm -f /etc/pacman.d/mirrorlist.bkp
+  fi
+
+  # Backup current mirrorlist
+  sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
+
+  # Update mirrorlist
+  print::note "Generating new mirrorlist..."
+  sudo reflector --latest 100 --protocol http --protocol https --sort rate --country 'United States' --country 'Brazil' --save "$mirrorlist_path"
+  print::sucess "mirrorlist sucessfully updated!"
 fi
-
-# Backup current mirrorlist
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
-
-# Update mirrorlist
-print::note "Generating new mirrorlist..."
-sudo reflector --latest 100 --protocol http --protocol https --sort rate --country 'United States' --country 'Brazil' --save "$mirrorlist_path"
-print::sucess "mirrorlist sucessfully updated!"
 
 # Update!
 aurman -Syu
