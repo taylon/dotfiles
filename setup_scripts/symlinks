@@ -13,6 +13,9 @@ ln -s $DOTFILES_PATH/fish $HOME/.config/fish
 touch $HOME/.config/fish/private.fish
 ln -s $DOTFILES_PATH/fish/fishfile $HOME/.fisherman_plugins/fishfile
 
+# Ag
+ln -s $DOTFILES_PATH/ag/agignore $HOME/.agignore
+
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
 ln -s $TMUX_COFIG_PATH/tmux.conf $HOME/tmux.conf

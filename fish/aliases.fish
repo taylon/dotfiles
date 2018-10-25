@@ -12,3 +12,6 @@ alias rm trash
 
 # Git
 alias g git
+
+# Ag
+alias ag 'ag --path-to-ignore ~/.agignore'
