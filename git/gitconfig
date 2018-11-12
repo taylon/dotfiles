@@ -39,6 +39,8 @@
 	ca = commit --amend
 	co = checkout
 	s = status
+	st = stash
+	sp = stash pop
 	a = add
 	aa = add --all
 	d = diff
