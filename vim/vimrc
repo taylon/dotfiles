@@ -3,6 +3,9 @@ set nocompatible
 " Enable line numbers
 set number
 
+" Enable backspace
+set backspace=2
+
 " Search options
 set hlsearch " Highlight the last used search pattern.
 set incsearch " Highlight matched patterns as you type
