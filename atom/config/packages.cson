@@ -38,6 +38,7 @@ packages: [
   "language-docker"
   "language-fish-shell"
   "language-graphql"
+  "language-i3wm"
   "language-ini"
   "language-nginx"
   "language-systemd"
