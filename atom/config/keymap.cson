@@ -28,6 +28,9 @@
   'ctrl-up': 'core:move-to-top'
   'ctrl-down': 'core:move-to-bottom'
 
+  'ctrl-shift-up': 'core:select-to-top'
+  'ctrl-shift-down': 'core:select-to-bottom'
+
   'ctrl-right': 'editor:move-to-end-of-screen-line'
   'ctrl-shift-right': 'editor:select-to-end-of-line'
 
