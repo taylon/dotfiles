@@ -23,6 +23,7 @@ ln -s $TMUX_COFIG_PATH/tmuxinator $HOME/.tmuxinator
 
 # Git
 ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
+ln -s $DOTFILES_PATH/git/gitconfig_riot $HOME/.gitconfig_riot
 
 # Atom
 ln -s $DOTFILES_PATH/atom/config/init.coffee $HOME/.atom/init.coffee

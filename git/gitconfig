@@ -48,3 +48,6 @@
 
 [advice]
 	statusHints = false
+
+[includeIf "gitdir:~/Development/riot/"]
+  path = .gitconfig_riot

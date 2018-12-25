@@ -11,9 +11,9 @@ mkdir $DOTFILES_PATH/vim/.undo
 # Create folder for N
 mkdir -p $HOME/.node/bin
 
-# Setup SSH keys
+# Setup SSH keys at ~/.ssh/config
 # Host github.com
-#   IdentityFile ~/.ssh/
+#   IdentityFile ~/.ssh/...
 
 # Create Fisherman's plugins folder
 mkdir $HOME/.fisherman_plugins

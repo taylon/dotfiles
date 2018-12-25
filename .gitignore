@@ -24,3 +24,6 @@ keyboard/qmk_keymaps/dist/
 # General
 TODO
 .DS_Store
+
+# Git
+git/gitconfig_riot
