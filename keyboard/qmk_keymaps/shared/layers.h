@@ -3,7 +3,7 @@ enum {
   NUMPAD,
   SYMBOLS,
   MOUSE,
-  LAYER_HUB,
+  HUB_LAYER,
   QWERTY,
   RESET_LAYER,
 

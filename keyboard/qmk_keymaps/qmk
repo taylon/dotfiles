@@ -1,44 +1,72 @@
 #!/usr/bin/env bash
-
-# Include lib for printing with colors
 # shellcheck source=/dev/null
-source $DOTFILES_PATH/bash/libs/print.sh
+
+source "${DOTFILES_PATH}/bash/libs/print.sh"
+
+# docker-compose run --rm "$KBD"
+# sudo chown -R taylon dist
 
 ACTION="$1"
 KBD="$2"
 
+DOCKER_IMAGE="qmk_keymaps_builder"
+QMK_KEYMAPS_FOLDER="${DOTFILES_PATH}/keyboard/qmk_keymaps"
+KEYBOARDS_PATH="${QMK_KEYMAPS_FOLDER}/keyboards"
+DIST_PATH="${QMK_KEYMAPS_FOLDER}/dist"
+
 check_keyboard_type() {
-  if [[ $KBD != "ergodox" && $KBD != "dactyl" && $KBD != "atreus62" ]]; then
+  if [[ -z $KBD || ! -d "${KEYBOARDS_PATH}/${KBD}"  ]]; then
     print::fail "You must specify a supported keyboard type"
     exit 1
   fi
 }
 
+clean() {
+  # On Linux Docker sets root user for files created in volumes
+  # I won't bother with this right now so let's just use sudo
+  rm -rf "$DIST_PATH"
+}
+
 case $ACTION in
-  "build-images" )
-      docker-compose build
+  "build-image" )
+      docker build -t $DOCKER_IMAGE .
     ;;
 
   "build" )
       check_keyboard_type
+      clean
 
-      sudo rm -rf ./dist
+      target=default
+      make_command=(make "${KBD}":"${target}")
 
-      docker-compose run $KBD
-      sudo chown -R taylon dist
+      if [[ $(uname) == "Darwin" ]]; then
+        make_command=("${make_command[@]}" "EXTRAFLAGS=-D IS_MACOS")
+      fi
+
+      keymaps_path="/qmk/keyboards/$KBD/keymaps"
+      # shellcheck disable=SC2086
+      docker run --rm \
+        -v "${KEYBOARDS_PATH}/$KBD/:${keymaps_path}/$target/" \
+        -v "${QMK_KEYMAPS_FOLDER}/shared:${keymaps_path}/shared/" \
+        -v "${QMK_KEYMAPS_FOLDER}/dist/:/qmk/.build/" \
+        qmk_keymaps_builder \
+        "${make_command[@]}"
+
+      # On Linux Docker sets root user for files created in volumes
+      # I won't bother with this right now so let's just use sudo
+      sudo chown -R "$(whoami)":"$(whoami)" "$DIST_PATH"
     ;;
 
   "flash" )
       check_keyboard_type
 
-      if [[ $KBD == "ergodox" ]]; then
-        hex_file="ergodox_ez_taylon.hex"
-      elif [[ $KBD == "dactyl" ]]; then
-        hex_file="handwired_dactyl_taylon.hex"
-      elif [[ $KBD == "atreus62" ]]; then
-        hex_file="atreus62_taylon.hex"
+      hex_file="${DIST_PATH}/${KBD}_default.hex"
+
+      if [[ ! -e $hex_file && ! -s $hex_file ]]; then
+        print::fail "Hex file does not exist or is empty"
+        exit 1
       fi
 
-      teensy-loader-cli -v -mmcu=atmega32u4 -w ./dist/$hex_file
+      teensy-loader-cli -v -mmcu=atmega32u4 -w "$hex_file"
     ;;
 esac

@@ -16,7 +16,7 @@ enum {
 // Tap Dance Definitions
 qk_tap_dance_action_t tap_dance_actions[] = {
   // Layers
-  [TD_LAYER_HUB] = ACTION_TAP_DANCE_DUAL_ROLE(KC_ESCAPE, LAYER_HUB),
+  [TD_LAYER_HUB] = ACTION_TAP_DANCE_DUAL_ROLE(KC_ESCAPE, HUB_LAYER),
 
   // Symbols
   [TD_PRN] = ACTION_TAP_DANCE_DOUBLE(KC_LPRN, KC_RPRN),
