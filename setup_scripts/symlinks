@@ -4,39 +4,42 @@ DEV_PATH="$HOME/Development"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
 
 # Bash
-ln -s $DOTFILES_PATH/bash/bashrc $HOME/.bashrc
-ln -s $DOTFILES_PATH/bash/bash_aliases $HOME/.bash_aliases
-ln -s $DOTFILES_PATH/bash/bash_profile $HOME/.bash_profile
+ln -s "$DOTFILES_PATH"/bash/bashrc "$HOME"/.bashrc
+ln -s "$DOTFILES_PATH"/bash/bash_aliases "$HOME"/.bash_aliases
+ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 
 # Fish
-ln -s $DOTFILES_PATH/fish $HOME/.config/fish
-touch $HOME/.config/fish/private.fish
-ln -s $DOTFILES_PATH/fish/fishfile $HOME/.fisherman_plugins/fishfile
+ln -s "$DOTFILES_PATH"/fish "$HOME"/.config/fish
+touch "$HOME"/.config/fish/private.fish
+ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisherman_plugins/fishfile
+
+# bat
+ln -s "$DOTFILES_PATH"/bat "$HOME"/.config/bat
 
 # Ag
-ln -s $DOTFILES_PATH/ag/agignore $HOME/.agignore
+ln -s "$DOTFILES_PATH"/ag/agignore "$HOME"/.agignore
 
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
-ln -s $TMUX_COFIG_PATH/tmux.conf $HOME/tmux.conf
-ln -s $TMUX_COFIG_PATH/tmuxinator $HOME/.tmuxinator
+ln -s "$TMUX_COFIG_PATH"/tmux.conf "$HOME"/tmux.conf
+ln -s "$TMUX_COFIG_PATH"/tmuxinator "$HOME"/.tmuxinator
 
 # Git
-ln -s $DOTFILES_PATH/git/gitconfig $HOME/.gitconfig
-ln -s $DOTFILES_PATH/git/gitconfig_riot $HOME/.gitconfig_riot
+ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig
+ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot
 
 # Atom
-ln -s $DOTFILES_PATH/atom/config/init.coffee $HOME/.atom/init.coffee
-ln -s $DOTFILES_PATH/atom/config/config.cson $HOME/.atom/config.cson
-ln -s $DOTFILES_PATH/atom/config/packages.cson $HOME/.atom/packages.cson
-ln -s $DOTFILES_PATH/atom/config/keymap.cson $HOME/.atom/keymap.cson
-ln -s $DOTFILES_PATH/atom/config/snippets.cson $HOME/.atom/snippets.cson
-ln -s $DOTFILES_PATH/atom/config/styles.less $HOME/.atom/styles.less
+ln -s "$DOTFILES_PATH"/atom/config/init.coffee "$HOME"/.atom/init.coffee
+ln -s "$DOTFILES_PATH"/atom/config/config.cson "$HOME"/.atom/config.cson
+ln -s "$DOTFILES_PATH"/atom/config/packages.cson "$HOME"/.atom/packages.cson
+ln -s "$DOTFILES_PATH"/atom/config/keymap.cson "$HOME"/.atom/keymap.cson
+ln -s "$DOTFILES_PATH"/atom/config/snippets.cson "$HOME"/.atom/snippets.cson
+ln -s "$DOTFILES_PATH"/atom/config/styles.less "$HOME"/.atom/styles.less
 
 # Vim
-ln -s $DOTFILES_PATH/vim $HOME/.vim
-ln -s $DOTFILES_PATH/vim/vimrc $HOME/.vimrc
+ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
+ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
 
 # Executables
 BIN_PATH="$HOME/.bin"
-ln -s $DOTFILES_PATH/bin $BIN_PATH
+ln -s "$DOTFILES_PATH/bin" "$BIN_PATH"

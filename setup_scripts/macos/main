@@ -58,6 +58,7 @@ brew install exa
 brew install tldr
 brew install teensy_loader_cli
 brew install cliclick
+brew install bat
 
 # Remove outdated versions from the cellar
 brew cleanup

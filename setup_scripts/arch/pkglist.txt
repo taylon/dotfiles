@@ -23,6 +23,7 @@ pipenv
 wget
 exa
 teensy-loader-cli
+bat
 
 AUR:
 

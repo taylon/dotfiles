@@ -15,3 +15,6 @@ alias g git
 
 # Ag
 alias ag 'ag --path-to-ignore ~/.agignore'
+
+# bat
+alias cat bat
