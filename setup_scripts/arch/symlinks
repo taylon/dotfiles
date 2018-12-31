@@ -7,5 +7,5 @@ ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
 ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
 
 # Xmodmap - Custom mouse and keyboard mapping
-# ln -s $DOTFILES_PATH/setup_scripts/arch/Xmodmap $HOME/.Xmodmap
+ln -s $DOTFILES_PATH/setup_scripts/arch/Xmodmap $HOME/.Xmodmap
 

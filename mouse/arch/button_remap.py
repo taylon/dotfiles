@@ -4,30 +4,30 @@
 from pymouse import PyMouseEvent
 from pykeyboard import PyKeyboard
 
-k = PyKeyboard()
+kbd = PyKeyboard()
 
 
-class MouseToButton(PyMouseEvent):
+class MouseHandler(PyMouseEvent):
     def click(self, x, y, button, press):
         # 8 is the back button
         if button == 8:
             if press:
-                k.press_key(k.windows_l_key)
+                kbd.press_key(kbd.windows_l_key)
             else:  # release
-                k.release_key(k.windows_l_key)
+                kbd.release_key(kbd.windows_l_key)
 
     def scroll(self, vertical=None, horizontal=None, depth=None, direction=None):
         # Scroll clicked to the right
         if direction == -1:
-            win = k.windows_l_key
+            win = kbd.windows_l_key
             backslash = '\\'
 
-            k.press_key(win)
-            k.press_key(backslash)
+            kbd.press_key(win)
+            kbd.press_key(backslash)
 
-            k.release_key(backslash)
-            k.release_key(win)
+            kbd.release_key(backslash)
+            kbd.release_key(win)
 
 
-C = MouseToButton()
-C.run()
+mouse_handler = MouseHandler()
+mouse_handler.run()
