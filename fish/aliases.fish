@@ -18,3 +18,7 @@ alias ag 'ag --path-to-ignore ~/.agignore'
 
 # bat
 alias cat bat
+
+# Docker
+alias dc 'docker-compose'
+alias dr 'docker run --rm'
