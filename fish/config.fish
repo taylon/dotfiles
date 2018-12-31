@@ -31,7 +31,7 @@ set -l autojump_path "/usr/share/autojump/autojump.fish"
 set -l golang_path "/usr/lib/go"
 
 # There are things that should be different or only executed in MacOS
-if test (uname) == "Darwin"
+if test (uname) = "Darwin"
     # Add GNU coreutils bin to PATH and MANPATH
     set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
     set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
