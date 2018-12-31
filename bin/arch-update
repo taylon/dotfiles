@@ -2,6 +2,11 @@
 
 source /home/taylon/Development/dotfiles/bash/libs/print.sh
 
+if [[ ! -f "/etc/arch-release" ]]; then
+  print::fail "You should only run this on Arch Linux"
+  exit 1
+fi
+
 # We will update using aurman and that should not run as root
 if [[ $(id -u) -eq 0 ]]; then
   print::fail "Do not run this as root!"
