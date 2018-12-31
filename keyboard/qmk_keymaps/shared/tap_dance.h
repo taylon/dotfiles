@@ -25,5 +25,15 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 
   // Shortcuts
   [TD_FOLD] = ACTION_TAP_DANCE_DOUBLE(LALT(LGUI(KC_LBRACKET)), LALT(LGUI(KC_LEFT_CURLY_BRACE))),
+
+#ifdef IS_MACOS
+
+  [TD_COPY_CUT] = ACTION_TAP_DANCE_DOUBLE(LGUI(KC_C), LGUI(KC_X)),
+
+#else
+
   [TD_COPY_CUT] = ACTION_TAP_DANCE_DOUBLE(LCTL(KC_C), LCTL(KC_X)),
+
+#endif
+
 };
