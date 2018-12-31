@@ -1,0 +1,13 @@
+/* Completely removes Tabs because who need that? */
+.title.show-file-icons {
+  opacity: 0;
+  height: 8px;
+}
+
+/* Hide useless stuff in the status bar */
+.editor-status-indentation,
+.editor-status-encoding,
+.editor-status-eol,
+.editor-status-mode {
+  display: none !important;
+}
