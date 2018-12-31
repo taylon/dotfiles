@@ -6,8 +6,7 @@ case $- in
       *) return;;
 esac
 
-# Most systems will have $HOME already set, so do it only in case it is not.
-if [ -z "$HOME" ]; then
+if [[ -z "$HOME" ]]; then
   HOME="/home/taylon"
 fi
 
@@ -16,25 +15,31 @@ PATH="$PATH:$HOME/.bin"
 
 # TODO: Apply this only on Arch Linux
 # SSH Agent on systemd
-export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
 # Let's keep aliases in a different file
 if [ -f ~/.bash_aliases ]; then
-    source /home/taylon/.bash_aliases
+  source /home/taylon/.bash_aliases
 fi
 
 # Tilix - https://gnunn1.github.io/tilix-web/manual/vteconfig/
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+if [[ $TILIX_ID ]] || [[ $VTE_VERSION ]]; then
   source /etc/profile.d/vte.sh
 fi
 
-# Setup N (Node version management)
-# export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+# Setup n
+export N_PREFIX="$HOME/.node"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
+# Setup Electron trash properly on Linux
+# This might no longer be necessary ofter VSCode adopts
+# Electon 3.0 so keep an eye on it
+if [[ $(uname) == "Linux" ]]; then
+  export ELECTRON_TRASH=gio
+fi
 
 
 
-
-# XXX: From here we have pretty much ElementaryOS's default bashrc, which is pretty
+# XXX: From here we have pretty much Arch's default bashrc, which is pretty
 # good but might cause issues in other systems:
 
 # don't put duplicate lines or lines starting with space in the history.

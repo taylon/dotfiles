@@ -3,10 +3,6 @@ set -gx DEV_PATH "$HOME/Development"
 set -gx DOTFILES_PATH "$DEV_PATH/dotfiles"
 set -gx XDG_CONFIG_HOME "$HOME/.config"
 
-# Set some variables to identify OS
-set -l macos_uname "Darwin"
-set -gx OSAMI (uname)
-
 # Keep private stuff in another file which is not checked into git
 source $HOME/.config/fish/private.fish
 
@@ -23,6 +19,11 @@ set PATH $PATH $HOME/.bin
 set -gx N_PREFIX $HOME/.node
 set PATH $N_PREFIX/bin $PATH
 
+# Temporary workaround for supporting Trash on electon apps
+# This might no longer be necessary after apps adopt
+# Electon 3.0 so keep an eye on it
+set -gx ELECTRON_TRASH gio
+
 # Set paths and other OS dependent things.
 # The default will be the paths used in Arch Linux, we will set different
 # ones when we are in MacOS
@@ -30,16 +31,19 @@ set -l autojump_path "/usr/share/autojump/autojump.fish"
 set -l golang_path "/usr/lib/go"
 
 # There are things that should be different or only executed in MacOS
-if test $OSAMI = $macos_uname
-  # Add GNU coreutils bin to PATH and MANPATH
-  set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
-  set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
+if test (uname) == "Darwin"
+    # Add GNU coreutils bin to PATH and MANPATH
+    set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+    set MANPATH /usr/local/opt/coreutils/libexec/gnuman $MANPATH
 
-  # Set Autojump's init script path
-  set autojump_path "/usr/local/share/autojump/autojump.fish"
+    # Set Autojump's init script path
+    set autojump_path "/usr/local/share/autojump/autojump.fish"
 
-  # Set Go's instalation path
-  set golang_path "/usr/local/opt/go/libexec"
+    # Set Go's instalation path
+    set golang_path "/usr/local/opt/go/libexec"
+
+    # This is not necessary on MacOS
+    set -e ELECTRON_TRASH
 end
 
 # Source Autojump's init script
@@ -61,7 +65,7 @@ set fish_function_path $fish_function_path[1] $fisher_path/functions $fish_funct
 set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
 
 for file in $fisher_path/conf.d/*.fish
-  builtin source $file 2> /dev/null
+    builtin source $file 2>/dev/null
 end
 
 # Disable greeting message
