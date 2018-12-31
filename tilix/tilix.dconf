@@ -3,46 +3,66 @@ default='c3376b19-9964-4858-b19d-e8e788665d3f'
 list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'c3376b19-9964-4858-b19d-e8e788665d3f']
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+allow-bold=false
 visible-name='Default'
 
 [profiles/c3376b19-9964-4858-b19d-e8e788665d3f]
 foreground-color='#ABB2BF'
 visible-name='Taylon'
 dim-color-set=false
-palette=['#000000', '#E12121', '#7ACC31', '#D1AD1E', '#61AFEF', '#C678DD', '#5AC2CF', '#ABB2BF', '#5C6370', '#E12121', '#7BCC31', '#D1AC1D', '#268AD2', '#C678DD', '#5AC1CE', '#ABB2BF']
+login-shell=false
+bold-is-bright=true
+badge-color='#FFFFFF'
 badge-color-set=false
+palette=['#000000', '#E06C75', '#98C379', '#D19A66', '#61AEEE', '#C678DD', '#56B6C2', '#ABB2BF', '#5C6370', '#E06C75', '#98C379', '#D19A66', '#62AFEE', '#C678DD', '#56B6C2', '#FFFFFF']
+cursor-background-color='#4FA6EE'
 cursor-shape='ibeam'
-cursor-colors-set=false
+cursor-colors-set=true
 highlight-colors-set=false
-use-system-font=false
+cell-height-scale=1.1000000000000001
 bold-color-set=false
-font='Ubuntu Mono 13'
-use-theme-colors=false
+cursor-foreground-color='#FFFFFF'
+font='Operator Mono SSm weight=330 15'
+allow-bold=false
+use-system-font=false
 terminal-title='${id}: ${title}'
-background-color='#272C34'
+use-theme-colors=false
+background-color='#282C34'
 background-transparency-percent=0
 dim-transparency-percent=34
+scrollback-lines=15000
 
 [/]
+quake-specific-monitor=0
 prompt-on-close=true
+unsafe-paste-alert=false
 sidebar-on-right=true
+auto-hide-mouse=true
 terminal-title-style='none'
+window-state=0
 theme-variant='dark'
 session-name=''
+use-tabs=false
 enable-wide-handle=true
 app-title='${appName} ${sessionName}'
-window-style='normal'
+paste-strip-first-char=true
+window-save-state=false
+window-style='disable-csd-hide-toolbar'
 
 [keybindings]
-session-close='<Primary>w'
+session-close='disabled'
+session-switch-to-next-terminal='disabled'
 terminal-find='<Primary>f'
 session-switch-to-terminal-down='<Primary>Down'
-win-switch-to-previous-session='<Primary>braceleft'
+win-switch-to-previous-session='<Primary><Shift>Tab'
 session-add-right='<Primary>d'
 session-add-down='<Primary><Shift>d'
-win-switch-to-next-session='<Primary>braceright'
+terminal-paste='<Primary>v'
+win-switch-to-next-session='<Primary>Tab'
 app-new-session='<Primary>t'
 session-switch-to-terminal-right='<Primary>Right'
 session-switch-to-terminal-up='<Primary>Up'
-terminal-copy='<Primary><Shift>c'
+terminal-close='<Primary>w'
+session-switch-to-previous-terminal='<Primary><Shift><Alt>Left'
+terminal-copy='<Primary>c'
 session-switch-to-terminal-left='<Primary>Left'
