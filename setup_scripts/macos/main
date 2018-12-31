@@ -42,7 +42,7 @@ brew install make --with-default-names
 brew install n
 brew install shellcheck
 brew install fish
-brew install fisherman
+brew install fisher
 brew install git
 brew install openssh
 brew install diff-so-fancy

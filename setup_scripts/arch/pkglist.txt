@@ -38,4 +38,4 @@ franz-bin
 tldr-cpp-client
 python-pyuserinput-git
 rsstail
-fisherman
+fisher

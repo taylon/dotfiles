@@ -1,6 +1,7 @@
-# Common variables that I use often
+# Variables
 set -gx DEV_PATH "$HOME/Development"
 set -gx DOTFILES_PATH "$DEV_PATH/dotfiles"
+set -gx XDG_CONFIG_HOME "$HOME/.config"
 
 # Set some variables to identify OS
 set -l macos_uname "Darwin"
@@ -53,13 +54,13 @@ set PATH $PATH $GOROOT/bin $GOPATH/bin
 # SSH Agent on systemd
 # set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
-# Setup Fisherman to save plugins in a different folder
-set -U fish_path $HOME/.fisherman_plugins
+# Setup Fisher to save plugins in a different location
+set -g fisher_path $HOME/.fisher_plugins
 
-set fish_function_path $fish_path/functions $fish_function_path
-set fish_complete_path $fish_path/completions $fish_complete_path
+set fish_function_path $fish_function_path[1] $fisher_path/functions $fish_function_path[2..-1]
+set fish_complete_path $fish_complete_path[1] $fisher_path/completions $fish_complete_path[2..-1]
 
-for file in $fish_path/conf.d/*.fish
+for file in $fisher_path/conf.d/*.fish
   builtin source $file 2> /dev/null
 end
 
