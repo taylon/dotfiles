@@ -1,0 +1,25 @@
+.blob-code-inner,
+.blob-num,
+.diff-table,
+.highlight pre {
+  font-family: "Operator Mono Book" !important;
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+}
+
+.pl-c,
+.pl-ii,
+.pl-e {
+  font-style: italic;
+}
+
+.file {
+  width: 1306px;
+}
+
+code,
+pre,
+tt {
+  font-family: "Operator Mono Book" !important;
+  font-size: 15px !important;
+}
