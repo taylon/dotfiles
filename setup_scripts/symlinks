@@ -27,6 +27,13 @@ ln -s "$TMUX_COFIG_PATH"/tmuxinator "$HOME"/.tmuxinator
 ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig
 ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot
 
+# VSCode
+ln -s "$DOTFILES_PATH"/prettier.config.js "$HOME"/.config/Code/User/prettier.config.js
+
+# Vim
+ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
+ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
+
 # Atom
 ln -s "$DOTFILES_PATH"/atom/config/init.coffee "$HOME"/.atom/init.coffee
 ln -s "$DOTFILES_PATH"/atom/config/config.cson "$HOME"/.atom/config.cson
@@ -34,10 +41,6 @@ ln -s "$DOTFILES_PATH"/atom/config/packages.cson "$HOME"/.atom/packages.cson
 ln -s "$DOTFILES_PATH"/atom/config/keymap.cson "$HOME"/.atom/keymap.cson
 ln -s "$DOTFILES_PATH"/atom/config/snippets.cson "$HOME"/.atom/snippets.cson
 ln -s "$DOTFILES_PATH"/atom/config/styles.less "$HOME"/.atom/styles.less
-
-# Vim
-ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
-ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
 
 # Executables
 BIN_PATH="$HOME/.bin"
