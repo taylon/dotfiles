@@ -10,7 +10,7 @@ ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 
 # Fish
 ln -s "$DOTFILES_PATH"/fish "$HOME"/.config/fish
-touch "$HOME"/.config/fish/private.fish
+ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisher_plugins/fishfile
 
 # bat
 ln -s "$DOTFILES_PATH"/bat "$HOME"/.config/bat
@@ -43,5 +43,6 @@ ln -s "$DOTFILES_PATH"/atom/config/snippets.cson "$HOME"/.atom/snippets.cson
 ln -s "$DOTFILES_PATH"/atom/config/styles.less "$HOME"/.atom/styles.less
 
 # Executables
-BIN_PATH="$HOME/.bin"
-ln -s "$DOTFILES_PATH/bin" "$BIN_PATH"
+ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
+
+# Don't forget the home directories aliases

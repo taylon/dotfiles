@@ -3,6 +3,9 @@
 DEV_PATH="$HOME/Development"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
 
+# Create private fish file
+touch "$HOME"/.config/fish/private.fish
+
 # Create VIM's backup, swap and undo history folders
 mkdir $DOTFILES_PATH/vim/.backups
 mkdir $DOTFILES_PATH/vim/.swaps
@@ -15,9 +18,9 @@ mkdir -p $HOME/.node/bin
 # Host github.com
 #   IdentityFile ~/.ssh/...
 
-# Create Fisherman's plugins folder
-mkdir $HOME/.fisherman_plugins
-
 # NPM stuff - Do this after setting up N/Node
-npm install -g bash-language-server
-npm install -g trash-cli
+yarn config set prefix $HOME/.node/
+
+yarn global add bash-language-server
+yarn global add trash-cli
+yarn global add all-the-package-names

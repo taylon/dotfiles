@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source /home/taylon/Development/dotfiles/bash/libs/print.sh
+source /home/taylon/Development/dotfiles/bash/libs/system_update.sh
 
 if [[ ! -f "/etc/arch-release" ]]; then
   print::fail "You should only run this on Arch Linux"
@@ -44,4 +45,8 @@ if [[ $answer =~ ^[Yy]$ ]]; then
 fi
 
 # Update!
+echo
+print::note "Updating Arch packages..."
 aurman -Syu
+
+system_update::common
