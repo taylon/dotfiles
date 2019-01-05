@@ -11,3 +11,8 @@
 .editor-status-mode {
   display: none !important;
 }
+
+/* Cursor animation */
+.cursor {
+  transition: all 80ms;
+}
