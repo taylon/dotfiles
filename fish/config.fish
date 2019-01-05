@@ -51,7 +51,7 @@ source $autojump_path
 
 # Golang
 set -gx GOROOT $golang_path
-set -gx GOPATH $HOME/Development/go
+set -gx GOPATH $DEV_PATH/go
 set PATH $PATH $GOROOT/bin $GOPATH/bin
 
 # TODO: Apply this only on Arch Linux
