@@ -4,6 +4,10 @@
   height: 8px;
 }
 
+.monaco-editor .scroll-decoration {
+  box-shadow: none;
+}
+
 /* Hide useless stuff in the status bar */
 .editor-status-indentation,
 .editor-status-encoding,
