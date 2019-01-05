@@ -18,7 +18,7 @@ brew tap fisherman/tap
 # Install with Cask:
 brew cask install google-chrome
 brew cask install sizeup
-brew cask install iterm2
+# brew cask install iterm2
 brew cask install atom # (package-sync for initial setup)
 brew cask install google-backup-and-sync
 brew cask install font-ubuntu
@@ -28,6 +28,7 @@ brew cask install dash
 brew cask install bartender
 brew cask install radiant-player
 brew cask install logitech-options
+brew cask install kitty
 
 # Install with brew:
 brew install coreutils

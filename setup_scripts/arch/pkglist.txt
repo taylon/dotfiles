@@ -24,10 +24,12 @@ wget
 exa
 teensy-loader-cli
 bat
+jq
+kitty
 
 AUR:
 
-tilix
+# tilix
 google-chrome
 atom-editor-bin
 nodejs-n

@@ -21,7 +21,7 @@
 #define OS_PASTE LCTL(KC_V)
 
 // General functionalities
-#define GENERAL_JUMPY LSFT(KC_ENTER)
+#define LEADER HYPR(KC_L)
 #define GENERAL_TAB_NAV LCTL(KC_TAB)
 #define GENERAL_TAB_RECENT LCTL(LSFT(KC_TAB))
 
@@ -45,7 +45,7 @@
 #define HM_S LCTL_T(KC_S)
 
 #define HM_E LCTL_T(KC_E)
-#define HM_O GUI_T(KC_I)
+#define HM_O GUI_T(KC_O)
 
 #endif
 

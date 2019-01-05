@@ -23,6 +23,9 @@ TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
 ln -s "$TMUX_COFIG_PATH"/tmux.conf "$HOME"/tmux.conf
 ln -s "$TMUX_COFIG_PATH"/tmuxinator "$HOME"/.tmuxinator
 
+# Kitty
+ln -s "$DOTFILES_PATH"/kitty "$HOME"/.config/kitty
+
 # Git
 ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig
 ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot

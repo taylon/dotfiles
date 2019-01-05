@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
 # Systemd
-ln -s $DOTFILES_PATH/systemd $HOME/.config/systemd
+ln -s "$DOTFILES_PATH"/systemd "$HOME"/.config/systemd
+
+# Fonts
+mkdir -p "$HOME"/.config/fontconfig/conf.d/
+ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$HOME"/.config/fontconfig/conf.d/90-operator-mono-ssm.conf
 
 # Tilix
-ln -s $DOTFILES_PATH/tilix $HOME/.config/tilix
+# ln -s "$DOTFILES_PATH"/tilix "$HOME"/.config/tilix
 
 # Xmodmap - Custom mouse and keyboard mapping
-ln -s $DOTFILES_PATH/setup_scripts/arch/Xmodmap $HOME/.Xmodmap
+ln -s "$DOTFILES_PATH"/setup_scripts/arch/Xmodmap "$HOME"/.Xmodmap
 

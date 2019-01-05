@@ -24,7 +24,7 @@ check_keyboard_type() {
 clean() {
   # On Linux Docker sets root user for files created in volumes
   # I won't bother with this right now so let's just use sudo
-  rm -rf "$DIST_PATH"
+  sudo rm -rf "$DIST_PATH"
 }
 
 case $ACTION in
