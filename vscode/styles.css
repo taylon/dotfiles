@@ -1,3 +1,8 @@
+/* Cursor animation */
+.cursor {
+  transition: all 80ms;
+}
+
 /* Completely removes Tabs because who need that? */
 .title.show-file-icons {
   opacity: 0;
@@ -16,7 +21,38 @@
   display: none !important;
 }
 
-/* Cursor animation */
-.cursor {
-  transition: all 80ms;
+/* Smooth animation to in .monaco-tree */
+.monaco-tree .monaco-tree-rows > .monaco-tree-row {
+  transition: background-color 0.3s ease;
+}
+
+/* File Navigation - Quick Open Widget */
+.monaco-quick-open-widget {
+  top: 15% !important;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: rgb(29, 29, 33) 0 2px 14px 3px !important;
+}
+
+.monaco-quick-open-widget .monaco-tree .monaco-tree-rows > .monaco-tree-row {
+  height: 37px !important;
+  font-size: 18px;
+}
+
+.monaco-quick-open-widget .monaco-tree .monaco-tree-row > .content.actions {
+  align-items: center;
+}
+
+.monaco-quick-open-widget .quick-open-input .monaco-inputbox {
+  height: 36px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.monaco-quick-open-widget .quick-open-input {
+  font-size: 15px;
+}
+
+.monaco-quick-open-widget .monaco-inputbox > .wrapper > .input {
+  padding-left: 8px;
 }

@@ -48,4 +48,4 @@ ln -s "$DOTFILES_PATH"/atom/config/styles.less "$HOME"/.atom/styles.less
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
 
-# Don't forget the home directories aliases
+# Don't forget the home directory aliases
