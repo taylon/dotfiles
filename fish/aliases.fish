@@ -14,6 +14,7 @@ alias rm trash
 
 # Git
 alias g git
+alias s 'git status'
 
 # Ag
 alias ag 'ag -S --path-to-ignore ~/.agignore'
