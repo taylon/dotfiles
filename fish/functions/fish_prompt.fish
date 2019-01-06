@@ -44,9 +44,9 @@ function fish_prompt
     set -g __fish_git_prompt_char_conflictedstate '✘'
     set -g __fish_git_prompt_char_stashstate '#'
     set -g __fish_git_prompt_char_cleanstate '✔'
-    set -g __fish_git_prompt_char_upstream_behind ' ⇣'
-    set -g __fish_git_prompt_char_upstream_ahead ' ⇡'
-    set -g __fish_git_prompt_char_upstream_diverged '⬍'
+    set -g __fish_git_prompt_char_upstream_behind ' 🠇'
+    set -g __fish_git_prompt_char_upstream_ahead ' 🠅'
+    set -g __fish_git_prompt_char_upstream_diverged '⮃'
 
     printf '\n'
 
