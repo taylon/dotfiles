@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
 
+# Normalize VSCode config location between Linux and MacOS
+ ln -s "$HOME/Library/Application Support/Code/" "$HOME"/.config/Code
+
 # ColemakDH-Matrix layout
-ln -s $DOTFILES_PATH/keyboard/macos/ColemakDH-Matrix.bundle /Library/"Keyboard Layouts"/ColemakDH-Matrix.bundle
+ln -s "$DOTFILES_PATH"/keyboard/macos/ColemakDH-Matrix.bundle "/Library/Keyboard Layouts/ColemakDH-Matrix.bundle"
 
 # Remap capslock to backspace
-ln -s $DOTFILES_PATH/keyboard/macos/remap_caps.plist $HOME/Library/LaunchAgents/com.user.loginscript.plist
+ln -s "$DOTFILES_PATH"/keyboard/macos/remap_caps.plist "$HOME"/Library/LaunchAgents/com.user.loginscript.plist
 
 # On MacOS teensy loader is installed with a name different from Arch, so let's link it for consistency
 ln -s /usr/local/bin/teensy_loader_cli /usr/local/bin/teensy-loader-cli
