@@ -22,8 +22,8 @@
 
 // General functionalities
 #define LEADER HYPR(KC_L)
-#define GENERAL_TAB_NAV LCTL(KC_TAB)
-#define GENERAL_TAB_RECENT LCTL(LSFT(KC_TAB))
+#define GENERAL_TAB_NAV LCTL(LSFT(KC_TAB))
+#define GENERAL_TAB_RECENT LCTL(KC_TAB)
 
 // Symbols
 #define SYMBOL_CBR TD(TD_CBR)
