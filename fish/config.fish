@@ -6,8 +6,9 @@ set -gx XDG_CONFIG_HOME "$HOME/.config"
 # Keep private stuff in another file which is not checked into git
 source $HOME/.config/fish/private.fish
 
-# Source aliases
+# Source aliases and abbreviations
 source $HOME/.config/fish/aliases.fish
+source $HOME/.config/fish/abbreviations.fish
 
 # Set VIM as default editor
 set -gx EDITOR vim
