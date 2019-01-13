@@ -3,6 +3,7 @@ fishd.*
 fish_history
 fish/private.fish
 fish/functions/fisher.fish
+fish/fish_variables
 
 # Tmux
 tmux/tmuxinator/*.yml
