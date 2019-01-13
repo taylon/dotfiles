@@ -18,7 +18,11 @@
 
 // OS functionality
 #define OS_COPY_CUT TD(TD_COPY_CUT)
+#ifdef IS_MACOS
+#define OS_PASTE LGUI(KC_V)
+#else
 #define OS_PASTE LCTL(KC_V)
+#endif
 
 // General functionalities
 #define LEADER HYPR(KC_L)
