@@ -37,16 +37,16 @@ function fish_prompt
     set -g __fish_git_prompt_color_stashstate cyan
     set -g __fish_git_prompt_color_upstream red
 
-    set -g __fish_git_prompt_char_stagedstate '•'
-    set -g __fish_git_prompt_char_dirtystate '•'
-    set -g __fish_git_prompt_char_untrackedfiles '•'
-    set -g __fish_git_prompt_char_invalidstate '✘'
-    set -g __fish_git_prompt_char_conflictedstate '✘'
+    set -g __fish_git_prompt_char_stagedstate '•' # U+2022
+    set -g __fish_git_prompt_char_dirtystate '•' # U+2022
+    set -g __fish_git_prompt_char_untrackedfiles '•' # U+2022
+    set -g __fish_git_prompt_char_invalidstate '✘' # U+2718
+    set -g __fish_git_prompt_char_conflictedstate '✘' # U+2718
     set -g __fish_git_prompt_char_stashstate '#'
-    set -g __fish_git_prompt_char_cleanstate '✔'
-    set -g __fish_git_prompt_char_upstream_behind ' 🠇'
-    set -g __fish_git_prompt_char_upstream_ahead ' 🠅'
-    set -g __fish_git_prompt_char_upstream_diverged '⮃'
+    set -g __fish_git_prompt_char_cleanstate '✔' # U+2714
+    set -g __fish_git_prompt_char_upstream_behind ' 🠇' # U+1F807
+    set -g __fish_git_prompt_char_upstream_ahead ' 🠅' # U+1F805
+    set -g __fish_git_prompt_char_upstream_diverged '⮃' # U+2B83
 
     printf '\n'
 
@@ -59,7 +59,7 @@ function fish_prompt
     printf '%s' (__fish_git_prompt)
 
     # printf '\n➜ '
-    printf '\n⮞ '
+    printf '\n⮞ ' # U+2B9E
 
     set_color normal
 end
