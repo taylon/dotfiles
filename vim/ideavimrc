@@ -1,0 +1,9 @@
+set number
+set relativenumber
+set scrolloff=3
+set hlsearch
+set incsearch
+set showmode
+set smartcase
+
+set surround

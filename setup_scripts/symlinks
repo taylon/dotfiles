@@ -36,6 +36,7 @@ ln -s "$DOTFILES_PATH"/prettier.config.js "$HOME"/.config/Code/User/prettier.con
 # Vim
 ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
 ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
+ln -s "$DOTFILES_PATH"/vim/ideavimrc "$HOME"/.ideavimrc
 
 # Atom
 ln -s "$DOTFILES_PATH"/atom/config/init.coffee "$HOME"/.atom/init.coffee
