@@ -6,10 +6,6 @@ case $- in
       *) return;;
 esac
 
-if [[ -z "$HOME" ]]; then
-  HOME="/home/taylon"
-fi
-
 # Set PATH
 PATH="$PATH:$HOME/.bin"
 
