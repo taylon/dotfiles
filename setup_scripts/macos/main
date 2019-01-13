@@ -22,6 +22,7 @@ brew cask install sizeup
 brew cask install atom # (package-sync for initial setup)
 brew cask install google-backup-and-sync
 brew cask install font-ubuntu
+brew cask install font-symbola
 brew cask install docker
 brew cask install franz
 brew cask install dash

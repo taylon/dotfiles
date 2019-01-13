@@ -7,6 +7,9 @@ ln -s "$DOTFILES_PATH"/systemd "$HOME"/.config/systemd
 mkdir -p "$HOME"/.config/fontconfig/conf.d/
 ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$HOME"/.config/fontconfig/conf.d/90-operator-mono-ssm.conf
 
+# Kitty
+ln -s "$DOTFILES_PATH"/kitty/linux_keymaps.conf "$HOME"/.config/kitty_os_specific_keymaps.conf
+
 # Tilix
 # ln -s "$DOTFILES_PATH"/tilix "$HOME"/.config/tilix
 
