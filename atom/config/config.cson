@@ -35,7 +35,7 @@
       "yaod-syntax"
     ]
   editor:
-    fontFamily: "Operator Mono"
+    fontFamily: "Operator Mono SSm"
     fontSize: 20
   "go-plus":
     autocomplete:
