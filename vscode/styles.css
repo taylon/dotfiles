@@ -1,8 +1,3 @@
-/* Cursor animation */
-.cursor {
-  transition: all 80ms;
-}
-
 /* Completely removes Tabs because who need that? */
 .title.show-file-icons {
   opacity: 0;
@@ -32,6 +27,10 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   box-shadow: rgb(29, 29, 33) 0 2px 14px 3px !important;
+}
+
+.monaco-quick-open-widget .quick-open-tree {
+  min-height: 210px !important;
 }
 
 .monaco-quick-open-widget .monaco-tree .monaco-tree-rows > .monaco-tree-row {
