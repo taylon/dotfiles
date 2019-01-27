@@ -23,3 +23,8 @@ dconf load /com/gexperts/Tilix/ < $DOTFILES_PATH/tilix/tilix.conf
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 sudo gpasswd -a taylon docker
+
+# VSCode Spell Right dictionaries
+mkdir "$HOME"/.config/Code/Dictionaries/
+wget --directory-prefix "$HOME"/.config/Code/Dictionaries/ "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/English (American).aff"
+wget --directory-prefix "$HOME"/.config/Code/Dictionaries/ "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/English (American).dic"
