@@ -3,13 +3,14 @@ set nocompatible
 set backspace=indent,eol,start
 set history=1000
 set wildmenu " Improved command line completion
-set clipboard=unnamed " Use the OS clipboard by default
+set clipboard=unnamedplus " Use the OS clipboard by default
 set autoindent " Carry over indenting from previous line
 set smarttab
 set tabstop=2 " Make tabs as wide as two spaces
 set shiftwidth=2
 set expandtab
 set autoread " Auto read files if it changes outside vim
+set ignorecase
 set smartcase
 set hlsearch " Highlight the last used search pattern.
 set incsearch " Highlight matched patterns as you type
