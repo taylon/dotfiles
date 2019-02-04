@@ -3,7 +3,6 @@ set nocompatible
 set backspace=indent,eol,start
 set history=1000
 set wildmenu " Improved command line completion
-set clipboard=unnamedplus " Use the OS clipboard by default
 set autoindent " Carry over indenting from previous line
 set smarttab
 set tabstop=2 " Make tabs as wide as two spaces
@@ -22,6 +21,11 @@ set relativenumber
 set scrolloff=3 " Start scrolling three lines before the horizontal window border
 
 filetype plugin indent on
+
+set clipboard=unnamedplus " Use the OS clipboard by default
+if system("uname") == "Darwin"
+  set clipboard=unnamed
+endif
 
 if has('syntax') && !exists('g:syntax_on')
   syntax enable
