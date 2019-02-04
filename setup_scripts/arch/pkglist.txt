@@ -26,6 +26,7 @@ teensy-loader-cli
 bat
 jq
 kitty
+fd
 
 AUR:
 
