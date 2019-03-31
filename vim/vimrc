@@ -22,8 +22,9 @@ set scrolloff=3 " Start scrolling three lines before the horizontal window borde
 
 filetype plugin indent on
 
-set clipboard=unnamedplus " Use the OS clipboard by default
-if system("uname") == "Darwin"
+if system("uname") == "Linux"
+  set clipboard=unnamedplus " Use the OS clipboard by default
+else
   set clipboard=unnamed
 endif
 

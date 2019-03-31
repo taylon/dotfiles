@@ -1,8 +1,9 @@
 " Save with Ctrl-s
 inoremap <C-S> <Esc>:w<CR>
 
-" Jump to next line on insert mode
-" imap <C-
+" Insert new line in Normal Mode
+nmap <Enter> o<Esc>
+" nmap <S-Enter> O<Esc>
 
 " Plugins
 
