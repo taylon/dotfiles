@@ -7,3 +7,6 @@ set showmode
 set smartcase
 
 set surround
+
+" Keybindings
+inoremap <C-S> <esc>:w<CR>
