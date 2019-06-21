@@ -5,9 +5,9 @@
 
 # Install Golang and create GOPATH folders
 # https://golang.org/dl/
-mkdir -p $HOME/Development/go/src
-mkdir -p $HOME/Development/go/bin
-mkdir -p $HOME/Development/go/pkg
+mkdir -p "$HOME"/Development/go/src
+mkdir -p "$HOME"/Development/go/bin
+mkdir -p "$HOME"/Development/go/pkg
 
 
 # Install homebrew (https://brew.sh/)
@@ -18,39 +18,36 @@ brew tap fisherman/tap
 # Install with Cask:
 brew cask install google-chrome
 brew cask install sizeup
-# brew cask install iterm2
-brew cask install atom # (package-sync for initial setup)
 brew cask install google-backup-and-sync
 brew cask install font-ubuntu
 brew cask install font-symbola
 brew cask install docker
 brew cask install franz
-brew cask install dash
+brew cask install alfred
 brew cask install bartender
-brew cask install radiant-player
 brew cask install logitech-options
 brew cask install kitty
 
 # Install with brew:
 brew install coreutils
-brew install gnu-sed --with-default-names
-brew install findutils --with-default-names
-brew install gnu-tar --with-default-names
-brew install gnu-which --with-default-names
+brew install gnu-sed
+brew install findutils
+brew install gnu-tar
+brew install gnu-which
 brew install wget
-brew install vim --with-override-system-vi
+brew install vim
 brew install less
-brew install make --with-default-names
+brew install make
 brew install n
 brew install shellcheck
 brew install fish
-brew install fisher
 brew install git
 brew install openssh
 brew install diff-so-fancy
 brew install the_silver_searcher
 brew install autojump
 brew install bash
+brew install dash
 brew install httpie
 brew install awscli
 brew install terraform
@@ -59,9 +56,9 @@ brew install pipenv
 brew install exa
 brew install tldr
 brew install teensy_loader_cli
-brew install cliclick
 brew install bat
 brew install fd
+brew install jetbrains-toolbox
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -75,9 +72,13 @@ pip3 install bpython
 # Add bash and fish to /etc/shells
 echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
 echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
+echo '/usr/local/bin/dash' | sudo tee -a /etc/shells
 
 # Set fish as default shell
 chsh -s /usr/local/bin/fish
+
+# Use Dash instead of whatever is linked to sh
+ln -sf dash /usr/local/bin/sh
 
 
 # Install Ubuntu font with ligatures - https://github.com/ToxicFrog/Ligaturizer

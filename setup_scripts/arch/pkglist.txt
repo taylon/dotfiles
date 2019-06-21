@@ -27,6 +27,7 @@ bat
 jq
 kitty
 fd
+dash
 
 AUR:
 
