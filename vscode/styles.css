@@ -8,14 +8,6 @@
   box-shadow: none;
 }
 
-/* Hide useless stuff in the status bar */
-.editor-status-indentation,
-.editor-status-encoding,
-.editor-status-eol,
-.editor-status-mode {
-  display: none !important;
-}
-
 /* Smooth animation to in .monaco-tree */
 .monaco-tree .monaco-tree-rows > .monaco-tree-row {
   transition: background-color 0.3s ease;
