@@ -28,6 +28,7 @@ jq
 kitty
 fd
 dash
+fzf
 
 AUR:
 

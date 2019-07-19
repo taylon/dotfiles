@@ -59,6 +59,7 @@ brew install teensy_loader_cli
 brew install bat
 brew install fd
 brew install jetbrains-toolbox
+brew install fzf
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -76,6 +77,9 @@ echo '/usr/local/bin/dash' | sudo tee -a /etc/shells
 
 # Set fish as default shell
 chsh -s /usr/local/bin/fish
+
+# Setup fzf completions and shortcuts for fish
+$(brew --prefix)/opt/fzf/install
 
 # Use Dash instead of whatever is linked to sh
 ln -sf dash /usr/local/bin/sh
