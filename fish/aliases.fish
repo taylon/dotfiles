@@ -10,7 +10,7 @@ alias ..... 'cd ../../../..'
 alias ls 'exa -a'
 
 # trash-cli
-alias rm trash
+# alias rm trash
 
 # Git
 alias g git

@@ -1,3 +1,5 @@
+settings.blacklistPattern = /.*thetypingcat/i;
+
 // Unmap useless search bindings
 unmap("sd");
 unmap("sb");
