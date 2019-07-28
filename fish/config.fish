@@ -20,6 +20,10 @@ set PATH $PATH $HOME/.bin
 set -gx N_PREFIX $HOME/.node
 set PATH $N_PREFIX/bin $PATH
 
+# fzf
+set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
+set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+
 # Temporary workaround for supporting Trash on electon apps
 # This might no longer be necessary after apps adopt
 # Electon 3.0 so keep an eye on it
