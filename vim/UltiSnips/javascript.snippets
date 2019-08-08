@@ -1,0 +1,78 @@
+global !p
+from snippets_helpers import *
+endglobal
+
+snippet l "console.log"
+console.log($1)
+endsnippet
+
+snippet if "if statement" b
+if ($1) {
+	$2
+}
+endsnippet
+
+snippet ef "export function" b
+export${1: default} function $2($3) {
+	$4
+}
+endsnippet
+
+snippet i "import" b
+import ${1:{ $2 }} from '$3'
+endsnippet
+
+# TODO: have a post trigger action that automatically imports all this things?
+# React stuff that is not only for tsx
+snippet us "useState" b
+const [$1, set`!p
+firstChar = t[1][0] if len(t[1]) > 0 else ''
+snip.rv = firstChar.upper() + t[1][1:]
+`] = useState($2)
+endsnippet
+
+snippet ue "useEffect" b
+useEffect(() => ${1:{
+	$2
+}${3:, [$4]}})
+endsnippet
+
+snippet uis "useUIDSeed" b
+const uidSeed = useUIDSeed()
+endsnippet
+
+# TODO: Make these ones trigger only if the filename contains .test
+# Jest
+snippet jt "Jest Test" b
+describe('`!p snip.rv = remove_extension(fn)`', () => {
+	it('$1', () => {
+		$2
+
+		expect(true).toEqual(true)
+	})
+})
+endsnippet
+
+snippet it "it" b
+it('$1', () => {
+	$2
+
+	expect(true).toEqual(true)
+})
+endsnippet
+
+snippet be "beforeEach" b
+beforeEach(() => {
+	$1
+})
+endsnippet
+
+snippet ae "afterEach" b
+afterEach(() => {
+	$1
+})
+endsnippet
+
+snippet e "expect" b
+expect($1).${2:toEqual}($3)
+endsnippet

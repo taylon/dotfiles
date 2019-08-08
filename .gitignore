@@ -27,6 +27,8 @@ keyboard/qmk_keymaps/dist/
 # General
 TODO
 .DS_Store
+__pycache__/
+*.pyc
 
 # Git
 git/gitconfig_riot

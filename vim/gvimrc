@@ -1,0 +1,23 @@
+set guifont=Operator\ Mono\ SSm:h18
+set guioptions= " Remove all UI elements like toolbars and scrollbars
+
+set linespace=10 " Set line height
+set macligatures " Enable font ligatures
+
+" Keep the cursor always in the middle
+"augroup VCenterCursor
+"  au!
+"  au BufEnter,WinEnter,WinNew,VimResized *,*.*
+"       \ let &scrolloff=winheight(win_getid())/2
+"augroup END
+
+" MacVim
+if has("gui_macvim")
+
+  " Unbind useless bs
+  macmenu File.Print key=<nop>
+  macmenu File.Save key=<nop>
+  macmenu File.Save\ All key=<nop>
+  macmenu File.Save\ As\.\.\. key=<nop>
+
+endif

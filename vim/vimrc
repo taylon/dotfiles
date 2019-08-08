@@ -19,11 +19,18 @@ set nowrap " Don't wrap lines
 set number
 set relativenumber
 set scrolloff=3 " Start scrolling three lines before the horizontal window border
+set signcolumn=yes " Always show the signcolumn in the gutter
+set pumheight=7 " limit the number of suggestions shown in the autocomplete menu
 
 filetype plugin indent on
 
+" Folding
+set foldmethod=syntax
+set nofoldenable
+
+" Use the OS clipboard by default
 if system("uname") == "Linux"
-  set clipboard=unnamedplus " Use the OS clipboard by default
+  set clipboard=unnamedplus
 else
   set clipboard=unnamed
 endif
@@ -59,31 +66,14 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
-" Plugins configuration
+source ~/.vim/keymaps.vim
+source ~/.vim/plugins.vim
 
-" ALE
-let g:ale_linters_explicit = 1 " Only run linters named in ale_linters settings.
-let g:ale_fix_on_save = 1
-let g:ale_completion_enabled = 0
+let g:onedark_hide_endofbuffer = 1
+augroup colorset
+  autocmd!
+  let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" }
+  autocmd ColorScheme * call onedark#set_highlight("MatchParen", { "fg": s:blue })
+augroup END
 
-" vim-plug
-call plug#begin('~/.vim/plugged')
-
-Plug 'joshdick/onedark.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'sheerun/vim-polyglot'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'yggdroot/indentline'
-Plug 'w0rp/ale'
-
-call plug#end()
-
-" Colorscheme
 colorscheme onedark
-
-" NERDCommenter
-let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters by default
-let g:NERDDefaultAlign = 'left' " Align delimiters flush left instead of following code indentation
-
-source ~/.vim/keybindings.vim

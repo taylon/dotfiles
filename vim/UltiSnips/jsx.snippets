@@ -1,0 +1,48 @@
+extends javascript
+
+snippet ir "import React" b
+import React from 'react'
+endsnippet
+
+snippet rc "React Component" b
+import React from 'react'
+
+export default function `!p snip.rv = fn.split('.', 1)[0]`($1) {
+	$2
+}
+endsnippet
+
+snippet ss "Storybook Story" b
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+
+storiesOf('$1', module).add('$2', () => ${3:{
+	$4
+}})
+endsnippet
+
+snippet s "styled component" b
+const $1 = styled${2:($3)}\`
+	$4
+\`
+endsnippet
+
+# this one should live within the javascript 
+# snippets and be smart enough to include
+# the react import depending on whether or not
+# the file name includes jsx/tsx, otherwise
+# we would have two snippets with the same name
+# and would have to choose one of them every time
+# Jest
+# snippet jt "Jest Test" b
+# import React from 'react'
+#
+# describe('`!p snip.rv = fn.split('.', 2)[0]`', () => {
+# 	it('$1', () => {
+# 		$2
+#
+# 		expect(true).toEqual(true)
+# 	})
+# })
+# endsnippet
+

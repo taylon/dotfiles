@@ -1,0 +1,24 @@
+{
+  "coc.preferences.formatOnType": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascripteact",
+    "typescriptreact",
+    "json",
+    "graphql"
+  ],
+
+  "tsserver.tsdk": "node_modules/typescript/lib",
+  "typescript.preferences.importModuleSpecifier": "auto",
+
+  "prettier.requireConfig": true,
+
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ]
+}
