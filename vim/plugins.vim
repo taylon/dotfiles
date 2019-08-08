@@ -91,6 +91,9 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gt <Plug>(coc-type-definition)
 
+" Actions
+nnoremap <leader>a :CocAction<Enter>
+
 " A normal mapping for this for whatever reason does not work
 " when you try to go to a definition that is in another file.
 " A function works though
