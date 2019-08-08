@@ -15,12 +15,11 @@ PATH="$PATH:$HOME/.bin"
 
 # Let's keep aliases in a different file
 if [ -f ~/.bash_aliases ]; then
-  source /home/taylon/.bash_aliases
-fi
-
-# Tilix - https://gnunn1.github.io/tilix-web/manual/vteconfig/
-if [[ $TILIX_ID ]] || [[ $VTE_VERSION ]]; then
-  source /etc/profile.d/vte.sh
+  if [[ $(uname) == "Linux" ]]; then
+    source /home/taylon/.bash_aliases
+  else
+    source /Users/tsilmer/.bash_aliases
+  fi
 fi
 
 # Setup n
