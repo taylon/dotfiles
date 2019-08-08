@@ -16,8 +16,5 @@ alias ls 'exa -a'
 alias g git
 alias s 'git status'
 
-# Ag
-alias ag 'ag -S -f --hidden --path-to-ignore ~/.agignore'
-
 # bat
 alias cat bat

@@ -11,7 +11,7 @@ arc-gtk-theme
 gnome-tweak-tool
 diff-so-fancy
 autojump
-the_silver_searcher
+ripgrep
 httpie
 mlocate
 docker

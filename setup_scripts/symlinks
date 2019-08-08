@@ -15,8 +15,8 @@ ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisher_plugins/fishfile
 # bat
 ln -s "$DOTFILES_PATH"/bat "$HOME"/.config/bat
 
-# Ag
-ln -s "$DOTFILES_PATH"/ag/agignore "$HOME"/.agignore
+# Rg
+ln -s "$DOTFILES_PATH"/ripgrep/ripgreprc "$HOME"/.config/ripgreprc
 
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
