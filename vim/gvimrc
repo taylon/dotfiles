@@ -5,11 +5,11 @@ set linespace=10 " Set line height
 set macligatures " Enable font ligatures
 
 " Keep the cursor always in the middle
-"augroup VCenterCursor
-"  au!
-"  au BufEnter,WinEnter,WinNew,VimResized *,*.*
-"       \ let &scrolloff=winheight(win_getid())/2
-"augroup END
+augroup VCenterCursor
+ au!
+ au BufEnter,WinEnter,WinNew,VimResized *,*.*
+      \ let &scrolloff=winheight(win_getid())/2
+augroup END
 
 " MacVim
 if has("gui_macvim")
@@ -19,5 +19,11 @@ if has("gui_macvim")
   macmenu File.Save key=<nop>
   macmenu File.Save\ All key=<nop>
   macmenu File.Save\ As\.\.\. key=<nop>
+  macmenu File.New\ Tab key=<nop>
 
 endif
+
+" Cursor settings
+highlight vCursor guifg=white guibg=#e5c07b
+set guicursor+=v:ver100-vCursor
+set guicursor+=a:blinkon0
