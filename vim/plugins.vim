@@ -133,8 +133,8 @@ map <D-/> <leader>c<Space>
 
 
 " FZF
-nnoremap <C-s-Tab> :FilesMru<Enter>
-inoremap <C-s-Tab> <ESC>:FilesMru<Enter>
+nnoremap <C-Tab> :FilesMru<Enter>
+inoremap <C-Tab> <ESC>:FilesMru<Enter>
 
 nnoremap <D-p> :Command<Enter>
 inoremap <D-p> <ESC>:Command<Enter>

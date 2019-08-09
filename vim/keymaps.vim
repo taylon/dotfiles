@@ -6,7 +6,7 @@ set nolangremap
 set langmap=hj,HJ,jh,JH
 
 " Ctrl-tab to move to last position
-nnoremap <C-Tab> <C-o>
+nnoremap <C-s-Tab> <C-o>
 
 " Save with Ctrl-s
 nnoremap <D-s> :w<Enter>
