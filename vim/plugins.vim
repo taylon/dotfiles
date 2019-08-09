@@ -15,6 +15,7 @@ Plug 'wellle/targets.vim'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'tweekmonster/fzf-filemru'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -132,11 +133,8 @@ map <D-/> <leader>c<Space>
 
 
 " FZF
-nnoremap <C-s-Tab> :History<Enter>
-inoremap <C-s-Tab> <ESC>:History<Enter>
-
-nnoremap <C-Tab> :Files<Enter>
-inoremap <C-Tab> <ESC>:Files<Enter>
+nnoremap <C-s-Tab> :FilesMru<Enter>
+inoremap <C-s-Tab> <ESC>:FilesMru<Enter>
 
 nnoremap <D-p> :Command<Enter>
 inoremap <D-p> <ESC>:Command<Enter>
