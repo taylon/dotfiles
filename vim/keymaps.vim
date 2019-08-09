@@ -8,6 +8,25 @@ set langmap=hj,HJ,jh,JH
 " Ctrl-tab to move to last position
 nnoremap <C-s-Tab> <C-o>
 
+if (has("gui_macvim"))
+  " Disable cmd_opt movement mappings because they
+  " conflict with other stuff
+  let macvim_skip_cmd_opt_movement = 1
+
+  " Let's try this temporarily until we have a better
+  " solution for this that does not involve D mappings
+  noremap <D-Left> <Home>
+  noremap <D-Right> <End>
+  noremap <M-Left> <C-Left>
+  noremap <M-Left> <C-Right>
+endif
+
+" Prevent A-direction jumps to be stored in the jumplist
+nnoremap <silent> <M-Up> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
+nnoremap <silent> <M-k> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
+nnoremap <silent> <M-Down> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
+nnoremap <silent> <M-h> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
+
 " Save with Ctrl-s
 nnoremap <D-s> :w<Enter>
 inoremap <D-s> <Esc>:w<Enter>
