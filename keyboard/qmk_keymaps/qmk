@@ -24,7 +24,8 @@ check_keyboard_type() {
 clean() {
   # On Linux Docker sets root user for files created in volumes
   # I won't bother with this right now so let's just use sudo
-  sudo rm -rf "$DIST_PATH"
+  # sudo rm -rf "$DIST_PATH"
+  rm -rf "$DIST_PATH"
 }
 
 case $ACTION in
@@ -38,6 +39,7 @@ case $ACTION in
 
       target=default
       make_command=(make "${KBD}":"${target}")
+      # make_command=(make "${KBD}":"${target}":bin)
 
       if [[ $(uname) == "Darwin" ]]; then
         make_command=("${make_command[@]}" "EXTRAFLAGS=-D IS_MACOS")
@@ -46,15 +48,19 @@ case $ACTION in
       keymaps_path="/qmk/keyboards/$KBD/keymaps"
       # shellcheck disable=SC2086
       docker run --rm \
-        -v "${KEYBOARDS_PATH}/$KBD/:${keymaps_path}/$target/" \
+        -v "${KEYBOARDS_PATH}/$KBD/:${keymaps_path}/${target}" \
         -v "${QMK_KEYMAPS_FOLDER}/shared:${keymaps_path}/shared/" \
         -v "${QMK_KEYMAPS_FOLDER}/dist/:/qmk/.build/" \
         qmk_keymaps_builder \
         "${make_command[@]}"
+        # make alf/dc60:default
+        # /bin/bash
+        # make alf/dc60:default
+        # /bin/bash
 
       # On Linux Docker sets root user for files created in volumes
       # I won't bother with this right now so let's just use sudo
-      sudo chown -R "$(whoami)":"$(whoami)" "$DIST_PATH"
+      # sudo chown -R "$(whoami)":"$(whoami)" "$DIST_PATH"
     ;;
 
   "flash" )

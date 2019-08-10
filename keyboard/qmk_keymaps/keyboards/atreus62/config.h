@@ -3,7 +3,7 @@
 #undef DIODE_DIRECTION
 
 #define MATRIX_ROW_PINS { D0, D1, D2, B6, D3 }
-#define MATRIX_COL_PINS { D7, D6, F7, F0, F4, E6, B4, C7, B0, B3, B2, F6, B7 }
+#define MATRIX_COL_PINS { D7, D6, F7, F0, F1, E6, B4, C7, B0, B3, B2, F6, B7 }
 
 #define DIODE_DIRECTION COL2ROW
 

@@ -13,8 +13,9 @@
 
 // Editor functionality
 #define EDITOR_FILE_TREE_NAVIGATION LCTL(KC_BSLASH)
-#define EDITOR_TOGGLE_FOLDING TD(TD_FOLD)
+#define EDITOR_TOGGLE_FOLDING LGUI(KC_LBRACKET)
 #define EDITOR_DEBUGGER LGUI(KC_5)
+#define EDITOR_BACK_ON_JUMP_LIST LCTL(KC_O)
 
 // OS functionality
 #define OS_COPY_CUT TD(TD_COPY_CUT)
@@ -25,7 +26,7 @@
 #endif
 
 // General functionalities
-#define LEADER HYPR(KC_L)
+#define LEADER LCTL(KC_BSLASH)
 #define GENERAL_TAB_NAV LCTL(LSFT(KC_TAB))
 #define GENERAL_TAB_RECENT LCTL(KC_TAB)
 
