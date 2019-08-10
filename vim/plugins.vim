@@ -36,7 +36,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'adelarsq/vim-matchit'
+Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 
