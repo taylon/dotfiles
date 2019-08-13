@@ -43,6 +43,13 @@ if (has("termguicolors"))
   set termguicolors " Enable 24-bit (true-color) mode
 endif
 
+" Disable cmd_opt movement mappings because they
+" conflict with other stuff, unfortunatelly this needs
+" to live in vimrc not gvimrc
+if has("gui_macvim")
+  let macvim_skip_cmd_opt_movement = 1
+endif
+
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>

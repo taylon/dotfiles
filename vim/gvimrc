@@ -21,6 +21,27 @@ if has("gui_macvim")
   macmenu File.Save\ As\.\.\. key=<nop>
   macmenu File.New\ Tab key=<nop>
 
+  " Let's try this temporarily until we have a better
+  " solution for this that does not involve D mappings
+  noremap  <D-Left> <Home>
+  noremap! <D-Left> <Home>
+  noremap  <M-Left> <C-Left>
+  noremap! <M-Left> <C-Left>
+
+  noremap  <D-Right> <End>
+  noremap! <D-Right> <End>
+  noremap  <M-Right> <C-Right>
+  noremap! <M-Right> <C-Right>
+
+  noremap  <D-Up> <C-Home>
+  inoremap <D-Up> <C-Home>
+
+  noremap  <D-Down> <C-End>
+  inoremap <D-Down> <C-End>
+
+  inoremap <M-BS> <C-w>
+  inoremap <D-BS> <C-u>
+
 endif
 
 " Cursor settings
