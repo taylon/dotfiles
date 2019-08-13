@@ -40,8 +40,14 @@ Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
+Plug 'bkad/CamelCaseMotion'
 
 call plug#end()
+
+" CamelCaseMotion
+let g:camelcasemotion_key = '<localleader>'
+imap <silent> <C-Left> <C-o><Plug>CamelCaseMotion_b
+imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
 
 " workspace
 let g:workspace_session_directory = $HOME.'/.vim/sessions/'
