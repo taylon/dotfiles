@@ -19,6 +19,7 @@ vim/.netrwhist
 vim/viminfo
 vim/plugged
 vim/autoload/plug.vim.old
+vim/sessions
 
 # QMK
 keyboard/qmk_keymaps/dist/
