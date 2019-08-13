@@ -1,0 +1,42 @@
+global !p
+from snippets_helpers import *
+endglobal
+
+context "is_test_file(snip.buffer.name) and not snip.buffer.name.endswith('jsx') and not snip.buffer.name.endswith('tsx')"
+snippet jt "Jest Test" b
+describe('`!p snip.rv = fn.split('.', 2)[0]`', () => {
+	it('$1', () => {
+		$2
+
+		expect(true).toEqual(true)
+	})
+})
+endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet it "it" b
+it('$1', () => {
+	$2
+
+	expect(true).toEqual(true)
+})
+endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet be "beforeEach" b
+beforeEach(() => {
+	$1
+})
+endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet ae "afterEach" b
+afterEach(() => {
+	$1
+})
+endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet e "expect" b
+expect($1).${2:toEqual}($3)
+endsnippet

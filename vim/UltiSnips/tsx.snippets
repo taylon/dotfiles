@@ -1,11 +1,7 @@
 extends typescript,jsx
 
-global !p
-from snippets_helpers import *
-endglobal
-
 snippet p "component props"
-interface `!p snip.rv = remove_extension(fn)`Props {
+interface `!p snip.rv = snip.basename`Props {
 	$1
 }
 endsnippet

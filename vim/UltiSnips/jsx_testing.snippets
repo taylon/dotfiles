@@ -1,0 +1,21 @@
+global !p
+from snippets_helpers import *
+endglobal
+
+context "is_test_file(snip.buffer.name)"
+snippet jt "Jest Test" b
+import React from 'react'
+
+describe('`!p snip.rv = fn.split('.', 2)[0]`', () => {
+	it('$1', () => {
+		$2
+
+		expect(true).toEqual(true)
+	})
+})
+endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet lw "console.log(wrapper.debug)" b
+console.log(wrapper${1:.}.debug({ ignoreProps: true }))$2
+endsnippet
