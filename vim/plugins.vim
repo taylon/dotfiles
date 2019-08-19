@@ -71,8 +71,8 @@ let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 let g:EasyMotion_keys = 'seriaowyfulpdkchx.,zgmtn'
 
-map <localleader>w <Plug>(easymotion-bd-w)
-map <localleader>s <Plug>(easymotion-s)
+map <localleader>s <Plug>(easymotion-bd-w)
+map <localleader><localleader> <Plug>(easymotion-s)
 nmap <localleader><localleader>s <Plug>(easymotion-overwin-f)
 nmap <localleader><localleader>w <Plug>(easymotion-overwin-w)
 map / <Plug>(easymotion-sn)
