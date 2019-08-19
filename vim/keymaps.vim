@@ -15,8 +15,8 @@ nnoremap <silent> <M-Down> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Ent
 nnoremap <silent> <M-h> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
 
 " Save with Ctrl-s
-nnoremap <D-s> :w<Enter>
-inoremap <D-s> <Esc>:w<Enter>
+nnoremap <silent> <D-s> :silent w<Enter>
+inoremap <silent> <D-s> <Esc>:silent w<Enter>
 
 " New line in Normal Mode
 nnoremap <Enter> o<Esc>
@@ -27,8 +27,8 @@ inoremap <D-Enter> <Esc>o
 inoremap <D-S-Enter> <Esc><S-o>
 
 " Clear search highlight with Esc
-nnoremap <silent> <Esc> :noh<Enter><Esc>
-nnoremap <Esc>^[ <Esc>^[
+" nnoremap <silent> <Esc> :noh<Enter><Esc>
+" nnoremap <Esc>^[ <Esc>^[
 
 " Splits
 nnoremap <leader>v :rightbelow vsplit<Enter>
