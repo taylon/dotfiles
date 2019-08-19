@@ -77,15 +77,7 @@ let &t_EI = "\<Esc>[2 q"
 
 source ~/.vim/keymaps.vim
 source ~/.vim/plugins.vim
-
-let g:onedark_hide_endofbuffer = 1
-augroup colorset
-  autocmd!
-  let s:blue = { "gui": "#61AFEF", "cterm": "39", "cterm16": "4" }
-  autocmd ColorScheme * call onedark#set_highlight("MatchParen", { "fg": s:blue })
-augroup END
-
-colorscheme onedark
+source ~/.vim/colorscheme.vim
 
 " For debugging syntax stuff
 " function! SynStack()

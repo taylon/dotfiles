@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'joshdick/onedark.vim'
 Plug 'luochen1990/rainbow'
 Plug 'ap/vim-css-color'
+Plug 'machakann/vim-highlightedyank'
 
 " Language stuff
 Plug 'sheerun/vim-polyglot'
@@ -22,7 +23,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Extensions
 " coc-tsserver
 " coc-prettier
-" coc-yank
 " coc-json
 " coc-css 
 
