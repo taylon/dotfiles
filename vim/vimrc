@@ -86,3 +86,10 @@ augroup colorset
 augroup END
 
 colorscheme onedark
+
+" For debugging syntax stuff
+" function! SynStack()
+"   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+" endfunc
+" set statusline+=%{SynStack()}
+"
