@@ -24,3 +24,5 @@ yarn config set prefix $HOME/.node/
 yarn global add bash-language-server
 yarn global add trash-cli
 yarn global add all-the-package-names
+
+# Override Ctrl-Tab in Chrome to avoid conflicts with Surfingkeys

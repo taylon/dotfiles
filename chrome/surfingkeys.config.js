@@ -6,10 +6,22 @@ unmap("sb");
 unmap("sw");
 unmap("ss");
 
+// Remap j and h to work better with Colemak-DHm
+map("h", "j");
+map("j", "h");
+
 // Remap history back/foward
 map("l", "S");
 map("u", "D");
 
+// Use t for new tab
+map("t", "on");
+
+// Tab navigation
+map("<Ctrl-Tab>", "T");
+map("<Ctrl-o>", "<Ctrl-6>");
+
+// Optimize hint characters for Colemak-DHm
 Hints.characters = "stradfpwgenihouylm,./";
 
 settings.theme = `
