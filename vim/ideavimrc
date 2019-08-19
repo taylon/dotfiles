@@ -9,5 +9,43 @@ set smartcase
 set surround
 set commentary
 
+" Integrate with system clipboard
+set clipboard+=unnamed
+
 " Keybindings
-inoremap <C-S> <esc>:w<CR>
+nmap h <Down>
+nmap k <Up>
+nmap l <Right>
+nmap j <Left>
+ 
+" Save with Ctrl-s
+nmap <M-s> :w<Enter>
+imap <M-s> <Esc>:w<Enter>
+
+" New line in Normal Mode
+nmap <Enter> o<Esc>
+nmap <S-Enter> O<Esc>
+
+" New line in Insert mode
+imap <D-Enter> <Esc>o
+imap <D-S-Enter> <Esc><S-o>
+
+nmap <C-\>v <C-w>v
+nmap <C-\><Right> <C-w><Right> 
+nmap <C-\><Left> <C-w><Left> 
+
+" Splits
+nmap <C-\>v <C-w>v
+nmap <C-\>s <C-w>s
+
+nmap <C-\><Right> <C-w><Right>
+nmap <C-\>l <C-w><Right>
+
+nmap <C-\><Left> <C-w><Left>
+nmap <C-\>j <C-w><Left>
+
+nmap <C-\><Up> <C-w><Up>
+nmap <C-\>k <C-w><Up>
+
+nmap <C-\><Down> <C-w><Down>
+nmap <C-\>h <C-w><Down>
