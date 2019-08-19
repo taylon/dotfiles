@@ -41,6 +41,7 @@ Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
 Plug 'bkad/CamelCaseMotion'
+Plug 'matze/vim-move'
 
 call plug#end()
 
@@ -54,12 +55,26 @@ let g:workspace_session_directory = $HOME.'/.vim/sessions/'
 let g:workspace_autosave = 0
 let g:workspace_autosave_untrailspaces = 0
 let g:workspace_persist_undo_history = 0 " This is already setup in vimrc
+let g:workspace_create_new_tabs = 0 " Do not create new tabs when calling vim with a file argument
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips'] 
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
+
+" move
+let g:move_map_keys = 0
+
+vmap H <Plug>MoveBlockDown
+vmap K <Plug>MoveBlockUp
+vmap <S-Down> <Plug>MoveBlockDown
+vmap <S-Up> <Plug>MoveBlockUp
+
+nmap K <Plug>MoveLineUp
+nmap H <Plug>MoveLineDown
+nmap <S-Down> <Plug>MoveLineDown
+nmap <S-Up> <Plug>MoveLineUp
 
 " NERDTree
 " Always use NERDTree by opening it in a split and replacing netwr
