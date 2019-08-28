@@ -24,6 +24,8 @@ map("<Ctrl-o>", "<Ctrl-6>");
 // Optimize hint characters for Colemak-DHm
 Hints.characters = "stradfpwgenihouylm,./";
 
+settings.tabsMRUOrder = false;
+
 settings.theme = `
 .sk_theme {
     font-family: Operator Mono SSm Book, sans-serif;
