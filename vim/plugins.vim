@@ -56,6 +56,7 @@ let g:workspace_autosave = 0
 let g:workspace_autosave_untrailspaces = 0
 let g:workspace_persist_undo_history = 0 " This is already setup in vimrc
 let g:workspace_create_new_tabs = 0 " Do not create new tabs when calling vim with a file argument
+let g:workspace_session_disable_on_args = 1 " Enable it only when calling vim without any arguments
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
