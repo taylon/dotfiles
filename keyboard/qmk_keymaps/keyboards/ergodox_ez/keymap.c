@@ -5,10 +5,10 @@
 
 // Ergodox EZ won't include base.h because we are keeping too many specific
 // things from the default config
-#include "../shared/layers.h"
-#include "../shared/tap_dance.h"
-#include "../shared/custom_keys.h"
-#include "../shared/keylogger.h"
+#include "./shared/layers.h"
+#include "./shared/tap_dance.h"
+#include "./shared/custom_keys.h"
+#include "./shared/keylogger.h"
 
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE,  // can always be here

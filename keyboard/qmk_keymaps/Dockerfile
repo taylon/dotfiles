@@ -24,9 +24,5 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/qmk/qmk_firmware.git /qmk
 WORKDIR /qmk
 
-# Copy Dactyl to a more standard folder, it will help with the
-# build cli
-RUN cp -r keyboards/handwired/dactyl/ keyboards/dactyl/
-
 RUN make git-submodule
 RUN make clean

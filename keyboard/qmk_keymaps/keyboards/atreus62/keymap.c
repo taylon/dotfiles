@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "version.h"
 
-#include "../shared/base.h"
+#include "./shared/base.h"
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT(

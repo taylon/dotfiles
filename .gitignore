@@ -30,6 +30,7 @@ TODO
 .DS_Store
 __pycache__/
 *.pyc
+.mypy_cache/
 
 # Git
 git/gitconfig_riot

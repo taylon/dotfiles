@@ -1,8 +1,8 @@
 #include QMK_KEYBOARD_H
 
-#include "../shared/layers.h"
-#include "../shared/tap_dance.h"
-#include "../shared/custom_keys.h"
+#include "./shared/layers.h"
+#include "./shared/tap_dance.h"
+#include "./shared/custom_keys.h"
 
 // KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 // KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
