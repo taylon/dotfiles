@@ -6,7 +6,8 @@
     "javascripteact",
     "typescriptreact",
     "json",
-    "graphql"
+    "graphql",
+    "python"
   ],
 
   "tsserver.tsdk": "node_modules/typescript/lib",
@@ -20,5 +21,9 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+
+  "python.jediEnabled": false,
+  "python.formatting.provider": "black",
+  "python.linting.mypyEnabled": true
 }

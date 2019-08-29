@@ -25,6 +25,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-prettier
 " coc-json
 " coc-css 
+" coc-python
 
 " General
 Plug 'tomtom/tcomment_vim'
