@@ -5,6 +5,9 @@ let maplocalleader="\<space>"
 set nolangremap
 set langmap=hj,HJ,jh,JH
 
+" Y should behave just like D or C
+map Y y$
+
 " Ctrl-tab to move to last position
 nnoremap <C-s-Tab> <C-o>
 
