@@ -27,6 +27,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc-css 
 " coc-python
 
+" Movement
+Plug 'rhysd/clever-f.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'bkad/CamelCaseMotion'
+Plug 'matze/vim-move'
+
 " General
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
@@ -36,13 +42,10 @@ Plug 'yggdroot/indentline'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'
-Plug 'easymotion/vim-easymotion'
 Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
-Plug 'bkad/CamelCaseMotion'
-Plug 'matze/vim-move'
 
 call plug#end()
 
@@ -50,6 +53,11 @@ call plug#end()
 let g:camelcasemotion_key = '<localleader>'
 imap <silent> <C-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
+
+" clever-f
+let g:clever_f_ignore_case = 1
+let g:clever_f_smart_case = 1
+let g:clever_f_chars_match_any_signs = ';'
 
 " workspace
 let g:workspace_session_directory = $HOME.'/.vim/sessions/'
