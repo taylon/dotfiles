@@ -32,6 +32,7 @@ Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'bkad/CamelCaseMotion'
 Plug 'matze/vim-move'
+Plug 'unblevable/quick-scope'
 
 " General
 Plug 'tomtom/tcomment_vim'
@@ -164,10 +165,6 @@ let g:closetag_regions =  {
 \ 'typescript.tsx': 'jsxRegion,tsxRegion',
 \ 'javascript.jsx': 'jsxRegion',
 \ }
-
-
-" NERDCommenter
-map <D-/> <leader>c<Space>
 
 
 " FZF
