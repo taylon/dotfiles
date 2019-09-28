@@ -56,7 +56,6 @@ imap <silent> <C-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
 
 " clever-f
-let g:clever_f_ignore_case = 1
 let g:clever_f_smart_case = 1
 let g:clever_f_chars_match_any_signs = ';'
 
