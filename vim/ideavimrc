@@ -13,11 +13,37 @@ set commentary
 set clipboard+=unnamed
 
 " Keybindings
+"
+" Remap j and h to work better with Colemak-DHm
 nmap h <Down>
+nmap dh d<Down>
+nmap ch c<Down>
+nmap yh y<Down>
+
 nmap k <Up>
+nmap dk d<Up>
+nmap ck c<Up>
+nmap yk y<Up>
+
 nmap l <Right>
 nmap j <Left>
- 
+
+" Y should behave just like D or C
+nmap Y y$
+
+" Jumps
+nmap gr :action GotoDeclaration<Enter>
+
+" Quick documentation
+nmap <C-\>d :action QuickJavaDoc<Enter>
+
+" Action List
+nmap <C-\>a :action ShowIntentionActions<Enter>
+
+" CamelCase navigation
+nmap <Space>w :action VimMotionCamelRight<Enter>
+nmap <Space>b :action VimMotionCamelLeft<Enter>
+
 " Save with Ctrl-s
 nmap <M-s> :w<Enter>
 imap <M-s> <Esc>:w<Enter>
