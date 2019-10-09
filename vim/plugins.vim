@@ -47,6 +47,7 @@ Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
