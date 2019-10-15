@@ -5,6 +5,8 @@
     "typescript",
     "javascripteact",
     "typescriptreact",
+    "css",
+    "scss",
     "json",
     "graphql",
     "python"
@@ -14,6 +16,7 @@
   "typescript.preferences.importModuleSpecifier": "auto",
 
   "prettier.requireConfig": true,
+  "prettier.disableSuccessMessage": true,
 
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
