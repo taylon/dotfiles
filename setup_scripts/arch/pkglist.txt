@@ -1,7 +1,7 @@
 git
 openssh
 fish
-aurman
+yay
 sudo
 vim
 ttf-ubuntu-font-family

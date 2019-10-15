@@ -30,9 +30,6 @@ ln -s "$DOTFILES_PATH"/kitty "$HOME"/.config/kitty
 ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig
 ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot
 
-# VSCode
-ln -s "$DOTFILES_PATH"/prettier.config.js "$HOME"/.config/Code/User/prettier.config.js
-
 # Vim
 ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
 ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc

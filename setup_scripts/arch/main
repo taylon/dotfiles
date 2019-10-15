@@ -1,20 +1,8 @@
 #!/usr/bin/env bash
 
-DEV_PATH="$HOME/Development"
-DOTFILES_PATH="$DEV_PATH/dotfiles"
-
-# Setup keyboard layout
-# sudo cat $DOTFILES_PATH/keyboard/arch/xkb_colemak_moddh_matrix >> /usr/share/X11/xkb/symbols/us
-# Add the content of $DOTFILES_PATH/keyboard/arch under the <layoutList> tag in the /usr/share/X11/xkb/rules/evdev.xml file
-
 # Install packages from arch_pkglist.txt
 
-# Setup Gnome
-
 # Setup symlinks
-
-# Load Tilix configuration
-dconf load /com/gexperts/Tilix/ < $DOTFILES_PATH/tilix/tilix.conf
 
 # Improve font-rendering
 # https://gist.github.com/cryzed/e002e7057435f02cc7894b9e748c5671
@@ -23,8 +11,3 @@ dconf load /com/gexperts/Tilix/ < $DOTFILES_PATH/tilix/tilix.conf
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 sudo gpasswd -a taylon docker
-
-# VSCode Spell Right dictionaries
-mkdir "$HOME"/.config/Code/Dictionaries/
-wget --directory-prefix "$HOME"/.config/Code/Dictionaries/ "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/English (American).aff"
-wget --directory-prefix "$HOME"/.config/Code/Dictionaries/ "https://raw.githubusercontent.com/titoBouzout/Dictionaries/master/English (American).dic"
