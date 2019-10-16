@@ -79,6 +79,13 @@ let &t_SI = "\<Esc>[6 q"
 let &t_SR = "\<Esc>[4 q"
 let &t_EI = "\<Esc>[2 q"
 
+" Keep the cursor always in the middle
+augroup VCenterCursor
+ au!
+ au BufEnter,WinEnter,WinNew,VimResized *,*.*
+      \ let &scrolloff=winheight(win_getid())/2
+augroup END
+
 source ~/.vim/keymaps.vim
 source ~/.vim/plugins.vim
 source ~/.vim/colorscheme.vim
@@ -88,4 +95,4 @@ source ~/.vim/colorscheme.vim
 "   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 " endfunc
 " set statusline+=%{SynStack()}
-"
+
