@@ -1,0 +1,5 @@
+- clean install 
+- installed nvidia drivers (nouveau did not work at all)
+- installed i3 (no nouveau so no sway)
+- installed pulseaudio and pulseaudio-alsa
+- generated new ssh keys

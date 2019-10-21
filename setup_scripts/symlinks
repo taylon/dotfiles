@@ -9,14 +9,14 @@ ln -s "$DOTFILES_PATH"/bash/bash_aliases "$HOME"/.bash_aliases
 ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 
 # Fish
-ln -s "$DOTFILES_PATH"/fish "$HOME"/.config/fish
+ln -s "$DOTFILES_PATH"/fish "$XDG_CONFIG_HOME"/fish
 ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisher_plugins/fishfile
 
 # bat
-ln -s "$DOTFILES_PATH"/bat "$HOME"/.config/bat
+ln -s "$DOTFILES_PATH"/bat "$XDG_CONFIG_HOME"/bat
 
 # Rg
-ln -s "$DOTFILES_PATH"/ripgrep/ripgreprc "$HOME"/.config/ripgreprc
+ln -s "$DOTFILES_PATH"/ripgrep/ripgreprc "$XDG_CONFIG_HOME"/ripgreprc
 
 # Tmux
 TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
@@ -24,17 +24,18 @@ ln -s "$TMUX_COFIG_PATH"/tmux.conf "$HOME"/tmux.conf
 ln -s "$TMUX_COFIG_PATH"/tmuxinator "$HOME"/.tmuxinator
 
 # Kitty
-ln -s "$DOTFILES_PATH"/kitty "$HOME"/.config/kitty
+ln -s "$DOTFILES_PATH"/kitty "$XDG_CONFIG_HOME"/kitty
 
 # Git
 ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig
 ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot
 
-# Vim
+# Vim/NeoVim
 ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
 ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
 ln -s "$DOTFILES_PATH"/vim/gvimrc "$HOME"/.gvimrc
 ln -s "$DOTFILES_PATH"/vim/ideavimrc "$HOME"/.ideavimrc
+ln -s "$DOTFILES_PATH"/vim/init.vim "$XDG_CONFIG_HOME"/nvim/init.vim
 
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"

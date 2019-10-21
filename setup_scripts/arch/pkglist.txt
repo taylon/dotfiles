@@ -3,7 +3,8 @@ openssh
 fish
 yay
 sudo
-vim
+nvim
+xclip
 ttf-ubuntu-font-family
 shellcheck
 go
@@ -34,13 +35,12 @@ AUR:
 
 # tilix
 google-chrome
-atom-editor-bin
 nodejs-n
 la-capitaine-icon-theme
 capitaine-cursors
 fonts-meta-extended-lt
 franz-bin
 tldr-cpp-client
-python-pyuserinput-git
 rsstail
 fisher
+ulauncher
