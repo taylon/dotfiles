@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# Set a fast key repeat rate
+xset r rate 200 25
+
+# Load nvidia settings
+nvidia-settings --load-config-only &
+
+# Load redshift
+redshift &
+
+# Run i3
+exec i3

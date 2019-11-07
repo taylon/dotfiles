@@ -1,0 +1,27 @@
+; Global settings for redshift
+
+[redshift]
+; Set the day and night screen temperatures
+temp-day=6500
+temp-night=4000
+
+; Custom dawn/dusk intervals.
+; Instead of using the solar elevation, the time intervals of dawn and dusk
+; can be specified manually. The times must be specified as HH:MM in 24-hour
+; format.
+;dawn-time=6:00-7:45
+;dusk-time=19:00-20:00
+
+; Set the location-provider: 'geoclue', 'geoclue2', 'manual'
+; type 'redshift -l list' to see possible values.
+; The location provider settings are in a different section.
+location-provider=manual
+
+; Configuration of the location-provider:
+; type 'redshift -l PROVIDER:help' to see the settings.
+; ex: 'redshift -l manual:help'
+; Keep in mind that longitudes west of Greenwich (e.g. the Americas)
+; are negative numbers.
+[manual]
+lat=
+lon=

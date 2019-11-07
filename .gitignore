@@ -25,6 +25,10 @@ vim/sessions
 keyboard/qmk_keymaps/dist/
 *.hex
 
+# Private stuff
+redshift/redshift.conf
+git/gitconfig_riot
+
 # General
 TODO
 .DS_Store
@@ -32,5 +36,3 @@ __pycache__/
 *.pyc
 .mypy_cache/
 
-# Git
-git/gitconfig_riot

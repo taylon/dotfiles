@@ -8,7 +8,7 @@ if [[ ! -f "/etc/arch-release" ]]; then
   exit 1
 fi
 
-# We will update using aurman and that should not run as root
+# We will update using yay and that should not run as root
 if [[ $(id -u) -eq 0 ]]; then
   print::fail "Do not run this as root!"
   exit 1
@@ -47,6 +47,10 @@ fi
 # Update!
 echo
 print::note "Updating Arch packages..."
-aurman -Syu
+yay -Syu
+
+echo
+print::note "Updating tldr cache..."
+tldr --update
 
 system_update::common

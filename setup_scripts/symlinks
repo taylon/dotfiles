@@ -40,4 +40,3 @@ ln -s "$DOTFILES_PATH"/vim/init.vim "$XDG_CONFIG_HOME"/nvim/init.vim
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
 
-# Don't forget the home directory aliases

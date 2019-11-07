@@ -4,10 +4,10 @@ DEV_PATH="$HOME/Development"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
 
 # Create private fish file
-touch "$HOME"/.config/fish/private.fish
+touch "$XDG_CONFIG_HOME"/fish/private.fish
 
 # Nvim config folder
-mkdir "XDG_CONFIG_HOME"/nvim
+mkdir "$XDG_CONFIG_HOME"/nvim
 
 # Create VIM's backup, swap and undo history folders
 mkdir $DOTFILES_PATH/vim/.backups

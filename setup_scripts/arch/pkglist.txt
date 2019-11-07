@@ -9,7 +9,6 @@ ttf-ubuntu-font-family
 shellcheck
 go
 arc-gtk-theme
-gnome-tweak-tool
 diff-so-fancy
 autojump
 ripgrep
@@ -38,9 +37,9 @@ google-chrome
 nodejs-n
 la-capitaine-icon-theme
 capitaine-cursors
-fonts-meta-extended-lt
 franz-bin
-tldr-cpp-client
+tealdeer
 rsstail
 fisher
 ulauncher
+redshift-minimal

@@ -5,8 +5,25 @@
 
 # Fonts
 mkdir -p "$HOME"/.config/fontconfig/conf.d/
-ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$HOME"/.config/fontconfig/conf.d/90-operator-mono-ssm.conf
+ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$XDG_CONFIG_HOME"/fontconfig/conf.d/90-operator-mono-ssm.conf
 
 # Kitty
-ln -s "$DOTFILES_PATH"/kitty/linux_keymaps.conf "$HOME"/.config/kitty_os_specific_keymaps.conf
+ln -s "$DOTFILES_PATH"/kitty/linux_keymaps.conf "$XDG_CONFIG_HOME"/kitty_os_specific_keymaps.conf
 
+# X11
+ln -s "$DOTFILES_PATH"/x11/xinitrc "$HOME"/.xinitrc
+
+# i3
+ln -s "$DOTFILES_PATH"/i3/i3.config "$XDG_CONFIG_HOME"/i3/config
+
+# GTK
+ln -s "$DOTFILES_PATH"/gtk/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
+ln -s "$DOTFILES_PATH"/gtk/gtk.css "$XDG_CONFIG_HOME"/gtk-3.0/gtk.css
+
+# Mouse cursor theme
+mkdir -p "$HOME"/.icons/default/
+ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme
+
+# Redshift
+cp "$DOTFILES_PATH"/redshift/redshift.conf.template "$DOTFILES_PATH"/redshift/redshift.conf  
+ln -s "$DOTFILES_PATH"/redshift/redshift.conf "$XDG_CONFIG_HOME"/redshift/redshift.conf

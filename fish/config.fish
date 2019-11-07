@@ -10,8 +10,8 @@ source $HOME/.config/fish/private.fish
 source $HOME/.config/fish/aliases.fish
 source $HOME/.config/fish/abbreviations.fish
 
-# Set VIM as default editor
-set -gx EDITOR vim
+# Set NeoVim as default editor
+set -gx EDITOR nvim
 
 # Add ~/.bin directory to $PATH
 set PATH $PATH $HOME/.bin
@@ -88,3 +88,12 @@ end
 
 # Disable greeting message
 set fish_greeting
+
+# If on Arch, start X at login
+if test (uname) = "Linux"
+    if status is-login
+        if test -z "$DISPLAY" -a $XDG_VTNR = 1
+            exec startx -- -keeptty
+        end
+    end
+end
