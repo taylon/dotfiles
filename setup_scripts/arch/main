@@ -11,3 +11,11 @@
 sudo systemctl start docker.service
 sudo systemctl enable docker.service
 sudo gpasswd -a taylon docker
+
+# Reminders of last setup
+
+# - Add the following to /etc/modprobe.d/50-blacklist-kvm.conf since we don't need it 
+#   - blacklist kvm
+#   - blacklist kvm_intel
+#   - blacklist kvm_amd
+
