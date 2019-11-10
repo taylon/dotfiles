@@ -1,5 +1,4 @@
 " Sanity
-"
 set nocompatible
 set backspace=indent,eol,start
 set history=1000
@@ -15,11 +14,11 @@ set smartcase
 set hlsearch " Highlight the last used search pattern.
 set incsearch " Highlight matched patterns as you type
 set cursorline " Highlight current line
-set ruler " Show the cursor position
+set noruler " Show the cursor position
 set nowrap " Don't wrap lines
 set number
 set relativenumber
-set scrolloff=3 " Start scrolling three lines before the horizontal window border
+" set scrolloff=3 " Start scrolling three lines before the horizontal window border
 set signcolumn=yes " Always show the signcolumn in the gutter
 set pumheight=7 " limit the number of suggestions shown in the autocomplete menu
 set shortmess+=F " remove message when opening files
@@ -37,7 +36,7 @@ set foldmethod=syntax
 set nofoldenable
 
 " Use the OS clipboard by default
-if system("uname") == "Linux"
+if has("unix")
   set clipboard=unnamedplus
 else
   set clipboard=unnamed

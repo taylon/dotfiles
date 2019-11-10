@@ -17,21 +17,27 @@ nnoremap <silent> <M-k> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
 nnoremap <silent> <M-Down> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
 nnoremap <silent> <M-h> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
 
-" Save with Ctrl-s
-nnoremap <silent> <D-s> :silent w<Enter>
-inoremap <silent> <D-s> <Esc>:silent w<Enter>
+" C and D will be in the same position in the keyboard,
+" setup by QMK
+if has("macunix")
+  " Save with Ctrl-s
+  nnoremap <silent> <D-s> :silent w<Enter>
+  inoremap <silent> <D-s> <Esc>:silent w<Enter>
+
+  " New line in Insert mode
+  inoremap <D-Enter> <Esc>o
+  inoremap <D-S-Enter> <Esc><S-o>
+else
+  nnoremap <silent> <C-s> :silent w<Enter>
+  inoremap <silent> <C-s> <Esc>:silent w<Enter>
+
+  inoremap <C-Enter> <Esc>o
+  inoremap <C-S-Enter> <Esc><S-o>
+endif
 
 " New line in Normal Mode
 nnoremap <Enter> o<Esc>
 nnoremap <S-Enter> O<Esc>
-
-" New line in Insert mode
-inoremap <D-Enter> <Esc>o
-inoremap <D-S-Enter> <Esc><S-o>
-
-" Clear search highlight with Esc
-" nnoremap <silent> <Esc> :noh<Enter><Esc>
-" nnoremap <Esc>^[ <Esc>^[
 
 " Splits
 nnoremap <leader>v :rightbelow vsplit<Enter>
