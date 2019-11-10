@@ -1,10 +1,10 @@
+i3-wm
 git
 openssh
 fish
 yay
 sudo
 nvim
-xclip
 ttf-ubuntu-font-family
 shellcheck
 go
@@ -17,7 +17,6 @@ mlocate
 docker
 docker-compose
 yarn
-zeal
 bpython
 pipenv
 wget
@@ -29,15 +28,17 @@ kitty
 fd
 dash
 fzf
+xclip
+xorg-xset
+pulseaudio
+pulseaudio-alsa
 
 AUR:
 
-# tilix
 google-chrome
 nodejs-n
 la-capitaine-icon-theme
 capitaine-cursors
-franz-bin
 tealdeer
 rsstail
 fisher

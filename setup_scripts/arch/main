@@ -19,3 +19,4 @@ sudo gpasswd -a taylon docker
 #   - blacklist kvm_intel
 #   - blacklist kvm_amd
 
+# - Saved nvidia xorg settings manually to /etc/X11/xorg.conf.d
