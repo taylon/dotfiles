@@ -93,7 +93,7 @@ set fish_greeting
 if test (uname) = "Linux"
     if status is-login
         if test -z "$DISPLAY" -a $XDG_VTNR = 1
-            exec startx -- -keeptty
+            exec startx -- -keeptty > ~/.xorg.log 2>&1
         end
     end
 end
