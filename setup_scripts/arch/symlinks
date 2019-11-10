@@ -27,3 +27,6 @@ ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme
 # Redshift
 cp "$DOTFILES_PATH"/redshift/redshift.conf.template "$DOTFILES_PATH"/redshift/redshift.conf  
 ln -s "$DOTFILES_PATH"/redshift/redshift.conf "$XDG_CONFIG_HOME"/redshift/redshift.conf
+
+# Link sh to dash
+ln -sfT dash /usr/bin/sh

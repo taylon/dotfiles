@@ -44,3 +44,4 @@ rsstail
 fisher
 ulauncher
 redshift-minimal
+dashbinsh
