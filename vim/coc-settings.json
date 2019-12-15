@@ -12,6 +12,17 @@
     "python"
   ],
 
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "usePlaceholders": true
+      }
+    }
+  },
+
   "tsserver.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "auto",
 

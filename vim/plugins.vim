@@ -126,6 +126,9 @@ set shortmess+=c
 
 nmap <D-r> <Plug>(coc-rename)
 
+" Golang auto format
+autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+
 " Gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
