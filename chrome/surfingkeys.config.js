@@ -18,8 +18,8 @@ map("u", "D");
 map("t", "on");
 
 // Tab navigation
-map("<Ctrl-Tab>", "T");
-map("<Ctrl-o>", "<Ctrl-6>");
+map("<F7>", "R");
+map("<F10>", "E");
 
 // Optimize hint characters for Colemak-DHm
 Hints.characters = "stradfpwgenihouylm,./";
