@@ -171,8 +171,8 @@ let g:closetag_regions =  {
 
 
 " FZF
-nnoremap <C-Tab> :FilesMru<Enter>
-inoremap <C-Tab> <ESC>:FilesMru<Enter>
+nnoremap <F12> :FilesMru<Enter>
+inoremap <F12> <ESC>:FilesMru<Enter>
 
 nnoremap <D-p> :Command<Enter>
 inoremap <D-p> <ESC>:Command<Enter>

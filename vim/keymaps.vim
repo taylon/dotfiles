@@ -1,4 +1,4 @@
-let mapleader="\<C-\>" " Setup on the keyboard as one key
+let mapleader="\<F6>"
 let maplocalleader="\<space>"
 
 " Remap j and h to work better with Colemak-DHm
@@ -8,8 +8,13 @@ set langmap=hj,HJ,jh,JH
 " Y should behave just like D or C
 map Y y$
 
-" Ctrl-tab to move to last position
-nnoremap <C-s-Tab> <C-o>
+" Positional movement
+nnoremap <F7> <C-o>
+nnoremap <F10> <C-i>
+
+" Make scolling keybindings more consistent
+nnoremap <C-k> <C-u>
+nnoremap <C-h> <C-d>
 
 " Prevent A-direction jumps to be stored in the jumplist
 nnoremap <silent> <M-Up> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
@@ -18,7 +23,7 @@ nnoremap <silent> <M-Down> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Ent
 nnoremap <silent> <M-h> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
 
 " C and D will be in the same position in the keyboard,
-" setup by QMK
+" setup by the keyboard firmware
 if has("macunix")
   " Save with Ctrl-s
   nnoremap <silent> <D-s> :silent w<Enter>
