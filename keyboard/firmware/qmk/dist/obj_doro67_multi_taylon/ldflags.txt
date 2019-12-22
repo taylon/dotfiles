@@ -1,0 +1,1 @@
+-Wl,--gc-sections -Wl,-Map=.build/doro67_multi_taylon.map,--cref     -lm 

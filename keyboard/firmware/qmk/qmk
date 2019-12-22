@@ -1,0 +1,123 @@
+#!/usr/bin/env python3
+
+import os
+import sys
+import shutil
+import platform
+import subprocess
+from dataclasses import dataclass
+from typing import Dict
+
+DOCKER_IMAGE = "qmk_keymaps_builder"
+QMK_TARGET = "taylon"
+QMK_KEYMAPS_FOLDER = f"{os.environ['DOTFILES_PATH']}/keyboard/qmk_keymaps"
+DIST_PATH = f"{QMK_KEYMAPS_FOLDER}/dist"
+
+
+AVAILABLE_KEYBOARDS: Dict[str, str] = {
+    "dactyl": "handwired/dactyl",
+    "atreus62": "atreus62",
+    "zephyr": "wilba_tech/zeal65",
+    "koyu": "wilba_tech/rama_works_koyu",
+    "m60a": "wilba_tech/rama_works_m60_a",
+    "ergodox_ez": "ergodox_ez",
+    "cod67": "gray_studio/cod67",
+    "doro67": "doro67/multi",
+}
+
+
+def exit_with_message(message: str):
+    print(message)
+    sys.exit(1)
+
+
+def keyboard_is_valid(keyboard_name: str):
+    return keyboard_name in AVAILABLE_KEYBOARDS.keys()
+
+
+def clean():
+    if os.path.exists(DIST_PATH):
+        shutil.rmtree(DIST_PATH)
+
+
+def build_firmware(keyboard_name: str):
+    keyboard_path = AVAILABLE_KEYBOARDS.get(keyboard_name)
+    # at this point the keyboard will already be validated and will for sure exist
+    # but let's just double check anyway
+    assert isinstance(keyboard_path, str)
+
+    make_command = ["make", f"{keyboard_path}:{QMK_TARGET}"]
+
+    # special handling for cod67. If we keep having keebs that require
+    # additional targets we will handle it in a more generic way,
+    # but let's keep it simple for now
+    if keyboard_name == "cod67":
+        make_command[1] += ":bin"
+
+    if platform.system() == "Darwin":
+        make_command.append("EXTRAFLAGS=-D IS_MACOS")
+
+    keymaps_path = os.path.join("/qmk/keyboards/", keyboard_path)
+
+    # fmt: off
+    subprocess.run([
+        "docker", "run", "--rm",
+        # '-i', '-t',
+        "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/keymaps/{QMK_TARGET}",
+        "-v", f"{QMK_KEYMAPS_FOLDER}/shared/:{keymaps_path}/keymaps/{QMK_TARGET}/shared",
+        "-v", f"{QMK_KEYMAPS_FOLDER}/dist/:/qmk/.build",
+        DOCKER_IMAGE,
+        *make_command
+        # '/bin/bash'
+    ])
+    # fmt: on
+
+
+def build_docker_image():
+    subprocess.run(["docker", "build", "--no-cache", "-t", DOCKER_IMAGE, "."])
+
+
+def flash(keyboard_name: str):
+    hex_file = f"{DIST_PATH}/{keyboard_name}_{QMK_TARGET}.hex"
+    # hex_file = f"{DIST_PATH}/handwired_dactyl_taylon.hex"
+
+    if not os.path.isfile(hex_file) and os.path.getsize(hex_file) > 0:
+        exit_with_message("Hex file does not exist or is empty")
+
+    subprocess.run(["teensy-loader-cli", "-v", "-mmcu=atmega32u4", "-w", hex_file])
+
+
+if __name__ == "__main__":
+    invalid_action_message = (
+        "You must specify a valid action, one of: build, build-image or flash"
+    )
+
+    try:
+        action = sys.argv[1]
+    except IndexError:
+        exit_with_message(invalid_action_message)
+
+    if action == "build-image":
+        build_docker_image()
+        sys.exit(0)
+
+    invalid_keyboard_message = "You must specify a supported keyboard"
+
+    try:
+        keyboard_name = sys.argv[2]
+    except IndexError:
+        exit_with_message(invalid_keyboard_message)
+
+    if not keyboard_is_valid(keyboard_name):
+        exit_with_message(invalid_keyboard_message)
+
+    if action == "flash":
+        flash(keyboard_name)
+        sys.exit(0)
+
+    clean()
+
+    if action == "build":
+        build_firmware(keyboard_name)
+    else:
+        exit_with_message(invalid_action_message)

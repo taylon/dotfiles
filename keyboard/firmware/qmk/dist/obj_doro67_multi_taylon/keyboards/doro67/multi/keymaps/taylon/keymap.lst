@@ -1,0 +1,379 @@
+   1               		.file	"keymap.c"
+   2               	__SP_H__ = 0x3e
+   3               	__SP_L__ = 0x3d
+   4               	__SREG__ = 0x3f
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.text
+   8               	.Ltext0:
+   9               		.cfi_sections	.debug_frame
+  10               	.global	keymaps
+  11               		.section	.progmem.data.keymaps,"a",@progbits
+  14               	keymaps:
+  15 0000 165C      		.word	23574
+  16 0002 1E0F      		.word	3870
+  17 0004 1F0F      		.word	3871
+  18 0006 200F      		.word	3872
+  19 0008 210F      		.word	3873
+  20 000a 220F      		.word	3874
+  21 000c 2300      		.word	35
+  22 000e 2400      		.word	36
+  23 0010 2500      		.word	37
+  24 0012 2600      		.word	38
+  25 0014 2700      		.word	39
+  26 0016 2D00      		.word	45
+  27 0018 2E00      		.word	46
+  28 001a 2A00      		.word	42
+  29 001c 4100      		.word	65
+  30 001e 4C00      		.word	76
+  31 0020 1400      		.word	20
+  32 0022 1A00      		.word	26
+  33 0024 0941      		.word	16649
+  34 0026 1300      		.word	19
+  35 0028 0500      		.word	5
+  36 002a 0D00      		.word	13
+  37 002c 0F00      		.word	15
+  38 002e 1842      		.word	16920
+  39 0030 1C00      		.word	28
+  40 0032 3300      		.word	51
+  41 0034 2F00      		.word	47
+  42 0036 3000      		.word	48
+  43 0038 2A00      		.word	42
+  44 003a 3B00      		.word	59
+  45 003c 2B00      		.word	43
+  46 003e 0468      		.word	26628
+  47 0040 1564      		.word	25621
+  48 0042 1661      		.word	24854
+  49 0044 1700      		.word	23
+  50 0046 0A00      		.word	10
+  51 0048 1000      		.word	16
+  52 004a 1100      		.word	17
+  53 004c 0861      		.word	24840
+  54 004e 0C64      		.word	25612
+  55 0050 1268      		.word	26642
+  56 0052 3400      		.word	52
+  57 0054 0000      		.word	0
+  58 0056 2800      		.word	40
+  59 0058 3900      		.word	57
+  60 005a 0255      		.word	21762
+  61 005c 0255      		.word	21762
+  62 005e 1D00      		.word	29
+  63 0060 1B00      		.word	27
+  64 0062 0600      		.word	6
+  65 0064 0700      		.word	7
+  66 0066 1900      		.word	25
+  67 0068 0E00      		.word	14
+  68 006a 0B00      		.word	11
+  69 006c 3600      		.word	54
+  70 006e 3700      		.word	55
+  71 0070 3800      		.word	56
+  72 0072 0255      		.word	21762
+  73 0074 0100      		.word	1
+  74 0076 0100      		.word	1
+  75 0078 0100      		.word	1
+  76 007a 0100      		.word	1
+  77 007c 3101      		.word	305
+  78 007e 2C43      		.word	17196
+  79 0080 2C43      		.word	17196
+  80 0082 2C43      		.word	17196
+  81 0084 0000      		.word	0
+  82 0086 0000      		.word	0
+  83 0088 2A00      		.word	42
+  84 008a 2B01      		.word	299
+  85 008c 1201      		.word	274
+  86 008e 0100      		.word	1
+  87 0090 0100      		.word	1
+  88 0092 0100      		.word	1
+  89 0094 0100      		.word	1
+  90 0096 0100      		.word	1
+  91 0098 0100      		.word	1
+  92 009a 0100      		.word	1
+  93 009c 0100      		.word	1
+  94 009e 0100      		.word	1
+  95 00a0 0100      		.word	1
+  96 00a2 0100      		.word	1
+  97 00a4 0100      		.word	1
+  98 00a6 0100      		.word	1
+  99 00a8 0100      		.word	1
+ 100 00aa 5500      		.word	85
+ 101 00ac 2202      		.word	546
+ 102 00ae 5400      		.word	84
+ 103 00b0 0100      		.word	1
+ 104 00b2 0100      		.word	1
+ 105 00b4 0100      		.word	1
+ 106 00b6 0100      		.word	1
+ 107 00b8 0100      		.word	1
+ 108 00ba 0100      		.word	1
+ 109 00bc 0100      		.word	1
+ 110 00be 0100      		.word	1
+ 111 00c0 0100      		.word	1
+ 112 00c2 2400      		.word	36
+ 113 00c4 2500      		.word	37
+ 114 00c6 2600      		.word	38
+ 115 00c8 5600      		.word	86
+ 116 00ca 0100      		.word	1
+ 117 00cc 0100      		.word	1
+ 118 00ce 0100      		.word	1
+ 119 00d0 0100      		.word	1
+ 120 00d2 0100      		.word	1
+ 121 00d4 0100      		.word	1
+ 122 00d6 0100      		.word	1
+ 123 00d8 0100      		.word	1
+ 124 00da 0100      		.word	1
+ 125 00dc 0100      		.word	1
+ 126 00de 0100      		.word	1
+ 127 00e0 2100      		.word	33
+ 128 00e2 2200      		.word	34
+ 129 00e4 2300      		.word	35
+ 130 00e6 5700      		.word	87
+ 131 00e8 0100      		.word	1
+ 132 00ea 0000      		.word	0
+ 133 00ec 0100      		.word	1
+ 134 00ee 0100      		.word	1
+ 135 00f0 0100      		.word	1
+ 136 00f2 0100      		.word	1
+ 137 00f4 0100      		.word	1
+ 138 00f6 0100      		.word	1
+ 139 00f8 0100      		.word	1
+ 140 00fa 0100      		.word	1
+ 141 00fc 0100      		.word	1
+ 142 00fe 0100      		.word	1
+ 143 0100 1E00      		.word	30
+ 144 0102 1F00      		.word	31
+ 145 0104 2000      		.word	32
+ 146 0106 0100      		.word	1
+ 147 0108 0100      		.word	1
+ 148 010a 0100      		.word	1
+ 149 010c 0100      		.word	1
+ 150 010e 0100      		.word	1
+ 151 0110 0100      		.word	1
+ 152 0112 0100      		.word	1
+ 153 0114 2700      		.word	39
+ 154 0116 2700      		.word	39
+ 155 0118 2700      		.word	39
+ 156 011a 0000      		.word	0
+ 157 011c 0000      		.word	0
+ 158 011e 0100      		.word	1
+ 159 0120 0100      		.word	1
+ 160 0122 0100      		.word	1
+ 161 0124 0100      		.word	1
+ 162 0126 0100      		.word	1
+ 163 0128 0100      		.word	1
+ 164 012a 0100      		.word	1
+ 165 012c 0100      		.word	1
+ 166 012e 0100      		.word	1
+ 167 0130 0100      		.word	1
+ 168 0132 0100      		.word	1
+ 169 0134 0100      		.word	1
+ 170 0136 0100      		.word	1
+ 171 0138 0100      		.word	1
+ 172 013a 0100      		.word	1
+ 173 013c 0100      		.word	1
+ 174 013e 0100      		.word	1
+ 175 0140 0100      		.word	1
+ 176 0142 0100      		.word	1
+ 177 0144 0100      		.word	1
+ 178 0146 0100      		.word	1
+ 179 0148 0100      		.word	1
+ 180 014a 0100      		.word	1
+ 181 014c 2202      		.word	546
+ 182 014e 1F02      		.word	543
+ 183 0150 0157      		.word	22273
+ 184 0152 2102      		.word	545
+ 185 0154 3102      		.word	561
+ 186 0156 0100      		.word	1
+ 187 0158 0100      		.word	1
+ 188 015a 0100      		.word	1
+ 189 015c 0100      		.word	1
+ 190 015e 0100      		.word	1
+ 191 0160 0100      		.word	1
+ 192 0162 0100      		.word	1
+ 193 0164 0100      		.word	1
+ 194 0166 0100      		.word	1
+ 195 0168 0100      		.word	1
+ 196 016a 2002      		.word	544
+ 197 016c 3502      		.word	565
+ 198 016e 0057      		.word	22272
+ 199 0170 2E00      		.word	46
+ 200 0172 2E02      		.word	558
+ 201 0174 0100      		.word	1
+ 202 0176 0100      		.word	1
+ 203 0178 0100      		.word	1
+ 204 017a 0100      		.word	1
+ 205 017c 0100      		.word	1
+ 206 017e 0100      		.word	1
+ 207 0180 0000      		.word	0
+ 208 0182 0100      		.word	1
+ 209 0184 0100      		.word	1
+ 210 0186 0100      		.word	1
+ 211 0188 0100      		.word	1
+ 212 018a 2302      		.word	547
+ 213 018c 1E02      		.word	542
+ 214 018e 0257      		.word	22274
+ 215 0190 2402      		.word	548
+ 216 0192 2502      		.word	549
+ 217 0194 0100      		.word	1
+ 218 0196 0100      		.word	1
+ 219 0198 0100      		.word	1
+ 220 019a 0100      		.word	1
+ 221 019c 0100      		.word	1
+ 222 019e 0100      		.word	1
+ 223 01a0 0100      		.word	1
+ 224 01a2 0100      		.word	1
+ 225 01a4 0100      		.word	1
+ 226 01a6 3100      		.word	49
+ 227 01a8 3500      		.word	53
+ 228 01aa 0100      		.word	1
+ 229 01ac 0100      		.word	1
+ 230 01ae 0100      		.word	1
+ 231 01b0 0000      		.word	0
+ 232 01b2 0000      		.word	0
+ 233 01b4 0100      		.word	1
+ 234 01b6 0100      		.word	1
+ 235 01b8 0100      		.word	1
+ 236 01ba 0100      		.word	1
+ 237 01bc 0100      		.word	1
+ 238 01be 0100      		.word	1
+ 239 01c0 0100      		.word	1
+ 240 01c2 0100      		.word	1
+ 241 01c4 0100      		.word	1
+ 242 01c6 0100      		.word	1
+ 243 01c8 0100      		.word	1
+ 244 01ca 0100      		.word	1
+ 245 01cc 0100      		.word	1
+ 246 01ce 0100      		.word	1
+ 247 01d0 0100      		.word	1
+ 248 01d2 0100      		.word	1
+ 249 01d4 0100      		.word	1
+ 250 01d6 0100      		.word	1
+ 251 01d8 0100      		.word	1
+ 252 01da 0100      		.word	1
+ 253 01dc 0100      		.word	1
+ 254 01de 0100      		.word	1
+ 255 01e0 0100      		.word	1
+ 256 01e2 0100      		.word	1
+ 257 01e4 0100      		.word	1
+ 258 01e6 0100      		.word	1
+ 259 01e8 0100      		.word	1
+ 260 01ea 0100      		.word	1
+ 261 01ec 5000      		.word	80
+ 262 01ee 4F00      		.word	79
+ 263 01f0 0100      		.word	1
+ 264 01f2 0100      		.word	1
+ 265 01f4 0100      		.word	1
+ 266 01f6 0100      		.word	1
+ 267 01f8 0100      		.word	1
+ 268 01fa 0100      		.word	1
+ 269 01fc 0100      		.word	1
+ 270 01fe 0100      		.word	1
+ 271 0200 0100      		.word	1
+ 272 0202 0100      		.word	1
+ 273 0204 0100      		.word	1
+ 274 0206 0100      		.word	1
+ 275 0208 0100      		.word	1
+ 276 020a 0100      		.word	1
+ 277 020c 0100      		.word	1
+ 278 020e 0100      		.word	1
+ 279 0210 0100      		.word	1
+ 280 0212 0100      		.word	1
+ 281 0214 0100      		.word	1
+ 282 0216 0000      		.word	0
+ 283 0218 0100      		.word	1
+ 284 021a 0100      		.word	1
+ 285 021c 0100      		.word	1
+ 286 021e 0100      		.word	1
+ 287 0220 0100      		.word	1
+ 288 0222 0100      		.word	1
+ 289 0224 0100      		.word	1
+ 290 0226 0100      		.word	1
+ 291 0228 0100      		.word	1
+ 292 022a 5200      		.word	82
+ 293 022c 5100      		.word	81
+ 294 022e 0100      		.word	1
+ 295 0230 0100      		.word	1
+ 296 0232 0100      		.word	1
+ 297 0234 0100      		.word	1
+ 298 0236 5200      		.word	82
+ 299 0238 0100      		.word	1
+ 300 023a 0100      		.word	1
+ 301 023c 0100      		.word	1
+ 302 023e 0100      		.word	1
+ 303 0240 0100      		.word	1
+ 304 0242 0100      		.word	1
+ 305 0244 0100      		.word	1
+ 306 0246 0000      		.word	0
+ 307 0248 0000      		.word	0
+ 308 024a 0100      		.word	1
+ 309 024c 0100      		.word	1
+ 310 024e 0100      		.word	1
+ 311 0250 0100      		.word	1
+ 312 0252 5000      		.word	80
+ 313 0254 5100      		.word	81
+ 314 0256 4F00      		.word	79
+ 315               	.global	tap_dance_actions
+ 316               		.section	.data.tap_dance_actions,"aw",@progbits
+ 319               	tap_dance_actions:
+ 320 0000 0000      		.word	gs(qk_tap_dance_pair_on_each_tap)
+ 321 0002 0000      		.word	gs(qk_tap_dance_pair_finished)
+ 322 0004 0000      		.word	gs(qk_tap_dance_pair_reset)
+ 323 0006 0000 0000 		.zero	14
+ 323      0000 0000 
+ 323      0000 0000 
+ 323      0000 
+ 324 0014 0000      		.word	__compound_literal.0
+ 325 0016 0000      		.word	gs(qk_tap_dance_pair_on_each_tap)
+ 326 0018 0000      		.word	gs(qk_tap_dance_pair_finished)
+ 327 001a 0000      		.word	gs(qk_tap_dance_pair_reset)
+ 328 001c 0000 0000 		.zero	14
+ 328      0000 0000 
+ 328      0000 0000 
+ 328      0000 
+ 329 002a 0000      		.word	__compound_literal.1
+ 330 002c 0000      		.word	gs(qk_tap_dance_pair_on_each_tap)
+ 331 002e 0000      		.word	gs(qk_tap_dance_pair_finished)
+ 332 0030 0000      		.word	gs(qk_tap_dance_pair_reset)
+ 333 0032 0000 0000 		.zero	14
+ 333      0000 0000 
+ 333      0000 0000 
+ 333      0000 
+ 334 0040 0000      		.word	__compound_literal.2
+ 335               		.section	.data.__compound_literal.2,"aw",@progbits
+ 338               	__compound_literal.2:
+ 339 0000 2F00      		.word	47
+ 340 0002 3000      		.word	48
+ 341               		.section	.data.__compound_literal.1,"aw",@progbits
+ 344               	__compound_literal.1:
+ 345 0000 2F02      		.word	559
+ 346 0002 3002      		.word	560
+ 347               		.section	.data.__compound_literal.0,"aw",@progbits
+ 350               	__compound_literal.0:
+ 351 0000 2602      		.word	550
+ 352 0002 2702      		.word	551
+ 353               		.text
+ 354               	.Letext0:
+ 355               		.file 1 "/usr/lib/avr/include/stdint.h"
+ 356               		.file 2 "tmk_core/common/keycode.h"
+ 357               		.file 3 "tmk_core/common/action_code.h"
+ 358               		.file 4 "tmk_core/common/report.h"
+ 359               		.file 5 "quantum/quantum_keycodes.h"
+ 360               		.file 6 "quantum/process_keycode/process_tap_dance.h"
+ 361               		.file 7 "keyboards/doro67/multi/keymaps/taylon/keymap.c"
+ 362               		.file 8 "tmk_core/common/action_util.h"
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 keymap.c
+     /tmp/ccUgvNvd.s:2      *ABS*:000000000000003e __SP_H__
+     /tmp/ccUgvNvd.s:3      *ABS*:000000000000003d __SP_L__
+     /tmp/ccUgvNvd.s:4      *ABS*:000000000000003f __SREG__
+     /tmp/ccUgvNvd.s:5      *ABS*:0000000000000000 __tmp_reg__
+     /tmp/ccUgvNvd.s:6      *ABS*:0000000000000001 __zero_reg__
+     /tmp/ccUgvNvd.s:14     .progmem.data.keymaps:0000000000000000 keymaps
+     /tmp/ccUgvNvd.s:319    .data.tap_dance_actions:0000000000000000 tap_dance_actions
+     /tmp/ccUgvNvd.s:350    .data.__compound_literal.0:0000000000000000 __compound_literal.0
+     /tmp/ccUgvNvd.s:344    .data.__compound_literal.1:0000000000000000 __compound_literal.1
+     /tmp/ccUgvNvd.s:338    .data.__compound_literal.2:0000000000000000 __compound_literal.2
+
+UNDEFINED SYMBOLS
+qk_tap_dance_pair_on_each_tap
+qk_tap_dance_pair_finished
+qk_tap_dance_pair_reset
+__do_copy_data
