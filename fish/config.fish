@@ -23,6 +23,7 @@ set PATH $N_PREFIX/bin $PATH
 # fzf
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git'
 set -gx FZF_CTRL_T_COMMAND $FZF_DEFAULT_COMMAND
+set -gx FZF_CTRL_T_OPTS "--preview 'bat --style=numbers --color=always {} | head -500'"
 
 # Rg
 set -gx RIPGREP_CONFIG_PATH $HOME/.config/ripgreprc
