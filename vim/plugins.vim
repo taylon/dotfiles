@@ -16,7 +16,7 @@ Plug 'wellle/targets.vim'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'tweekmonster/fzf-filemru'
+Plug 'taylon/fzf-filemru'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
