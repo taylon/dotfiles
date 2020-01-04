@@ -98,3 +98,6 @@ if test (uname) = "Linux"
         end
     end
 end
+
+# Rust
+set PATH $PATH $HOME/.cargo/bin

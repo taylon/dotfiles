@@ -8,6 +8,7 @@ esac
 
 # Set PATH
 PATH="$PATH:$HOME/.bin"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # TODO: Apply this only on Arch Linux
 # SSH Agent on systemd
@@ -26,7 +27,7 @@ fi
 export N_PREFIX="$HOME/.node"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
 # Setup Electron trash properly on Linux
-# This might no longer be necessary ofter VSCode adopts
+# This might no longer be necessary once apps adopt
 # Electon 3.0 so keep an eye on it
 if [[ $(uname) == "Linux" ]]; then
   export ELECTRON_TRASH=gio
