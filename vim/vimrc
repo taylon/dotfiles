@@ -36,7 +36,7 @@ set foldmethod=syntax
 set nofoldenable
 
 " Use the OS clipboard by default
-if has("unix")
+if has('unix') && !has('macunix')
   set clipboard=unnamedplus
 else
   set clipboard=unnamed
