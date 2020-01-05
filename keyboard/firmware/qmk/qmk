@@ -10,7 +10,7 @@ from typing import Dict
 
 DOCKER_IMAGE = "qmk_keymaps_builder"
 QMK_TARGET = "taylon"
-QMK_KEYMAPS_FOLDER = f"{os.environ['DOTFILES_PATH']}/keyboard/qmk_keymaps"
+QMK_KEYMAPS_FOLDER = f"{os.environ['DOTFILES_PATH']}/keyboard/firmware/qmk"
 DIST_PATH = f"{QMK_KEYMAPS_FOLDER}/dist"
 
 
