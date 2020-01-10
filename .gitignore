@@ -22,7 +22,7 @@ vim/autoload/plug.vim.old
 vim/sessions
 
 # QMK
-keyboard/qmk_keymaps/dist/
+keyboard/firmware/qmk/dist/
 *.hex
 
 # Private stuff

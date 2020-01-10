@@ -1,6 +1,6 @@
 #include QMK_KEYBOARD_H
 
-/* #include "./shared/custom_keys.h" */
+#include "./shared/custom_keys.h"
 
 // Layers
 enum {
@@ -24,8 +24,8 @@ enum {
 #define CK_Bracket TD(TD_BRACKET)
 
 // General
-#define CK_NextTab KC_F7
-#define CK_PreviousTab KC_F10
+#define CK_Forward KC_F7
+#define CK_Back KC_F10
 #define CK_FileNavigation KC_F12
 #define CK_Leader KC_F6
 
@@ -57,12 +57,13 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
   [BASE] = LAYOUT(
     KC_GESC, CK_Music, CK_Terminal, CK_Browser, CK_Vim, CK_Chat, LAYER_HUB, KC_TRNS, CK_Leader, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_DELETE, KC_Q, KC_W, LAYER_NUMPAD_F, KC_P, KC_B, KC_J, KC_L, LAYER_SYMBOL_U, KC_Y, KC_SCOLON, KC_TRNS,
     KC_TAB, HM_A, HM_R, HM_S, HM_T, KC_G, KC_M, HM_N, HM_E, HM_I, HM_O, KC_QUOTE,
     KC_COPY, KC_Z, KC_X, KC_C, KC_D, KC_V, KC_K, KC_H, KC_COMMA, KC_DOT, KC_SLASH, KC_MINUS,
-    KC_PASTE, KC_TRNS, KC_TRNS, KC_LEFT, KC_RIGHT, KC_BSPC,   KC_ENTER, OSM(MOD_LSFT),  KC_SPACE, KC_UP, KC_DOWN, CK_FileNavigation, CK_PreviousTab, CK_NextTab
+    KC_PASTE, KC_TRNS, KC_TRNS, KC_LEFT, KC_RIGHT, KC_BSPC,   KC_ENTER, OSM(MOD_LSFT),  KC_SPACE, KC_UP, KC_DOWN, CK_FileNavigation, CK_Back, CK_Forward
   ),
 
   [NUMPAD] = LAYOUT(
@@ -96,5 +97,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,   TO(BASE), RESET,   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
   ),
+
 };
 
