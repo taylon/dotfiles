@@ -16,6 +16,7 @@ DIST_PATH = f"{QMK_KEYMAPS_FOLDER}/dist"
 
 AVAILABLE_KEYBOARDS: Dict[str, str] = {
     "dactyl": "handwired/dactyl",
+    "gaming_dactyl": "gaming_dactyl",
     "atreus62": "atreus62",
     "zephyr": "wilba_tech/zeal65",
     "koyu": "wilba_tech/rama_works_koyu",
@@ -64,6 +65,7 @@ def build_firmware(keyboard_name: str):
         "docker", "run", "--rm",
         # '-i', '-t',
         "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/keymaps/{QMK_TARGET}",
+        # "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/",
         "-v", f"{QMK_KEYMAPS_FOLDER}/shared/:{keymaps_path}/keymaps/{QMK_TARGET}/shared",
         "-v", f"{QMK_KEYMAPS_FOLDER}/dist/:/qmk/.build",
         DOCKER_IMAGE,
@@ -80,6 +82,7 @@ def build_docker_image():
 def flash(keyboard_name: str):
     hex_file = f"{DIST_PATH}/{keyboard_name}_{QMK_TARGET}.hex"
     # hex_file = f"{DIST_PATH}/handwired_dactyl_taylon.hex"
+    # hex_file = f"{DIST_PATH}/gaming_dactyl_taylon.hex"
 
     if not os.path.isfile(hex_file) and os.path.getsize(hex_file) > 0:
         exit_with_message("Hex file does not exist or is empty")
