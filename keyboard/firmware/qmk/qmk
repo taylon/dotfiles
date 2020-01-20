@@ -18,6 +18,7 @@ AVAILABLE_KEYBOARDS: Dict[str, str] = {
     "dactyl": "handwired/dactyl",
     "gaming_dactyl": "gaming_dactyl",
     "atreus62": "atreus62",
+    "iris": "keebio/iris",
     "zephyr": "wilba_tech/zeal65",
     "koyu": "wilba_tech/rama_works_koyu",
     "m60a": "wilba_tech/rama_works_m60_a",
@@ -54,11 +55,16 @@ def build_firmware(keyboard_name: str):
     # but let's keep it simple for now
     if keyboard_name == "cod67":
         make_command[1] += ":bin"
+    elif keyboard_name == "iris":
+        make_command[1] = f"keebio/iris/rev4:{QMK_TARGET}"
 
     if platform.system() == "Darwin":
         make_command.append("EXTRAFLAGS=-D IS_MACOS")
 
     keymaps_path = os.path.join("/qmk/keyboards/", keyboard_path)
+
+    print(f"Keymaps path: {keymaps_path}")
+    print(f"Make command: {make_command}")
 
     # fmt: off
     subprocess.run([
