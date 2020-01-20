@@ -60,6 +60,7 @@ brew install bat
 brew install fd
 brew install jetbrains-toolbox
 brew install fzf
+brew install jq
 
 # Remove outdated versions from the cellar
 brew cleanup
