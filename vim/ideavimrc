@@ -17,38 +17,51 @@ set clipboard+=unnamed
 " Keybindings
 
 " Remap j and h to work better with Colemak-DHm
+nmap k <Up>
+vmap k <Up>
 nmap h <Down>
+vmap h <Down>
+nmap l <Right>
+vmap l <Right>
+nmap j <Left>
+vmap j <Left>
+
+nmap dk d<Up>
+nmap ck c<Up>
+nmap yk y<Up>
 nmap dh d<Down>
 nmap ch c<Down>
 nmap yh y<Down>
 
-nmap k <Up>
-nmap dk d<Up>
-nmap ck c<Up>
-nmap yk y<Up>
-
-nmap l <Right>
-nmap j <Left>
+nmap gch gc<Down>
+nmap gck gc<Up>
 
 " Y should behave just like D or C
 nmap Y y$
 
 " Jumps
 nmap gr :action GotoDeclaration<Enter>
+nmap <F7> :action Back<Enter>
+nmap <F10> :action Forward<Enter>
 
 " Quick documentation
-nmap <C-\>d :action QuickJavaDoc<Enter>
+nmap <F6>d :action QuickJavaDoc<Enter>
 
 " Action List
-nmap <C-\>a :action ShowIntentionActions<Enter>
+nmap <F6>a :action ShowIntentionActions<Enter>
 
 " CamelCase navigation
 nmap <Space>w :action VimMotionCamelRight<Enter>
 nmap <Space>b :action VimMotionCamelLeft<Enter>
 
-" Save with Ctrl-s
+" Refactor
+nmap <F6>r :action RenameElement<Enter>
+
+" Save with Ctrl-s or Cmd-S
 nmap <M-s> :wa<Enter>
 imap <M-s> <Esc>:wa<Enter>
+nmap <C-s> :wa<Enter>
+imap <C-s> <Esc>:wa<Enter>
 
 " New line in Normal Mode
 nmap <Enter> o<Esc>
@@ -57,26 +70,28 @@ nmap <S-Enter> O<Esc>
 " New line in Insert mode
 imap <D-Enter> <Esc>o
 imap <D-S-Enter> <Esc><S-o>
+imap <C-Enter> <Esc>o
+imap <C-S-Enter> <Esc><S-o>
 
 " Splits
-nmap <C-\>v <C-w>v
-nmap <C-\>s <C-w>s
+nmap <F6>v <C-w>v
+nmap <F6>s <C-w>s
 
-nmap <C-\><Right> <C-w><Right>
-nmap <C-\>l <C-w><Right>
+nmap <F6><Right> <C-w><Right>
+nmap <F6>l <C-w><Right>
 
-nmap <C-\><Left> <C-w><Left>
-nmap <C-\>j <C-w><Left>
+nmap <F6><Left> <C-w><Left>
+nmap <F6>j <C-w><Left>
 
-nmap <C-\><Up> <C-w><Up>
-nmap <C-\>k <C-w><Up>
+nmap <F6><Up> <C-w><Up>
+nmap <F6>k <C-w><Up>
 
-nmap <C-\><Down> <C-w><Down>
-nmap <C-\>h <C-w><Down>
+nmap <F6><Down> <C-w><Down>
+nmap <F6>h <C-w><Down>
 
 " EasyMotion
 map <Space>s <Plug>(easymotion-bd-w)
-map <Space><Space> <Plug>(easymotion-s)
-nmap <Space><Space>s <Plug>(easymotion-overwin-f)
-nmap <Space><Space>w <Plug>(easymotion-overwin-w)
+map <Space> <Plug>(easymotion-s)
+" map <Space><Space>s <Plug>(easymotion-overwin-f)
+" nmap <Space><Space>w <Plug>(easymotion-overwin-w)
 
