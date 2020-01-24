@@ -52,11 +52,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     OS_PASTE, KC_TRNS, KC_TRNS, KC_LEFT, KC_RIGHT,
 
     KC_GESC, KC_MEDIA_PLAY_PAUSE,
-    KC_TRNS,
+    KC_F8,
     KC_BSPACE, OSM(MOD_LSFT), KC_TRNS,
 
     // Right hand
-    KC_TRNS, KC_TRNS, CK_Leader, CK_FileNavigation, KC_TRNS, KC_TRNS,
+    KC_TRNS, KC_TRNS, CK_Leader, CK_FileNavigation, KC_TRNS, CK_I3,
     KC_J, KC_L, KC_U, KC_Y, KC_SCOLON, KC_TRNS,
     KC_M, KC_N, HM_E, HM_I, HM_O, KC_QUOTE,
     KC_K, KC_H, KC_COMMA, KC_DOT, KC_SLASH, KC_MINUS,

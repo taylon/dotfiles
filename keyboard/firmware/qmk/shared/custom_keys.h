@@ -17,6 +17,7 @@
 #define CK_Back KC_F10
 #define CK_FileNavigation KC_F12
 #define CK_Leader KC_F6
+#define CK_I3 LCTL(LALT(KC_LGUI))
 
 // Layer Swithing
 #define CK_Numpad_F LT(NUMPAD, KC_F)
