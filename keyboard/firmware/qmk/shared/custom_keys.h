@@ -1,21 +1,47 @@
-// Application switching
-#define APP_MUSIC HYPR(KC_1)
-#define APP_TERMINAL HYPR(KC_2)
-#define APP_BROWSER HYPR(KC_3)
-#define APP_EDITOR HYPR(KC_4)
-#define APP_CHAT HYPR(KC_5)
+// TODO: Share this with Kaleidoscope
+
+// App switching
+#define CK_Music KC_F1
+#define CK_Browser KC_F2
+#define CK_Vim KC_F3
+#define CK_Terminal KC_F4
+#define CK_Chat KC_F5
+
+// Symbols
+#define CK_CBR TD(TD_CBR)
+#define CK_PRN TD(TD_PRN)
+#define CK_Bracket TD(TD_BRACKET)
+
+// General
+#define CK_Forward KC_F7
+#define CK_Back KC_F10
+#define CK_FileNavigation KC_F12
+#define CK_Leader KC_F6
 
 // Layer Swithing
-#define LAYER_NUMPAD_F LT(NUMPAD, KC_F)
-#define LAYER_MOUSE_P LT(MOUSE, KC_P)
+#define CK_Numpad_F LT(NUMPAD, KC_F)
 #define LAYER_SYMBOL_U LT(SYMBOLS, KC_U)
 #define LAYER_HUB TD(TD_LAYER_HUB)
 
-// Editor functionality
-#define EDITOR_FILE_TREE_NAVIGATION LCTL(KC_BSLASH)
-#define EDITOR_TOGGLE_FOLDING LGUI(KC_LBRACKET)
-#define EDITOR_DEBUGGER LGUI(KC_5)
-#define EDITOR_BACK_ON_JUMP_LIST LCTL(KC_O)
+// ============================
+
+// Application switching
+#define APP_MUSIC KC_F1
+#define APP_BROWSER KC_F2
+#define APP_EDITOR KC_F3
+#define APP_TERMINAL KC_F4
+#define APP_CHAT KC_F5
+
+// Layer Swithing
+#define LAYER_NUMPAD_F LT(NUMPAD, KC_F)
+#define LAYER_SYMBOL_U LT(SYMBOLS, KC_U)
+#define LAYER_HUB TD(TD_LAYER_HUB)
+
+// General
+#define GENERAL_NEXT_TAB Key_F7
+#define GENERAL_PREV_TAB Key_F10
+#define GENERAL_FILE_NAVIGATION Key_F12
+#define GENERAL_LEADER Key_F6
 
 // OS functionality
 #define OS_COPY_CUT TD(TD_COPY_CUT)

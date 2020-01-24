@@ -86,9 +86,12 @@ def build_docker_image():
 
 
 def flash(keyboard_name: str):
-    hex_file = f"{DIST_PATH}/{keyboard_name}_{QMK_TARGET}.hex"
-    # hex_file = f"{DIST_PATH}/handwired_dactyl_taylon.hex"
-    # hex_file = f"{DIST_PATH}/gaming_dactyl_taylon.hex"
+    if keyboard_name == "dactyl":
+        hex_file = f"{DIST_PATH}/handwired_dactyl_taylon.hex"
+    elif keyboard_name == "gaming_dactyl":
+        hex_file = f"{DIST_PATH}/gaming_dactyl_taylon.hex"
+    else:
+        hex_file = f"{DIST_PATH}/{keyboard_name}_{QMK_TARGET}.hex"
 
     if not os.path.isfile(hex_file) and os.path.getsize(hex_file) > 0:
         exit_with_message("Hex file does not exist or is empty")
