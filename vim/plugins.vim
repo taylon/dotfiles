@@ -49,6 +49,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
 Plug 'terryma/vim-multiple-cursors'
 
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " CamelCaseMotion
