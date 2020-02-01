@@ -12,29 +12,6 @@ enum {
   ARROWS,
 };
 
-// App switching
-#define CK_Music KC_F1
-#define CK_Browser KC_F2
-#define CK_Vim KC_F3
-#define CK_Terminal KC_F4
-#define CK_Chat KC_F5
-
-// Symbols
-#define CK_CBR TD(TD_CBR)
-#define CK_PRN TD(TD_PRN)
-#define CK_Bracket TD(TD_BRACKET)
-
-// General
-#define CK_Forward KC_F7
-#define CK_Back KC_F10
-#define CK_FileNavigation KC_F12
-#define CK_Leader KC_F6
-
-// Layer Swithing
-#define CK_Numpad_F LT(NUMPAD, KC_F)
-#define LAYER_SYMBOL_U LT(SYMBOLS, KC_U)
-#define LAYER_HUB TD(TD_LAYER_HUB)
-
 // Tap Dance
 enum {
   // Layers
@@ -60,12 +37,12 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [BASE] = LAYOUT(
-    KC_GESC, CK_Music, CK_Terminal, CK_Browser, CK_Vim, CK_Chat,         KC_TRNS, KC_TRNS, CK_Leader, CK_Back, CK_Forward, KC_TRNS,
+    KC_GESC, CK_Music, CK_Browser, CK_Vim, CK_Terminal, CK_Chat,         KC_F8, KC_TRNS, CK_Leader, CK_Back, CK_Forward, CK_I3,
     KC_DELETE, KC_Q, KC_W, LAYER_NUMPAD_F, KC_P, KC_B,                   KC_J, KC_L, LAYER_SYMBOL_U, KC_Y, KC_SCOLON, KC_TRNS,
     KC_TAB, HM_A, HM_R, HM_S, HM_T, KC_G,                                KC_M, HM_N, HM_E, HM_I, HM_O, KC_QUOTE,
     KC_COPY, KC_Z, KC_X, KC_C, KC_D, KC_V,   KC_GESC,              CK_FileNavigation, KC_K, KC_H, KC_COMMA, KC_DOT, KC_SLASH, KC_MINUS,
 
-         OSM(MOD_LSFT), KC_BSPC, LT(ARROWS, KC_BSPC),                 KC_ENTER, KC_SPACE, KC_TRNS
+        LT(ARROWS, KC_BSPC), KC_BSPC, OSM(MOD_LSFT),                    KC_ENTER, KC_SPACE, OSL(SYMBOLS) 
   ),
 
   [NUMPAD] = LAYOUT(
@@ -88,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [ARROWS] = LAYOUT(
     RGB_VAD, RGB_VAI, RGB_HUD, RGB_HUI, RGB_SAD, RGB_SAI,                      KC_LEFT, KC_RGHT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-    RGB_TOG, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+    RGB_TOG, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_LEFT, KC_RGHT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                      KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
     KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,    KC_TRNS, KC_UP,   KC_DOWN, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
 
