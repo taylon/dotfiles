@@ -7,7 +7,7 @@ alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
 
 # exa
-alias ls 'exa -a'
+alias ls 'exa -a --icons'
 
 # trash-cli
 # alias rm trash
