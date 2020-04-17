@@ -174,8 +174,8 @@ let g:closetag_regions =  {
 
 
 " FZF
-nnoremap <F12> :FilesMru<Enter>
-inoremap <F12> <ESC>:FilesMru<Enter>
+nnoremap <silent> <F12> :FilesMru --tiebreak=end<Enter>
+inoremap <silent> <F12> <ESC>:FilesMru --tiebreak=end<Enter>
 
 nnoremap <D-p> :Command<Enter>
 inoremap <D-p> <ESC>:Command<Enter>
