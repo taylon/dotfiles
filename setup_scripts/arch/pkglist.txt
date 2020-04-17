@@ -36,6 +36,7 @@ pulseaudio-alsa
 
 AUR:
 
+reason-language-server
 google-chrome
 nodejs-n
 la-capitaine-icon-theme

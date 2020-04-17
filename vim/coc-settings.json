@@ -9,6 +9,7 @@
     "scss",
     "json",
     "graphql",
+    "reason",
     "python"
   ],
 
@@ -20,6 +21,11 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+
+    "reason": {
+      "command": "reason-language-server",
+      "filetypes": ["reason"]
     }
   },
 
