@@ -18,6 +18,7 @@ docker
 docker-compose
 yarn
 bpython
+mypy
 pipenv
 wget
 exa
