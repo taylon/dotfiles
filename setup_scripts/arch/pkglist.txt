@@ -47,3 +47,4 @@ fisher
 ulauncher
 redshift-minimal
 dashbinsh
+franz
