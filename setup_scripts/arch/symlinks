@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Systemd
-# ln -s "$DOTFILES_PATH"/systemd "$HOME"/.config/systemd
+ln -s "$DOTFILES_PATH"/systemd "$XDG_CONFIG_HOME"/systemd
 
 # Fonts
 mkdir -p "$HOME"/.config/fontconfig/conf.d/

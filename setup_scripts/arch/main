@@ -7,9 +7,13 @@
 # Improve font-rendering
 # https://gist.github.com/cryzed/e002e7057435f02cc7894b9e748c5671
 
+# SSH Agent
+echo 'SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"' >'$HOME'/.pam_environment
+systemctl enable ssh-agent --user
+
 # Docker Setup
-sudo systemctl start docker.service
-sudo systemctl enable docker.service
+sudo systemctl start docker
+sudo systemctl enable docker
 sudo gpasswd -a taylon docker
 
 # Reminders of last setup

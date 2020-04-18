@@ -29,6 +29,10 @@ keyboard/firmware/qmk/dist/
 redshift/redshift.conf
 git/gitconfig_riot
 
+# Systemd
+systemd/user/default.target.wants
+
+
 # General
 TODO
 .DS_Store
