@@ -7,6 +7,7 @@ sudo
 nvim
 ttf-ubuntu-font-family
 shellcheck
+shfmt
 go
 arc-gtk-theme
 diff-so-fancy

@@ -40,6 +40,7 @@ brew install less
 brew install make
 brew install n
 brew install shellcheck
+brew install shfmt
 brew install fish
 brew install git
 brew install openssh
