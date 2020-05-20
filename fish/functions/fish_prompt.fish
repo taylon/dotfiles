@@ -13,10 +13,13 @@ function downloads_prompt
     if test $PWD = "$HOME/Downloads"
         set_color yellow --bold
         echo -n ' ('
+
         set_color cyan --bold
         echo -n (ls -1 --sort newest | tail -1)
+
         set_color yellow --bold
         echo -n ')'
+
         set_color normal
     end
 end

@@ -1,6 +1,7 @@
 # Navigation
 alias dot 'cd $DOTFILES_PATH'
 alias dev 'cd $DEV_PATH'
+alias down 'cd ~/Downloads'
 alias .. 'cd ..'
 alias ... 'cd ../..'
 alias .... 'cd ../../..'
