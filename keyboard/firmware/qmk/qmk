@@ -9,13 +9,14 @@ from dataclasses import dataclass
 from typing import Dict
 
 DOCKER_IMAGE = "qmk_keymaps_builder"
-QMK_TARGET = "taylon"
+QMK_TARGET = "default"
 QMK_KEYMAPS_FOLDER = f"{os.environ['DOTFILES_PATH']}/keyboard/firmware/qmk"
 DIST_PATH = f"{QMK_KEYMAPS_FOLDER}/dist"
 
 
 AVAILABLE_KEYBOARDS: Dict[str, str] = {
     "dactyl": "handwired/dactyl",
+    "dactyl_elite_c": "dactyl_elite_c",
     "gaming_dactyl": "gaming_dactyl",
     "atreus62": "atreus62",
     "iris": "keebio/iris",
@@ -70,8 +71,8 @@ def build_firmware(keyboard_name: str):
     subprocess.run([
         "docker", "run", "--rm",
         # '-i', '-t',
-        "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/keymaps/{QMK_TARGET}",
-        # "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/",
+        # "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/keymaps/{QMK_TARGET}",
+        "-v", f"{QMK_KEYMAPS_FOLDER}/keyboards/{keyboard_path}/:{keymaps_path}/",
         "-v", f"{QMK_KEYMAPS_FOLDER}/shared/:{keymaps_path}/keymaps/{QMK_TARGET}/shared",
         "-v", f"{QMK_KEYMAPS_FOLDER}/dist/:/qmk/.build",
         DOCKER_IMAGE,

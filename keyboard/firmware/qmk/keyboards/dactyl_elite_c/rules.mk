@@ -1,0 +1,30 @@
+# TAP_DANCE_ENABLE = yes
+#
+# CONSOLE_ENABLE = no # Console for debug(+400)
+# COMMAND_ENABLE = no  # Commands for debug and configuration
+#
+# MOUSEKEY_ENABLE = no
+
+MCU = atmega32u4
+
+BOOTLOADER = atmel-dfu
+
+BOOTMAGIC_ENABLE = no
+MOUSEKEY_ENABLE = no
+EXTRAKEY_ENABLE = no
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+NKRO_ENABLE = no
+BACKLIGHT_ENABLE = no
+MIDI_ENABLE = no
+AUDIO_ENABLE = no
+UNICODE_ENABLE = no
+BLUETOOTH_ENABLE = no
+RGBLIGHT_ENABLE = no
+
+# Do not enable SLEEP_LED_ENABLE. it uses the same timer as BACKLIGHT_ENABLE
+SLEEP_LED_ENABLE = no
+
+SPLIT_KEYBOARD = yes
+
+TAP_DANCE_ENABLE = yes
