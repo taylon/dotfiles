@@ -35,15 +35,16 @@ brew install vim
 brew install less
 brew install make
 brew install n
-brew install shellcheck
-brew install shfmt
-brew install fish
 brew install git
 brew install openssh
 brew install diff-so-fancy
 brew install ripgrep
 brew install autojump
+brew install fish
 brew install bash
+brew install shellcheck
+brew install shfmt
+brew install checkbashisms
 brew install httpie
 brew install awscli
 brew install terraform
@@ -58,6 +59,7 @@ brew install jetbrains-toolbox
 brew install fzf
 brew install jq
 brew install yq
+brew install dust
 
 # Remove outdated versions from the cellar
 brew cleanup

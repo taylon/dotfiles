@@ -34,6 +34,7 @@ xclip
 xorg-xset
 pulseaudio
 pulseaudio-alsa
+checkbashisms
 
 AUR:
 
@@ -49,3 +50,4 @@ ulauncher
 redshift-minimal
 dashbinsh
 franz
+dust
