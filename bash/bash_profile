@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
 if [ -f $HOME/.bashrc ]; then
-   source /home/taylon/.bashrc
+  source /home/taylon/.bashrc
 fi
-
