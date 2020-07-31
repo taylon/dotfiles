@@ -10,6 +10,11 @@ set smartcase
 set surround
 set commentary
 set easymotion
+set textobj-entire
+set argtextobj
+
+" Remove icon from status bar
+set ideastatusicon
 
 " Integrate with system clipboard
 set clipboard+=unnamed
