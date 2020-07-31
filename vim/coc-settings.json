@@ -24,9 +24,10 @@
       }
     },
 
-    "reason": {
-      "command": "reason-language-server",
-      "filetypes": ["reason"]
+    "ocaml-lsp": {
+      "command": "esy",
+      "args": ["sh", "-c", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
     },
 
     "bash": {
@@ -51,11 +52,14 @@
   },
 
   "tsserver.tsdk": "node_modules/typescript/lib",
+  "tsserver.enable": true,
   "typescript.preferences.importModuleSpecifier": "auto",
 
   "prettier.requireConfig": true,
-  "prettier.onlyUseLocalVersion" : true,
+  "prettier.onlyUseLocalVersion": true,
   "prettier.disableSuccessMessage": true,
+
+  "stylelint.enable": false,
 
   "eslint.autoFixOnSave": true,
   "eslint.filetypes": [
