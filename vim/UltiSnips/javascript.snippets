@@ -8,10 +8,8 @@ if ($1) {
 }
 endsnippet
 
-snippet ef "export function" b
-export${1: default} function $2($3) {
-	$4
-}
+snippet ec "export const" b
+export const $1 = ($2) => $3
 endsnippet
 
 snippet i "import" b
@@ -35,5 +33,9 @@ endsnippet
 
 snippet uid "useUIDSeed" b
 const uidSeed = useUIDSeed()
+endsnippet
+
+snippet ut "useTranslation" b
+const { t } = useTranslation()
 endsnippet
 

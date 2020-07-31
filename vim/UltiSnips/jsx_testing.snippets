@@ -19,3 +19,10 @@ context "is_test_file(snip.buffer.name)"
 snippet lw "console.log(wrapper.debug)" b
 console.log(wrapper${1:.}.debug({ ignoreProps: true }))$2
 endsnippet
+
+context "is_test_file(snip.buffer.name)"
+snippet test "test" b
+test('$1', () => {
+	$2
+})
+endsnippet
