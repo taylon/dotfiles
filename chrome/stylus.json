@@ -1,0 +1,68 @@
+[
+	{
+		"enabled": false,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1579291199016,
+		"name": "github.com",
+		"sections": [
+			{
+				"code": ".blob-code-inner,\n.blob-num,\n.diff-table,\n.highlight pre {\n  font-family: \"Operator Mono Book SSm\" !important;\n  font-size: 18px !important;\n  line-height: 1.5 !important;\n}\n\n.pl-c,\n.pl-ii,\n.pl-e {\n  font-style: italic;\n}\n\n/*.file {\n  width: 1306px;\n}*/\n\ncode,\npre,\ntt {\n  font-family: \"Operator Mono Book SSm\" !important;\n  font-size: 15px !important;\n}",
+				"domains": [
+					"github.com"
+				]
+			}
+		],
+		"updateDate": 1579291457368,
+		"id": 1,
+		"_id": "337ba6bb-485b-4b71-a94a-d28537c92d93",
+		"_rev": 1580770373294
+	},
+	{
+		"enabled": true,
+		"updateUrl": "https://userstyles.org/styles/chrome/108591.json",
+		"md5Url": "https://update.userstyles.org/108591.md5",
+		"url": "http://userstyles.org/styles/108591",
+		"originalMd5": "1a53d7ab822048c38c3280872ccf9947",
+		"installDate": 1579291639126,
+		"sections": [
+			{
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"github.com"
+				],
+				"regexps": [],
+				"code": "@namespace url(http://www.w3.org/1999/xhtml);\n/*\r\n * Basic layout\r\n */\r\n\r\n.container {\r\n  width: 100% !important;\r\n  padding-right: 30px !important;\r\n  padding-left: 30px !important;\r\n}\r\n\r\n/* Responsive containers on some pages */\r\n.container-lg,\r\n.container-xl {\r\n  max-width: 100% !important;\r\n  padding-right: 30px !important;\r\n  padding-left: 30px !important;\r\n}\r\n\r\n/* Match the header to container padding */\r\n.Header {\r\n  padding-right: 30px !important;\r\n  padding-left: 30px !important;\r\n}\r\n\r\n\r\n/*\r\n * Profile pages\r\n */\r\n\r\n.pinned-repo-item {\r\n  width: calc(50% - 10px) !important;\r\n}\r\n.org-pinned-repos-list .pinned-repo-item {\r\n  width: calc(33.3% - 10px) !important;\r\n}\r\n\r\n.u-photo,\r\n.user-status-container {\r\n  max-width: 250px;\r\n}\r\n.u-photo .avatar {\r\n  width: 100% !important;\r\n  height: auto !important;\r\n}\r\n\r\n\r\n/*\r\n * Repo-specific stuff\r\n */\r\n\r\n.repository-content {\r\n  width: 100% !important;\r\n}\r\n\r\n/* Undo container changes for the Projects tab on repos which have unnecessary nested container-lg's */\r\n.repository-content > .container-lg {\r\n  padding-right: 0 !important;\r\n  padding-left: 0 !important;\r\n}\r\n\r\n/* Undo for profile timeline */\r\n.contribution-activity-listing .discussion-timeline {\r\n  width: 100% !important;\r\n}\r\n\r\n/* Fix #18 - props: @auscompgeek */\r\n.file-header::after {\r\n  clear: left !important;\r\n}\r\n\r\n/* Network graph */\r\n#network {\r\n  max-width: 730px;\r\n}\r\n\r\n\r\n/*\r\n * Issues & Dashboard\r\n */\r\n\r\n#dashboard,\r\n.new-issue-form {\r\n  position: relative !important;\r\n}\r\n\r\n.new-issue-form .discussion-sidebar {\r\n  position: absolute !important;\r\n  top: 0 !important;\r\n  right: 0 !important;\r\n}\r\n\r\nbutton.discussion-sidebar-toggle {\r\n  width: 100% !important;\r\n}\r\n\r\n.timeline-new-comment {\r\n  max-width: none !important;\r\n}\r\n\r\n/* Commits: extended message under \"...\" */\r\n.commit-desc pre {\r\n  max-width: none;\r\n}\r\n\r\n/* Alert messages */\r\n#js-flash-container .flash-messages {\r\n  width: 100% !important;\r\n  padding-left: 30px !important;\r\n  padding-right: 30px !important;\r\n}"
+			}
+		],
+		"name": "GitHub Wide",
+		"originalDigest": "e1c01fbfc56a8fa0521241dd291adae41fc7d9ce",
+		"id": 2,
+		"_id": "0535ae6a-3c3e-4a0c-bf67-0a51eae95098",
+		"_rev": 1580770373294
+	},
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"installDate": 1595552342675,
+		"name": "Lazy Foo' Productions",
+		"sections": [
+			{
+				"code": ":root {\n  --dark-text-color: #272822;\n  --code-background-color: #282c34;\n\n  --font-family: Roboto;\n}\n\nbody {\n  font-family: val(--font-family);\n  font-size: 125%;\n  color: var(--text-color);\n  background-color: #eee8d5;\n}\n\nh1 {\n  color: var(--dark-text-color);\n}\n\nh2 {\n  color: var(--dark-text-color);\n}\n\nh3 {\n  width: 100%;\n  color: var(--dark-text-color);\n  text-align: center;\n}\n\nh6 {\n  width: 100%;\n  color: #F9F8F5;\n  text-align: center;\n}\n\nb {\n  color: #F92672;\n}\n\na.nav {\n  color: var(--dark-text-color);\n}\n\na.leftNav {\n  float: left;\n  color: #A6E22E;\n}\n\na.tutLink {\n  margin: 0px auto;\n}\n\ndiv.tutPreface {\n  width: 90%;\n  margin: 30px auto 50px auto;\n  padding: 10px 5px 10px 5px;\n  border: medium solid #F4BF75;\n  background-color: #f9f8f5;\n  text-align: left;\n}\n\ndiv.tutCodeHeader {\n  width: 90%;\n\n  margin: 0px auto 0px auto;\n  padding: 10px;\n\n  background-color: #F9F8F5;\n  border: 1px solid black;\n\n  font-weight: bold;\n  color: #272822;\n  text-align: left;\n}\n\ndiv.tutCode {\n  font-family: Jetbrains Mono;\n  color: #f9f8f5;\n\n  width: 90%;\n\n  margin: 15px auto;\n\n  padding: 20px;\n  background-color: var(--code-background-color);\n  white-space: pre;\n}\n\ndiv.tutText {\n  width: 90%;\n  background-color: #f9f8f5;\n  margin: 0px auto 40px auto;\n\n  padding: 20px;\n}\n\ndiv.tutImg {\n  margin: 0px auto 0px auto;\n  text-align: center;\n}\n\ndiv.tutFooter {\n  width: 90%;\n  margin: 30px auto 50px auto;\n  padding: 10px 5px 10px 5px;\n  border: thin solid #111144;\n  background-color: #f9f8f5;\n  text-align: left;\n}\n\ntd.ToCTitle {\n  background-color: #272822;\n  border: thin solid #66D9EF;\n  color: #f9f8f5;\n  height: 30px;\n  text-align: center;\n}\n\ntd.tutLink {\n  background-color: #f9f8f5;\n  border: thin solid #FFF;\n  color: #272822;\n  text-align: center;\n}",
+				"domains": [
+					"lazyfoo.net"
+				]
+			}
+		],
+		"updateDate": 1595552366736,
+		"_id": "6bae3e1d-69b4-4247-b72f-566406adda3e",
+		"_rev": 1595552366736,
+		"id": 4
+	}
+]
