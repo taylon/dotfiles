@@ -8,6 +8,8 @@
 #   - Spotlight > Show Spotlight Search - cmd-space
 #   - Spotlight > Show Finder search window - option-cmd-space
 
+defaults write org.vim.MacVim AppleFontSmoothing -int 0
+
 # Avoid creating .DS_Store files on network volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
