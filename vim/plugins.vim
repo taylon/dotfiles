@@ -12,6 +12,8 @@ Plug 'jparise/vim-graphql'
 
 " Text Objects
 Plug 'wellle/targets.vim'
+Plug 'kanA/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
 
 " fzf
 Plug '/usr/local/opt/fzf'
@@ -20,12 +22,15 @@ Plug 'taylon/fzf-filemru'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Extensions
-" coc-tsserver
-" coc-prettier
-" coc-json
-" coc-css 
-" coc-python
+" Extensions:
+  " coc-css
+  " coc-diagnostic
+  " coc-eslint
+  " coc-json
+  " coc-prettier
+  " coc-python
+  " coc-stylelint
+  " coc-tsserver
 
 " Movement
 Plug 'rhysd/clever-f.vim'
@@ -49,7 +54,7 @@ Plug 'SirVer/ultisnips'
 Plug 'scrooloose/nerdtree'
 Plug 'thaerkh/vim-workspace'
 Plug 'terryma/vim-multiple-cursors'
-
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
@@ -59,9 +64,11 @@ let g:camelcasemotion_key = '<localleader>'
 imap <silent> <C-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
 
+
 " clever-f
 let g:clever_f_smart_case = 1
 let g:clever_f_chars_match_any_signs = ';'
+
 
 " workspace
 let g:workspace_session_directory = $HOME.'/.vim/sessions/'
@@ -71,11 +78,13 @@ let g:workspace_persist_undo_history = 0 " This is already setup in vimrc
 let g:workspace_create_new_tabs = 0 " Do not create new tabs when calling vim with a file argument
 let g:workspace_session_disable_on_args = 1 " Enable it only when calling vim without any arguments
 
+
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
 let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips'] 
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
+
 
 " move
 let g:move_map_keys = 0
@@ -90,10 +99,17 @@ nmap H <Plug>MoveLineDown
 nmap <S-Down> <Plug>MoveLineDown
 nmap <S-Up> <Plug>MoveLineUp
 
+
 " NERDTree
 " Always use NERDTree by opening it in a split and replacing netwr
 let g:NERDTreeHijackNetrw = 1
 map <leader>e :rightbelow vsplit<Enter> :execute 'e '.fnameescape(getcwd())<Enter>
+
+
+" devicons
+" disabling icons because there is a bug in nerdtree :(
+let g:webdevicons_enable_nerdtree = 0
+
 
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
@@ -179,4 +195,15 @@ inoremap <silent> <F12> <ESC>:FilesMru --tiebreak=end<Enter>
 
 nnoremap <D-p> :Command<Enter>
 inoremap <D-p> <ESC>:Command<Enter>
+
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
+
+
+" eunuch
+nnoremap <leader>df :Delete<Enter>
+
+
+" splitjoin
+nnoremap sj :SplitjoinJoin<Enter>
+nnoremap ss :SplitjoinSplit<Enter>
 
