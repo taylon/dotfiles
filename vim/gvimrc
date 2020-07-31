@@ -1,4 +1,4 @@
-set guifont=Operator\ Mono\ SSm:h18
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h18
 set guioptions= " Remove all UI elements like toolbars and scrollbars
 
 set linespace=10 " Set line height
