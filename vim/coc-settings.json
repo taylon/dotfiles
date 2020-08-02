@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
+    "c",
     "cpp",
     "css",
     "graphql",
