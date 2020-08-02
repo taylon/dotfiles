@@ -1,4 +1,3 @@
-set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h18
 set guioptions= " Remove all UI elements like toolbars and scrollbars
 
 set linespace=10 " Set line height
@@ -11,7 +10,10 @@ set guicursor+=a:blinkon0
 " MacVim
 if has("gui_macvim")
 
-  set macligatures " Enable font ligatures
+  set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h18
+
+  " Enable font ligatures
+  set macligatures
 
   " Unbind useless bs
   macmenu File.Print key=<nop>
@@ -40,6 +42,11 @@ if has("gui_macvim")
 
   inoremap <M-BS> <C-w>
   inoremap <D-BS> <C-u>
+
+else
+
+  set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ 16
+  nnoremap <C-w> :q<Enter>
 
 endif
 
