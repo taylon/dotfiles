@@ -11,7 +11,9 @@
     "ocaml",
     "python",
     "reason",
+    "rust",
     "scss",
+    "zsh",
     "sh",
     "typescript",
     "typescriptreact"
@@ -54,7 +56,8 @@
     "sh": "shellcheck"
   },
   "diagnostic-languageserver.formatFiletypes": {
-    "sh": "shfmt"
+    "sh": "shfmt",
+    "zsh": "shfmt"
   },
   "diagnostic-languageserver.formatters": {
     "shfmt": {
