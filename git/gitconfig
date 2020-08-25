@@ -9,6 +9,9 @@
 	name = Taylon Silva
 	email = taylonsilva@gmail.com
 
+[pull]
+	ff = only
+
 [alias]
 	l = log --graph --decorate --pretty=oneline --abbrev-commit --all -n 20
 	c = commit -m
