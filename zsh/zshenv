@@ -1,0 +1,45 @@
+export DEV_PATH="$HOME/Development"
+export DOTFILES_PATH="$DEV_PATH/dotfiles"
+
+# PATH
+export PATH="$HOME/.bin:$PATH"
+
+# XDG
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$XDG_CONFIG_HOME"/local/share
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME"/cache
+
+# zsh
+ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+HISTFILE="$ZDOTDIR"/.zhistory
+HISTSIZE=10000
+SAVEHIST=10000
+
+# Editor
+export EDITOR="nvim"
+
+# n
+export N_PREFIX="$HOME"/.node
+export PATH="$N_PREFIX/bin:$PATH"
+
+# fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude esy.lock'
+export FZF_DEFAULT_OPTS="--reverse"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always {} | head -500'"
+
+# Rg
+export RIPGREP_CONFIG_PATH="$HOME"/.config/ripgreprc
+
+# Golang
+export GOROOT="/usr/lib/go"
+export GOPATH="$DEV_PATH/go"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
+
+# Rust
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Temporary workaround for supporting Trash on electon apps
+# This might no longer be necessary after apps adopt
+# Electon 3.0 so keep an eye on it
+export ELECTRON_TRASH=gio

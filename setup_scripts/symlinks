@@ -12,6 +12,10 @@ ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 ln -s "$DOTFILES_PATH"/fish "$XDG_CONFIG_HOME"/fish
 ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisher_plugins/fishfile
 
+# ZSH
+ln -s "$DOTFILES_PATH"/zsh/zshenv "$HOME"/.zshenv
+ln -s "$DOTFILES_PATH"/zsh "$XDG_CONFIG_HOME"/zsh
+
 # bat
 ln -s "$DOTFILES_PATH"/bat "$XDG_CONFIG_HOME"/bat
 
@@ -39,4 +43,3 @@ ln -s "$DOTFILES_PATH"/vim/init.vim "$XDG_CONFIG_HOME"/nvim/init.vim
 
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
-
