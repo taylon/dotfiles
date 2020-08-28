@@ -42,6 +42,7 @@ brew install ripgrep
 brew install autojump
 brew install fish
 brew install bash
+brew install zsh
 brew install shellcheck
 brew install shfmt
 brew install checkbashisms

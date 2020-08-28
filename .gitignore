@@ -5,6 +5,11 @@ fish/private.fish
 fish/functions/fisher.fish
 fish/fish_variables
 
+# zsh
+zsh/.zhistory
+zsh/.zcompdump
+zsh/.zgen
+
 # Tmux
 tmux/tmuxinator/*.yml
 

@@ -10,20 +10,20 @@ touch "$XDG_CONFIG_HOME"/fish/private.fish
 mkdir "$XDG_CONFIG_HOME"/nvim
 
 # Create VIM's backup, swap and undo history folders
-mkdir $DOTFILES_PATH/vim/.backups
-mkdir $DOTFILES_PATH/vim/.swaps
-mkdir $DOTFILES_PATH/vim/.undo
+mkdir "$DOTFILES_PATH"/vim/.backups
+mkdir "$DOTFILES_PATH"/vim/.swaps
+mkdir "$DOTFILES_PATH"/vim/.undo
 
 # Create folders for N
-mkdir -p $HOME/.node/bin
-mkdir -p $HOME/.node/n/versions
+mkdir -p "$HOME"/.node/bin
+mkdir -p "$HOME"/.node/n/versions
 
 # Setup SSH keys at ~/.ssh/config
 # Host github.com
 #   IdentityFile ~/.ssh/...
 
 # NPM stuff - Do this after setting up N/Node
-yarn config set prefix $HOME/.node/
+yarn config set prefix "$HOME"/.node/
 
 yarn global add bash-language-server
 yarn global add trash-cli
@@ -33,3 +33,6 @@ yarn global add all-the-package-names
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Override Ctrl-Tab in Chrome to avoid conflicts with Surfingkeys
+
+# zgen
+git clone https://github.com/tarjoilija/zgen.git "$DOTFILES_PATH"/zsh/.zgen

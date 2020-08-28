@@ -14,6 +14,7 @@ ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 HISTFILE="$ZDOTDIR"/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
+ZGEN_DIR="$XDG_CONFIG_HOME"/zgen
 
 # Editor
 export EDITOR="nvim"
@@ -31,11 +32,6 @@ export FZF_CTRL_T_OPTS="--preview 'bat --style=numbers --color=always {} | head 
 # Rg
 export RIPGREP_CONFIG_PATH="$HOME"/.config/ripgreprc
 
-# Golang
-export GOROOT="/usr/lib/go"
-export GOPATH="$DEV_PATH/go"
-export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
-
 # Rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -43,3 +39,30 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # This might no longer be necessary after apps adopt
 # Electon 3.0 so keep an eye on it
 export ELECTRON_TRASH=gio
+
+if [[ $(uname) == "Darwin" ]]; then
+  # Add GNU stuff to PATH and MANPATH
+  export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/gnu-sed/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/gnu-which/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/gnu-which/libexec/gnuman:$MANPATH"
+  export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+  export MANPATH="/usr/local/opt/make/libexec/gnuman:$MANPATH"
+
+  export GOROOT="/usr/local/opt/go/libexec"
+
+  # This is not necessary on MacOS
+  unset ELECTRON_TRASH
+else
+  export GOROOT="/usr/lib/go"
+fi
+
+# Golang
+export GOPATH="$DEV_PATH/go"
+export PATH="$GOROOT/bin:$GOPATH/bin:$PATH"
