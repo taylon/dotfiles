@@ -4,6 +4,7 @@
     "c",
     "cpp",
     "css",
+    "dune",
     "graphql",
     "javascript",
     "javascripteact",
@@ -29,10 +30,16 @@
       }
     },
 
+    "ocaml-lsp-opam": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml"]
+    },
+
     "ocaml-lsp": {
       "command": "esy",
       "args": ["sh", "-c", "ocamllsp"],
-      "filetypes": ["ocaml", "reason"]
+      "filetypes": ["reason"]
     },
 
     "cmake": {
