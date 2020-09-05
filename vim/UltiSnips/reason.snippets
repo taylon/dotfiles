@@ -4,8 +4,12 @@ let $1 = ${2:($3) => ${4:{
 }}}
 endsnippet
 
-snippet log "Console.log"
-Console.log("$1");
+snippet l "Log.debug"
+Log.debug("$1");
+endsnippet
+
+snippet lf "Log.debugf"
+Log.debugf(m => m("$1", $2));
 endsnippet
 
 snippet s "switch"
