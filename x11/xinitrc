@@ -3,14 +3,9 @@
 # Set a fast key repeat rate
 xset r rate 200 25
 
-# Load nvidia settings
 nvidia-settings --load-config-only &
-
-# Load redshift
 redshift &
+ulauncher --hide-window --no-window-shadow &
 
-# Load Xresources
 xrdb -merge ~/.Xresources &&
-
-# Run i3
-exec i3
+  exec i3

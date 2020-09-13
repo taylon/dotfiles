@@ -19,7 +19,11 @@ mkdir -p "$HOME"/.node/bin
 mkdir -p "$HOME"/.node/n/versions
 
 # Setup SSH keys at ~/.ssh/config
+#
 # Host github.com
+#   IdentityFile ~/.ssh/...
+#
+# Host gitlab.freedesktop.org
 #   IdentityFile ~/.ssh/...
 
 # NPM stuff - Do this after setting up N/Node
