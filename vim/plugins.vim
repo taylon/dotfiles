@@ -31,6 +31,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " coc-python
   " coc-stylelint
   " coc-tsserver
+  " coc-rls
 
 " Movement
 Plug 'rhysd/clever-f.vim'
@@ -56,6 +57,7 @@ Plug 'thaerkh/vim-workspace'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'vhdirk/vim-cmake'
 
 call plug#end()
 
@@ -114,7 +116,7 @@ let g:webdevicons_enable_nerdtree = 0
 " easymotion
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys = 'seriaowyfulpdkchx.,zgmtn'
+let g:EasyMotion_keys = 'tnseriaowyfulpdhc,x.z/gmvkbjq;'
 
 map <localleader>s <Plug>(easymotion-bd-w)
 map <localleader><localleader> <Plug>(easymotion-s)
@@ -143,7 +145,7 @@ set nowritebackup
 set updatetime=300
 set shortmess+=c
 
-nmap <D-r> <Plug>(coc-rename)
+nmap <leader>rr <Plug>(coc-rename)
 
 " Golang auto format
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
@@ -193,8 +195,9 @@ let g:closetag_regions =  {
 nnoremap <silent> <F12> :FilesMru --tiebreak=end<Enter>
 inoremap <silent> <F12> <ESC>:FilesMru --tiebreak=end<Enter>
 
-nnoremap <D-p> :Command<Enter>
-inoremap <D-p> <ESC>:Command<Enter>
+nnoremap <leader>rg :Rg<Space>
+nnoremap <C-p> :Command<Enter>
+inoremap <C-p> <ESC>:Command<Enter>
 
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
 
