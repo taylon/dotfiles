@@ -2,6 +2,7 @@ i3-wm
 git
 openssh
 fish
+zsh
 yay
 sudo
 nvim
@@ -11,6 +12,7 @@ shfmt
 go
 arc-gtk-theme
 diff-so-fancy
+git-delta
 autojump
 ripgrep
 httpie

@@ -1,6 +1,6 @@
 [core]
-	editor = vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = nvim
+  pager = delta 
 
 [advice]
 	statusHints = false
@@ -26,19 +26,16 @@
 	dk = difftool --no-symlinks --dir-diff
 	pm = push origin master
 
+[delta]
+  syntax-theme = TwoDark
+  line-numbers = true
+
 [diff]
-	tool = kitty
-	guitool = kitty.gui
+  colorMoved = default
 
 [difftool]
 	prompt = false
 	trustExitCode = true
-
-[difftool "kitty"]
-	cmd = kitty +kitten diff $LOCAL $REMOTE
-
-[difftool "kitty.gui"]
-	cmd = kitty kitty +kitten diff $LOCAL $REMOTE
 
 [color]
 	ui = auto

@@ -37,7 +37,7 @@ brew install make
 brew install n
 brew install git
 brew install openssh
-brew install diff-so-fancy
+brew install git-delta
 brew install ripgrep
 brew install autojump
 brew install fish
