@@ -9,6 +9,8 @@ fish/fish_variables
 zsh/.zhistory
 zsh/.zcompdump
 zsh/.zgen
+zsh/private.zsh
+zsh/.zcompcache
 
 # Tmux
 tmux/tmuxinator/*.yml
