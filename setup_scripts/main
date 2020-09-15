@@ -40,3 +40,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # zgen
 git clone https://github.com/tarjoilija/zgen.git "$DOTFILES_PATH"/zsh/.zgen
+
+# Python
+pip install inflect # used by Ultisnips
