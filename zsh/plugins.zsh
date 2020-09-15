@@ -8,7 +8,6 @@ if ! zgen saved; then
   zgen load zdharma/fast-syntax-highlighting
   zgen load zsh-users/zsh-history-substring-search
 
-  zgen load olets/zsh-abbr
   zgen load zsh-users/zsh-completions src
   zgen load hlissner/zsh-autopair
 

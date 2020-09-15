@@ -9,6 +9,7 @@ alias .....="cd ../../../.."
 
 # exa
 alias ls='exa -a --icons'
+alias ll='exa -al'
 
 # trash-cli
 # alias rm trash
@@ -22,3 +23,4 @@ alias cat=bat
 
 # Vim
 alias v=nvim
+alias gvim=glrnvim
