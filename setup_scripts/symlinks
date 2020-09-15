@@ -36,10 +36,10 @@ ln -s "$DOTFILES_PATH"/git/gitconfig_riot "$HOME"/.gitconfig_riot
 
 # Vim/NeoVim
 ln -s "$DOTFILES_PATH"/vim "$HOME"/.vim
+ln -s "$DOTFILES_PATH"/vim "$XDG_CONFIG_HOME"/nvim
 ln -s "$DOTFILES_PATH"/vim/vimrc "$HOME"/.vimrc
 ln -s "$DOTFILES_PATH"/vim/gvimrc "$HOME"/.gvimrc
 ln -s "$DOTFILES_PATH"/vim/ideavimrc "$HOME"/.ideavimrc
-ln -s "$DOTFILES_PATH"/vim/init.vim "$XDG_CONFIG_HOME"/nvim/init.vim
 
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"

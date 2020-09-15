@@ -1,7 +1,3 @@
-# Vim
-abbr -a v nvim
-abbr -a vim nvim
-
 # Docker
 abbr -a dc docker-compose
 abbr -a dr docker run --rm

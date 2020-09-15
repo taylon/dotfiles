@@ -19,3 +19,7 @@ alias s 'git status'
 
 # bat
 alias cat bat
+
+# Vim
+alias v nvim
+alias gvim glrnvim
