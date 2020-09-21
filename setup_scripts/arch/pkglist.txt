@@ -37,6 +37,7 @@ xorg-xset
 pulseaudio
 pulseaudio-alsa
 checkbashisms
+ctags
 
 AUR:
 
