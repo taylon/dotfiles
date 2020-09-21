@@ -102,5 +102,5 @@ end
 # Rust
 set PATH $PATH $HOME/.cargo/bin
 
-# opam configuration
+# setup opam
 source /home/taylon/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

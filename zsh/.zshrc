@@ -33,3 +33,6 @@ if [[ $(uname) == "Linux" ]]; then
 else
   source /usr/local/share/autojump/autojump.zsh
 fi
+
+# Setup opam
+test -r /home/taylon/.opam/opam-init/init.zsh && . /home/taylon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
