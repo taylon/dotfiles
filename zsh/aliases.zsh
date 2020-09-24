@@ -24,3 +24,6 @@ alias cat=bat
 # Vim
 alias v=nvim
 alias gvim=glrnvim
+
+# Yarn
+alias ys='yarn start'
