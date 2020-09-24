@@ -1,50 +1,9 @@
-" Sanity
-set nocompatible
-set backspace=indent,eol,start
-set history=1000
-set wildmenu " Improved command line completion
-set autoindent " Carry over indenting from previous line
-set smarttab
-set tabstop=2 " Make tabs as wide as two spaces
-set shiftwidth=2
-set expandtab
-set autoread " Auto read files if it changes outside vim
-set ignorecase
-set smartcase
-set hlsearch " Highlight the last used search pattern.
-set incsearch " Highlight matched patterns as you type
-set cursorline " Highlight current line
-set noruler " Show the cursor position
-set nowrap " Don't wrap lines
-set number
-set relativenumber
-" set scrolloff=3 " Start scrolling three lines before the horizontal window border
-set signcolumn=yes " Always show the signcolumn in the gutter
-set pumheight=7 " limit the number of suggestions shown in the autocomplete menu
-set shortmess+=F " remove message when opening files
-set laststatus=1 " show filename in the bottom only if there is a split
-set noshowcmd " hide command echoing
-
 filetype plugin indent on
 
-if has('syntax') && !exists('g:syntax_on')
-  syntax enable
-endif
-
-" Folding
-set foldmethod=syntax
-set nofoldenable
-
-" Use the OS clipboard by default
-if has('unix') && !has('macunix')
-  set clipboard=unnamedplus
-else
-  set clipboard=unnamed
-endif
-
-if (has("termguicolors"))
-  set termguicolors " Enable 24-bit (true-color) mode
-endif
+syntax on
+" if has('syntax') && !exists('g:syntax_on')
+"   syntax enable
+" endif
 
 " Disable cmd_opt movement mappings because they
 " conflict with other stuff, unfortunatelly this needs
@@ -53,37 +12,17 @@ if has("gui_macvim")
   let macvim_skip_cmd_opt_movement = 1
 endif
 
+if has("termguicolors")
+  set termguicolors " Enable 24-bit (true-color) mode
+endif
+
 " Speed up viewport scrolling
 nnoremap <C-e> 3<C-e>
 nnoremap <C-y> 3<C-y>
 
-" Map common commands to avoid typos
-cab W w
-cab Q q
-cab Wq wq
-cab wQ wq
-cab WQ wq
-cab Qa qa
-cab Wqa wqa
 
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/.backups
-set directory=~/.vim/.swaps
-set undofile
-set undodir=~/.vim/.undo
+let g:clever_f_mark_char_color = "CleverFMark"
 
-" Set cursor colors per mode
-set noshowmode
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
-
-" Keep the cursor always in the middle
-augroup VCenterCursor
- au!
- au BufEnter,WinEnter,WinNew,VimResized *,*.*
-      \ let &scrolloff=winheight(win_getid())/2
-augroup END
 
 source ~/.vim/keymaps.vim
 source ~/.vim/plugins.vim

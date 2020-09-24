@@ -1,10 +1,14 @@
 call plug#begin('~/.vim/plugged')
 
-" Color related stuff
+" Visuals related stuff
 Plug 'joshdick/onedark.vim'
 Plug 'luochen1990/rainbow'
-Plug 'ap/vim-css-color'
-Plug 'machakann/vim-highlightedyank'
+Plug 'ryanoasis/vim-devicons'
+
+if has('nvim')
+  Plug 'norcalli/nvim-colorizer.lua'
+  Plug 'nvim-treesitter/nvim-treesitter'
+endif
 
 " Language stuff
 Plug 'sheerun/vim-polyglot'
@@ -14,14 +18,23 @@ Plug 'jparise/vim-graphql'
 Plug 'wellle/targets.vim'
 Plug 'kanA/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
+Plug 'thinca/vim-textobj-comment'
+Plug 'bkad/CamelCaseMotion'
 
-" fzf
+" Files
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'taylon/fzf-filemru'
+Plug 'benwainwright/fzf-project'
+Plug 'thaerkh/vim-workspace'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-eunuch'
+Plug 'duggiefresh/vim-easydir'
 
 " coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 " Extensions:
   " coc-css
   " coc-diagnostic
@@ -29,35 +42,39 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
   " coc-json
   " coc-prettier
   " coc-python
-  " coc-stylelint
+  " coc-stylelintplus
   " coc-tsserver
   " coc-rls
+  " coc-actions
 
 " Movement
 Plug 'rhysd/clever-f.vim'
 Plug 'easymotion/vim-easymotion'
-Plug 'bkad/CamelCaseMotion'
-Plug 'matze/vim-move'
 Plug 'unblevable/quick-scope'
 
 " General
-Plug 'tomtom/tcomment_vim'
+" Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-eunuch'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'yggdroot/indentline'
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
-Plug 'airblade/vim-gitgutter'
 Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
-Plug 'scrooloose/nerdtree'
-Plug 'thaerkh/vim-workspace'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'AndrewRadev/splitjoin.vim'
-Plug 'ryanoasis/vim-devicons'
 Plug 'vhdirk/vim-cmake'
+Plug 'liuchengxu/vista.vim'
+Plug 'romainl/vim-cool' 
+
+" Under evaluation/wanting to remove soon
+Plug 'vimwiki/vimwiki'
+Plug 'matze/vim-move'
+Plug 'scrooloose/nerdtree'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'cohama/lexima.vim'
+
+
 
 call plug#end()
 
@@ -69,7 +86,6 @@ imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
 
 " clever-f
 let g:clever_f_smart_case = 1
-let g:clever_f_chars_match_any_signs = ';'
 
 
 " workspace
@@ -91,13 +107,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 " move
 let g:move_map_keys = 0
 
-vmap H <Plug>MoveBlockDown
-vmap K <Plug>MoveBlockUp
 vmap <S-Down> <Plug>MoveBlockDown
 vmap <S-Up> <Plug>MoveBlockUp
 
-nmap K <Plug>MoveLineUp
-nmap H <Plug>MoveLineDown
 nmap <S-Down> <Plug>MoveLineDown
 nmap <S-Up> <Plug>MoveLineUp
 
@@ -109,7 +121,7 @@ map <leader>e :rightbelow vsplit<Enter> :execute 'e '.fnameescape(getcwd())<Ente
 
 
 " devicons
-" disabling icons because there is a bug in nerdtree :(
+" disabling icons because there is a bug in nerdtree 
 let g:webdevicons_enable_nerdtree = 0
 
 
@@ -139,11 +151,8 @@ let g:rainbow_conf = {
 
 " coc
 " Recommended settings to avoid issues
-set hidden
-set nobackup
-set nowritebackup
-set updatetime=300
-set shortmess+=c
+" set nobackup
+" set nowritebackup
 
 nmap <leader>rr <Plug>(coc-rename)
 
@@ -153,10 +162,6 @@ autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeIm
 " Gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> gt <Plug>(coc-type-definition)
-
-" Actions
-nnoremap <leader>a :CocAction<Enter>
 
 " A normal mapping for this for whatever reason does not work
 " when you try to go to a definition that is in another file.
@@ -168,6 +173,11 @@ endfunction
 
 nnoremap <leader>gd :call <SID>GoToDefinitionInSplit()<Enter>
 
+" coc-actions
+" nnoremap <leader>a :CocAction<Enter>
+" Remap for do codeAction of selected region
+nmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+
 " Show documentation in preview window
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -177,7 +187,7 @@ function! s:show_documentation()
   endif
 endfunction
 
-map <silent> <leader>d :call <SID>show_documentation()<Enter>
+nnoremap <silent> <leader>d :call <SID>show_documentation()<Enter>
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -192,21 +202,103 @@ let g:closetag_regions =  {
 
 
 " FZF
-nnoremap <silent> <F12> :FilesMru --tiebreak=end<Enter>
-inoremap <silent> <F12> <ESC>:FilesMru --tiebreak=end<Enter>
+nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
+inoremap <silent> <f12> <esc>:FilesMru --tiebreak=end<enter>
 
-nnoremap <leader>rg :Rg<Space>
-nnoremap <C-p> :Command<Enter>
-inoremap <C-p> <ESC>:Command<Enter>
+nnoremap <leader>rg :Rg<space>
+nnoremap <silent> <leader>; :Commands<enter> 
+
+nnoremap <c-p> :Command<enter>
+inoremap <c-p> <esc>:Command<enter>
 
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
 
+" fzf-project
+let g:fzfSwitchProjectGitInitBehavior = 'none'
+let g:fzfSwitchProjectWorkspaces = ['~/Development']
+" f36 maps to <c-f12> which in my keyboard is close to home row
+" to figure out this enigma look at "showkeys -a" to see what comes
+" out of the <c-f12> keypress, then use terminfo (nvim -V3log) to see
+" what keycode matches the output of showkeys
+nnoremap <f36> :FzfSwitchProject<enter>
 
-" eunuch
-nnoremap <leader>df :Delete<Enter>
+
+" File Operations (eunuch and coc)
+nnoremap <leader>fd :Delete<Enter>
+nnoremap <leader>fr :CocCommand workspace.renameCurrentFile<Enter>
+
+
+" Git
+nmap <leader>gr <Plug>(GitGutterUndoHunk)
 
 
 " splitjoin
 nnoremap sj :SplitjoinJoin<Enter>
 nnoremap ss :SplitjoinSplit<Enter>
+
+
+" Vista
+let g:vista_fzf_preview = ['right:50%']
+let g:vista_keep_fzf_colors = 1
+let g:vista_fzf_show_line_numbers = 0
+let g:vista_fzf_show_source_line = 0
+noremap <silent> <leader><F12> :Vista finder<Enter>
+" let g:vista_default_executive = 'coc'
+
+
+" VimWiki
+ let wiki = {}
+ let wiki.nested_syntaxes = {'python': 'python', 'c++': 'cpp', 'reason': 'reason'}
+ let g:vimwiki_list = [wiki]
+
+ " let g:vimwiki_list = [{
+ " \  'path': '~/vimwiki/',
+ " \  'syntax': 'markdown', 
+ " \  'ext': '.md',
+ " \}]
+
+if has('nvim')
+  lua require'colorizer'.setup()
+
+  lua <<
+    require'nvim-treesitter.configs'.setup {
+      ensure_installed = "all",
+
+      highlight = {
+        enable = true,              
+      },
+
+      textobjects = {
+        select = {
+          enable = true,
+
+          keymaps = {
+            ["af"] = "@function.outer",
+            ["if"] = "@function.inner",
+          },
+        },
+
+        move = {
+          enable = true,
+
+          goto_next_start = {
+            ["<M-Down>"] = "@function.outer",
+          },
+
+          -- goto_next_end = {
+          --  ["<M-Down>"] = "@function.outer",
+          -- },
+
+          goto_previous_start = {
+           ["<M-Up>"] = "@function.outer",
+          },
+
+          -- goto_previous_end = {
+          --  ["<M-Up>"] = "@function.outer",
+          -- },
+        },
+      },
+    }
+.
+endif
 

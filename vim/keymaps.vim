@@ -2,13 +2,13 @@ let mapleader="\<F6>"
 let maplocalleader="\<space>"
 
 " Remap j and h to work better with Colemak-DHm
-set nolangremap
-set langmap=hj,HJ,jh,JH
+" set nolangremap
+" set langmap=hj,HJ,jh,JH
 
 " Y should behave just like D or C
 map Y y$
 
-" Positional movement
+" Movement
 nnoremap <F7> <C-o>
 nnoremap <F10> <C-i>
 
@@ -60,6 +60,12 @@ nnoremap <leader>k <C-w><Up>
 nnoremap <leader><Down> <C-w><Down>
 nnoremap <leader>h <C-w><Down>
 
+nnoremap <C-w> :q<Enter>
+
 " Folding
 nnoremap <D-[> za
+
+" Pasting
+nnoremap <leader>p v$<left>p
+cnoremap <c-v> <c-r>"
 
