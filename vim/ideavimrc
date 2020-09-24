@@ -12,9 +12,12 @@ set commentary
 set easymotion
 set textobj-entire
 set argtextobj
+set highlightedyank
+
+let g:highlightedyank_highlight_color = "rgba(62, 68, 82, 1)"
 
 " Remove icon from status bar
-set ideastatusicon
+set ideastatusicon=disabled
 
 " Integrate with system clipboard
 set clipboard+=unnamed
