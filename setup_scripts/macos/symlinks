@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 # Normalize VSCode config location between Linux and MacOS
-ln -s "$HOME/Library/Application Support/Code/" "$HOME"/.config/Code
+ln -s "$HOME/Library/Application Support/Code/" "$XDG_CONFIG_HOME"/Code
 
 # Kitty
 rm "$HOME"/.config/kitty
-ln -s "$DOTFILES_PATH"/kitty/macos_keymaps.conf "$HOME"/.config/kitty_os_specific_keymaps.conf
+ln -s "$DOTFILES_PATH"/kitty/macos.conf "$XDG_CONFIG_HOME"/kitty_os_specific.conf
 
 # ColemakDH-Matrix layout
 ln -s "$DOTFILES_PATH"/keyboard/macos/ColemakDH-Matrix.bundle "/Library/Keyboard Layouts/ColemakDH-Matrix.bundle"

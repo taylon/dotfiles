@@ -8,7 +8,7 @@ mkdir -p "$HOME"/.config/fontconfig/conf.d/
 ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$XDG_CONFIG_HOME"/fontconfig/conf.d/90-operator-mono-ssm.conf
 
 # Kitty
-ln -s "$DOTFILES_PATH"/kitty/linux_keymaps.conf "$XDG_CONFIG_HOME"/kitty_os_specific_keymaps.conf
+ln -s "$DOTFILES_PATH"/kitty/linux.conf "$XDG_CONFIG_HOME"/kitty_os_specific.conf
 
 # X11
 ln -s "$DOTFILES_PATH"/x11/xinitrc "$HOME"/.xinitrc
