@@ -9,61 +9,45 @@ let maplocalleader="\<space>"
 map Y y$
 
 " Movement
-nnoremap <F7> <C-o>
-nnoremap <F10> <C-i>
+nnoremap <f7> <c-o>
+nnoremap <f10> <c-i>
 
 " Make scolling keybindings more consistent
-nnoremap <C-k> <C-u>
-nnoremap <C-h> <C-d>
+nnoremap <c-k> <c-u>
+nnoremap <c-h> <c-d>
 
-" Prevent A-direction jumps to be stored in the jumplist
-nnoremap <silent> <M-Up> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
-nnoremap <silent> <M-k> :<C-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
-nnoremap <silent> <M-Down> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
-nnoremap <silent> <M-h> :<C-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
+" Prevent Alt-direction jumps to be stored in the jumplist
+nnoremap <silent> <m-Up> :<c-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
+nnoremap <silent> <m-k> :<c-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>
+nnoremap <silent> <m-Down> :<c-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
+nnoremap <silent> <m-h> :<c-u>execute "keepjumps norm! " . v:count1 . "}"<Enter>
 
-" C and D will be in the same position in the keyboard,
-" setup by the keyboard firmware
-if has("macunix")
-  " Save with Ctrl-s
-  nnoremap <silent> <D-s> :silent w<Enter>
-  inoremap <silent> <D-s> <Esc>:silent w<Enter>
+nnoremap <silent> <c-s> :silent w<enter>
+inoremap <silent> <c-s> <esc>:silent w<enter>
 
-  " New line in Insert mode
-  inoremap <D-Enter> <Esc>o
-  inoremap <D-S-Enter> <Esc><S-o>
-else
-  nnoremap <silent> <C-s> :silent w<Enter>
-  inoremap <silent> <C-s> <Esc>:silent w<Enter>
-
-  inoremap <C-Enter> <Esc>o
-  inoremap <C-S-Enter> <Esc><S-o>
-endif
+inoremap <c-enter> <esc>o
+inoremap <c-s-enter> <esc><s-o>
 
 " New line in Normal Mode
 nnoremap <Enter> o<Esc>
 nnoremap <S-Enter> O<Esc>
 
 " Splits
+noremap <silent> <c-w> :q<Enter>
 nnoremap <leader>v :rightbelow vsplit<Enter>
 nnoremap <leader>s :rightbelow split<Enter>
 
-nnoremap <leader><Right> <C-w><Right>
-nnoremap <leader>l <C-w><Right>
+nnoremap <leader><right> <c-w><right>
+nnoremap <leader>l <c-w><right>
 
-nnoremap <leader><Left> <C-w><Left>
-nnoremap <leader>j <C-w><Left>
+nnoremap <leader><left> <c-w><left>
+nnoremap <leader>j <c-w><left>
 
-nnoremap <leader><Up> <C-w><Up>
-nnoremap <leader>k <C-w><Up>
+nnoremap <leader><up> <c-w><up>
+nnoremap <leader>k <c-w><up>
 
-nnoremap <leader><Down> <C-w><Down>
-nnoremap <leader>h <C-w><Down>
-
-nnoremap <C-w> :q<Enter>
-
-" Folding
-nnoremap <D-[> za
+nnoremap <leader><down> <c-w><down>
+nnoremap <leader>h <c-w><down>
 
 " Pasting
 nnoremap <leader>p v$<left>p
