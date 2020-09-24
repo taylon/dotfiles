@@ -1,75 +1,90 @@
-settings.blacklistPattern = /.*thetypingcat/i;
+// Reminders:
+//  - ;s to toggle the PDF viwer
+//  - alt-s to toggle surfingkeys for a given website
+
+settings.modeAfterYank = "Normal"
+
+settings.blacklistPattern = /.*thetypingcat/i
 
 // Unmap useless search bindings
-unmap("sd");
-unmap("sb");
-unmap("sw");
-unmap("ss");
+unmap("sd") // duckduckgo
+unmap("sb") // baidu
+unmap("sw") // wikipedia
+unmap("ss") // stackoverflow
+unmap("sh") // github
+unmap("sy") // youtube
 
 // Remap j and h to work better with Colemak-DHm
-map("h", "j");
-map("j", "h");
+// map("h", "j");
+// map("j", "h");
 
 // Remap history back/foward
-map("l", "S");
-map("u", "D");
+map("l", "S")
+map("u", "D")
+
+settings.tabsThreshold = 0
+settings.tabsMRUOrder = true
 
 // Use t for new tab
-map("t", "on");
+map("t", "on") 
 
 // Tab navigation
-map("<F7>", "R");
-map("<F10>", "E");
+map("<f7>", "R")
+map("<f10>", "E")
 
 // Optimize hint characters for Colemak-DHm
-Hints.characters = "stradfpwgenihouylm,./";
+Hints.characters = "stradfpwgenihouylm,./"
 
-settings.tabsMRUOrder = false;
+
+// Styling
+Hints.style("border: solid 3px transparent; color: #fff; background: initial; background-color: #ff4700;")
 
 settings.theme = `
-.sk_theme {
-    font-family: Operator Mono SSm Book, sans-serif;
-    font-size: 18px;
-    background: #24272e;
-    color: #abb2bf;
+:root {
+  --font: Menlo, sans-serif;
 }
 
-.sk_theme tbody {
-    color: #fff;
+.sk_theme {
+  font-family: var(--font);
+  color: #212428;
+}
+
+#sk_omnibar {
+  box-shadow: 0px 1px 5px 0px rgb(177 177 177 / 80%);
+}
+
+.sk_omnibar_middle #sk_omnibarSearchArea {
+  margin: 9px;
+  padding: 5px 5px 5px 0;
+
+  background-color: #f5f5f5;
+
+  border-bottom: none;
+  border-radius: 4px;
 }
 
 .sk_theme input {
-    color: #d0d0d0;
+  font-size: 18px;
+  color: #424a54; 
 }
 
-.sk_theme .url {
-    color: #61afef;
+#sk_omnibarSearchArea .prompt {
+  display: none;
 }
 
-.sk_theme .annotation {
-    color: #56b6c2;
+#sk_omnibarSearchArea .resultPage {
+  display: none;
 }
 
-.sk_theme .omnibar_highlight {
-    color: #528bff;
+#sk_omnibarSearchResult .url {
+  display: none;
 }
 
-.sk_theme .omnibar_timestamp {
-    color: #e5c07b;
+#sk_omnibarSearchResult ul li {
+  padding: 9px 9px;
 }
 
-.sk_theme .omnibar_visitcount {
-    color: #98c379;
+#sk_omnibarSearchResult ul li:last-child {
+  padding: 9px 0 9px 9px;
 }
-
-.sk_theme #sk_omnibarSearchResult>ul>li:nth-child(odd) {
-    background: #303030;
-}
-
-.sk_theme #sk_omnibarSearchResult>ul>li.focused {
-    background: #3e4452;
-}
-
-#sk_status, #sk_find {
-    font-size: 20pt;
-}`;
+`;
