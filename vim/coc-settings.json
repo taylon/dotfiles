@@ -5,10 +5,12 @@
     "cpp",
     "css",
     "dune",
+    "go",
     "graphql",
     "javascript",
     "javascripteact",
     "json",
+    "rescript",
     "ocaml",
     "python",
     "reason",
@@ -40,6 +42,11 @@
       "command": "esy",
       "args": ["sh", "-c", "ocamllsp"],
       "filetypes": ["reason"]
+    },
+
+    "rescript": {
+      "command": "reason-language-server",
+      "filetypes": ["rescript"]
     },
 
     "cmake": {
@@ -91,5 +98,12 @@
 
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
-  "python.linting.mypyEnabled": true
+  "python.linting.mypyEnabled": true,
+
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+
+  "stylelintplus.cssInJs": true
 }
