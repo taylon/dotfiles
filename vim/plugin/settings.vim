@@ -85,10 +85,6 @@ if exists('&belloff')
 endif
 
 set sidescrolloff=5 " same as scrolloff, but for columns
-if exists('+colorcolumn')
-  " highlight up to 255 columns (this is the current Vim max) beyond 'textwidth'
-  let &l:colorcolumn='+' . join(range(0, 254), ',+')
-endif
 
 set formatoptions+=n " smart auto-indenting inside numbered lists
 if v:version > 703 || v:version == 703 && has('patch541')
