@@ -2,6 +2,10 @@ snippet p "printf"
 printf("$1${2: %i}\n", $3);
 endsnippet
 
+snippet e "fprintf(stderr, ...)"
+fprintf(stderr, "$1${2: %s}\n", $3);
+endsnippet
+
 snippet if "if"
 if ($1) {
 	$2;
@@ -12,10 +16,6 @@ snippet for "for"
 for (${1:int }$2 = 0; $2 < $3; $2++) {
 	$4;
 }
-endsnippet
-
-snippet in "#include"
-#include <$1>
 endsnippet
 
 snippet ts "typedef struct"
@@ -38,4 +38,27 @@ ${1:void} $2(${3:void}) {
 } 
 endsnippet
 
+snippet main "main function"
+int main(${1:int argc, char *argv[]}) {
+	$2
+
+	return 0;
+}
+endsnippet
+
+snippet iio "#include <stdio.h>"
+#include <stdio.h>
+endsnippet
+
+snippet istd "#include <stdlib.h"
+#include <stdlib.h>
+endsnippet
+
+snippet is "#include <string.h>"
+#include <string.h>
+endsnippet
+
+snippet ib "#include <stdbool.h>"
+#include <stdbool.h>
+endsnippet
 
