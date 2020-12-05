@@ -16,6 +16,7 @@ alias ls 'exa -a --icons'
 # Git
 alias g git
 alias s 'git status'
+alias clone 'git clone'
 
 # bat
 alias cat bat

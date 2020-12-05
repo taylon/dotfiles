@@ -17,6 +17,7 @@ alias ll='exa -al'
 # Git
 alias g=git
 alias s='git status'
+alias clone='git clone'
 
 # bat
 alias cat=bat
