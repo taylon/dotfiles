@@ -43,3 +43,6 @@ ln -s "$DOTFILES_PATH"/vim/ideavimrc "$HOME"/.ideavimrc
 
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
+
+# Qutebrowser
+ln -s "$DOTFILES_PATH/qutebrowser" "$XDG_CONFIG_HOME"/qutebrowser
