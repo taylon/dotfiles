@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Reboot
+Categories=System;
+Comment=Reboot the system
+Exec=reboot
+GenericName=Reboot
+Icon=/usr/share/icons/la-capitaine/apps/scalable/system-reboot.svg
+Type=Application

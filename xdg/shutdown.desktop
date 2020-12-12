@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Shutdown
+Categories=System;
+Comment=Shutdown the system
+Exec=shutdown -h now
+GenericName=Shutdown
+Icon=/usr/share/icons/la-capitaine/apps/scalable/system-shutdown.svg
+Type=Application

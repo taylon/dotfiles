@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Logout
+Categories=System;
+Comment=Logout
+Exec=i3-msg exit
+GenericName=Logout
+Icon=/usr/share/icons/la-capitaine/apps/scalable/system-shutdown.svg
+Type=Application
