@@ -16,6 +16,14 @@ ln -s "$DOTFILES_PATH"/x11/xinitrc "$HOME"/.xinitrc
 # i3
 ln -s "$DOTFILES_PATH"/i3/i3.config "$XDG_CONFIG_HOME"/i3/config
 
+# Rofi
+ln -s "$DOTFILES_PATH"/rofi "$XDG_CONFIG_HOME"/rofi
+
+# XDG
+ln -s "$DOTFILES_PATH"/xdg/shutdown.desktop "$HOME"/.local/share/applications/shutdown.desktop
+ln -s "$DOTFILES_PATH"/xdg/reboot.desktop "$HOME"/.local/share/applications/reboot.desktop
+ln -s "$DOTFILES_PATH"/xdg/logout.desktop "$HOME"/.local/share/applications/logout.desktop
+
 # GTK
 ln -s "$DOTFILES_PATH"/gtk/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 ln -s "$DOTFILES_PATH"/gtk/gtk.css "$XDG_CONFIG_HOME"/gtk-3.0/gtk.css
