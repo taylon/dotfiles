@@ -23,6 +23,7 @@ ln -s "$DOTFILES_PATH"/rofi "$XDG_CONFIG_HOME"/rofi
 ln -s "$DOTFILES_PATH"/xdg/shutdown.desktop "$HOME"/.local/share/applications/shutdown.desktop
 ln -s "$DOTFILES_PATH"/xdg/reboot.desktop "$HOME"/.local/share/applications/reboot.desktop
 ln -s "$DOTFILES_PATH"/xdg/logout.desktop "$HOME"/.local/share/applications/logout.desktop
+ln -s "$DOTFILES_PATH"/xdg/suspend.desktop "$HOME"/.local/share/applications/suspend.desktop
 
 # GTK
 ln -s "$DOTFILES_PATH"/gtk/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini

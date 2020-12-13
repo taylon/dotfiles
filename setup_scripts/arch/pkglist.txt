@@ -13,7 +13,7 @@ go
 arc-gtk-theme
 diff-so-fancy
 git-delta
-autojump
+autojump-rs
 ripgrep
 httpie
 mlocate
@@ -38,6 +38,7 @@ pulseaudio
 pulseaudio-alsa
 checkbashisms
 ctags
+imagemagick
 
 AUR:
 
@@ -49,8 +50,8 @@ capitaine-cursors
 tealdeer
 rsstail
 fisher
-ulauncher
 redshift-minimal
 dashbinsh
 franz
 dust
+viu
