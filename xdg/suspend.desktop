@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Suspend
+Categories=System;
+Comment=Suspend the system
+Exec=systemctl suspend
+GenericName=Suspend
+Icon=/usr/share/icons/la-capitaine/apps/scalable/system-suspend.svg
+Type=Application
