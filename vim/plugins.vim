@@ -8,11 +8,16 @@ Plug 'ryanoasis/vim-devicons'
 if has('nvim')
   Plug 'norcalli/nvim-colorizer.lua'
   Plug 'nvim-treesitter/nvim-treesitter'
+
+  Plug 'Olical/conjure', {'tag': 'v4.6.0'}
+  Plug 'Olical/aniseed', { 'tag': 'v3.8.0' }
+  Plug 'bakpakin/fennel.vim'
 endif
 
 " Language stuff
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
+Plug 'guns/vim-sexp'
 
 " Text Objects
 Plug 'wellle/targets.vim'
@@ -45,7 +50,7 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
   " coc-stylelintplus
   " coc-tsserver
   " coc-rls
-  " coc-actions
+  " coc-clangd
 
 " Movement
 Plug 'rhysd/clever-f.vim'
@@ -53,7 +58,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'unblevable/quick-scope'
 
 " General
-" Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
@@ -74,8 +78,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'cohama/lexima.vim'
 
-
-
 call plug#end()
 
 " CamelCaseMotion
@@ -95,7 +97,6 @@ let g:workspace_autosave_untrailspaces = 0
 let g:workspace_persist_undo_history = 0 " This is already setup in vimrc
 let g:workspace_create_new_tabs = 0 " Do not create new tabs when calling vim with a file argument
 let g:workspace_session_disable_on_args = 1 " Enable it only when calling vim without any arguments
-
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
@@ -173,10 +174,8 @@ endfunction
 
 nnoremap <leader>gd :call <SID>GoToDefinitionInSplit()<Enter>
 
-" coc-actions
-" nnoremap <leader>a :CocAction<Enter>
-" Remap for do codeAction of selected region
-nmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+" Actions
+nnoremap <leader>a :CocAction<Enter>
 
 " Show documentation in preview window
 function! s:show_documentation()
@@ -244,6 +243,10 @@ let g:vista_fzf_show_line_numbers = 0
 let g:vista_fzf_show_source_line = 0
 noremap <silent> <leader><F12> :Vista finder<Enter>
 " let g:vista_default_executive = 'coc'
+
+
+" sexp
+let g:sexp_filetypes = 'clojure,scheme,lisp,timl,fennel'
 
 
 " VimWiki
