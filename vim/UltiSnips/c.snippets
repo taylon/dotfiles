@@ -1,4 +1,8 @@
 snippet p "printf"
+printf("$1\n");
+endsnippet
+
+snippet pf "printf"
 printf("$1${2: %i}\n", $3);
 endsnippet
 
@@ -24,14 +28,27 @@ typedef struct {
 } $1;
 endsnippet
 
-
-snippet st "struct"
+snippet s "struct"
 struct $1 {
 	$2;
 };
 endsnippet
 
-snippet s "switch"
+snippet te "enum"
+typedef enum $1 {
+	snippet te "typedef enum"
+	$2
+} $1;
+endsnippet
+
+snippet e "enum"
+enum $1 {
+	snippet te "typedef enum"
+	$2
+};
+endsnippet
+
+snippet sw "switch"
 switch ($1) {
 	case $2: {
 		$3;
