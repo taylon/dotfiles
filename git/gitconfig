@@ -2,6 +2,9 @@
 	editor = nvim
   pager = delta 
 
+[init]
+	defaultBranch = main
+
 [advice]
 	statusHints = false
 
