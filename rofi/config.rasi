@@ -1,11 +1,9 @@
 configuration {
 	modi: "run,drun";
-	width: 800;
 	font: "Ubuntu 16";
 	show-icons: true;
 	theme: "onedark";
 	cycle: true;
-	lines: 5;
 }
 
 /*	lines: 15*/

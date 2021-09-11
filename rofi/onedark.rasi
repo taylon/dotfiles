@@ -7,6 +7,7 @@
 window {
   border: 1;
   border-color: #2e343f;
+  width: 1200;
 }
 
 inputbar {
@@ -30,6 +31,7 @@ entry {
 
 listview {
   margin: 0 0 -1px 0;
+  lines: 6;
 }
 
 element {
@@ -43,6 +45,10 @@ element-icon {
 
 element-text {
   margin: 0 0 0 20px;
+}
+
+element-text selected {
+  background-color: #2e343f;
 }
 
 element selected {
