@@ -36,6 +36,9 @@ keyboard/firmware/qmk/dist/
 redshift/redshift.conf
 git/gitconfig_riot
 
+# Powershell
+windows/private.ps1
+
 # Systemd
 systemd/user/default.target.wants
 
