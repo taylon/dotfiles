@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 " Visuals related stuff
 Plug 'joshdick/onedark.vim'
-Plug 'luochen1990/rainbow'
 Plug 'ryanoasis/vim-devicons'
 
 if has('nvim')
@@ -18,6 +17,7 @@ endif
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
 Plug 'guns/vim-sexp'
+Plug 'dummyunit/vim-fastbuild'
 
 " Text Objects
 Plug 'wellle/targets.vim'
@@ -27,9 +27,11 @@ Plug 'thinca/vim-textobj-comment'
 Plug 'bkad/CamelCaseMotion'
 
 " Files
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'taylon/fzf-filemru'
+if has('unix')
+  Plug 'taylon/fzf-filemru'
+endif
 Plug 'benwainwright/fzf-project'
 Plug 'thaerkh/vim-workspace'
 Plug 'tpope/vim-fugitive'
@@ -61,13 +63,10 @@ Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'yggdroot/indentline'
-" Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'vhdirk/vim-cmake'
+Plug 'mg979/vim-visual-multi'
 Plug 'liuchengxu/vista.vim'
 Plug 'romainl/vim-cool' 
 
@@ -84,6 +83,9 @@ call plug#end()
 let g:camelcasemotion_key = '<localleader>'
 imap <silent> <C-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <C-Right> <C-o><Plug>CamelCaseMotion_w
+
+" commentary
+autocmd FileType c setlocal commentstring=\/\/\ %s
 
 
 " clever-f
@@ -156,6 +158,7 @@ let g:rainbow_conf = {
 " set nowritebackup
 
 nmap <leader>rr <Plug>(coc-rename)
+nnoremap <silent> <leader>t :CocCommand clangd.switchSourceHeader<Enter>
 
 " Golang auto format
 autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
@@ -181,12 +184,14 @@ nnoremap <leader>a :CocAction<Enter>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
   else
-    call CocAction('doHover')
+    execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
 
-nnoremap <silent> <leader>d :call <SID>show_documentation()<Enter>
+nnoremap <silent> <leader>i :call <SID>show_documentation()<Enter>
 
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -201,25 +206,26 @@ let g:closetag_regions =  {
 
 
 " FZF
-nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
-inoremap <silent> <f12> <esc>:FilesMru --tiebreak=end<enter>
-
-nnoremap <leader>rg :Rg<space>
-nnoremap <silent> <leader>; :Commands<enter> 
-
-nnoremap <c-p> :Command<enter>
-inoremap <c-p> <esc>:Command<enter>
+nnoremap <silent> <f12> :FZF<Enter>
+if has('unix')
+  nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
+endif
 
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
 
 " fzf-project
 let g:fzfSwitchProjectGitInitBehavior = 'none'
 let g:fzfSwitchProjectWorkspaces = ['~/Development']
-" f36 maps to <c-f12> which in my keyboard is close to home row
-" to figure out this enigma look at "showkeys -a" to see what comes
-" out of the <c-f12> keypress, then use terminfo (nvim -V3log) to see
-" what keycode matches the output of showkeys
-nnoremap <f36> :FzfSwitchProject<enter>
+
+if has('win32')
+  nnoremap <silent> <c-f12> :FzfSwitchProject<enter>
+else
+  " f36 maps to <c-f12> which in my keyboard is close to home row
+  " to figure out this enigma look at "showkeys -a" to see what comes
+  " out of the <c-f12> keypress, then use terminfo (nvim -V3log) to see
+  " what keycode matches the output of showkeys
+  nnoremap <silent> <f36> :FzfSwitchProject<enter>
+endif
 
 
 " File Operations (eunuch and coc)
@@ -241,7 +247,8 @@ let g:vista_fzf_preview = ['right:50%']
 let g:vista_keep_fzf_colors = 1
 let g:vista_fzf_show_line_numbers = 0
 let g:vista_fzf_show_source_line = 0
-noremap <silent> <leader><F12> :Vista finder<Enter>
+noremap <silent> <leader><F12> :call vista#finder#fzf#Run('coc')<Enter>
+" noremap <silent> <leader><F12> :Vista finder<Enter>
 " let g:vista_default_executive = 'coc'
 
 
@@ -261,10 +268,10 @@ let g:sexp_filetypes = 'clojure,scheme,lisp,timl,fennel'
  " \}]
 
 if has('nvim')
-  lua require'colorizer'.setup()
+  lua require('colorizer').setup()
 
   lua <<
-    require'nvim-treesitter.configs'.setup {
+    require('nvim-treesitter.configs').setup {
       ensure_installed = "all",
 
       highlight = {
@@ -283,25 +290,9 @@ if has('nvim')
 
         move = {
           enable = true,
-
-          goto_next_start = {
-            ["<M-Down>"] = "@function.outer",
-          },
-
-          -- goto_next_end = {
-          --  ["<M-Down>"] = "@function.outer",
-          -- },
-
-          goto_previous_start = {
-           ["<M-Up>"] = "@function.outer",
-          },
-
-          -- goto_previous_end = {
-          --  ["<M-Up>"] = "@function.outer",
-          -- },
-        },
-      },
-    }
+       },
+     },
+   }
 .
 endif
 

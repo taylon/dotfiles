@@ -1,0 +1,58 @@
+set clipboard=unnamed
+set hlsearch
+set incsearch
+set scrolloff=5
+set ignorecase
+set smartcase
+set number
+set relativenumber
+
+let mapleader="\<F6>"
+
+" Y should behave just like D or C
+map Y y$
+
+" New line in Normal Mode
+nnoremap <enter> o<esc>
+nnoremap <s-enter> O<esc>
+
+" Splits
+noremap <c-w> :q<enter>
+nnoremap <leader>v :vsplit<enter>
+nnoremap <leader>s :split<enter>
+
+nnoremap <leader><right> <c-w><right>
+nnoremap <leader>l <c-w><right>
+
+nnoremap <leader><left> <c-w><left>
+nnoremap <leader>j <c-w><left>
+
+nnoremap <leader><up> <c-w><up>
+nnoremap <leader>k <c-w><up>
+
+nnoremap <leader><down> <c-w><down>
+nnoremap <leader>h <c-w><down>
+
+nnoremap <m-up> :vsc Edit.JumpUp<enter>
+nnoremap <m-down> :vsc Edit.JumpDown<enter>
+
+nnoremap gcc :vsc Edit.ToggleLineComment<enter>
+vnoremap gcc :vsc Edit.ToggleLineComment<enter>
+
+nnoremap gd :vsc Edit.GoToDefinition<enter>
+nnoremap gr :vsc Edit.FindAllReferences<enter>
+
+nnoremap <leader>e :vsc View.SolutionExplorer<enter>
+
+nnoremap <leader>i :vsc Edit.QuickInfo<enter>
+nnoremap <leader>a :vsc View.QuickActions<enter>
+
+" Debug
+nnoremap <leader>ds :vsc Debug.Start<enter>
+nnoremap <leader>dp :vsc Debug.StopDebugging<enter>
+nnoremap <leader>db :vsc Debug.ToggleBreakpoint<enter>
+
+noremap <f12> :vsc Edit.GotoRecentFile<enter>
+
+nnoremap <leader>t :vsc EditorContextMenus.CodeWindow.ToggleHeaderCodeFile<enter>
+

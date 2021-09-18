@@ -23,6 +23,14 @@ nnoremap <C-y> 3<C-y>
 
 let g:clever_f_mark_char_color = "CleverFMark"
 
+if has('win32')
+  if executable('volta')
+    "let g:node_host_prog = trim(system("volta which neovim-node-host"))
+    "let g:coc_node_path = trim(system("volta which node"))
+    let g:node_host_prog = "~/AppData/Local/Volta/tools/image/packages/neovim/node_modules/neovim/bin/cli.js"
+    "let g:node_host_prog = "C:\Users\tsilmer\AppData\Local\Volta\tools\image\packages\neovim\node_modules\neovim\bin\cli.js"
+  endif
+endif
 
 source ~/.vim/keymaps.vim
 source ~/.vim/plugins.vim
