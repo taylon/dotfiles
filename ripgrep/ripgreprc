@@ -6,4 +6,7 @@
 --glob=!yarn.lock
 --glob=!*.min.js
 --glob=!resources/graphiql/*
+--glob=!External/*
 
+--max-columns=150
+--max-columns-preview
