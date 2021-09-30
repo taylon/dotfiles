@@ -1,0 +1,43 @@
+snippet p "println"
+fmt.Println("$1")
+endsnippet
+
+snippet pf "printf"
+fmt.Printf("$1", $2)
+endsnippet
+
+snippet s "type struct"
+type $1 struct {
+	$2
+}
+endsnippet
+
+snippet i "type interface"
+type $1 interface {
+	$2
+}
+endsnippet
+
+snippet r "for range"
+for $1 := range $2 {
+	$3
+}
+endsnippet
+
+snippet if "if"
+if $1 {
+	$2
+}
+endsnippet
+
+snippet ife "if err"
+if err != nil {
+	$1
+}
+endsnippet
+
+snippet f "func"
+func ($1 $2) $3($4) ($5) {
+	$6
+}
+endsnippet
