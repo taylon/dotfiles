@@ -33,8 +33,6 @@ nnoremap <Enter> o<Esc>
 nnoremap <S-Enter> O<Esc>
 
 " Splits
-noremap <silent> <c-w> :q<Enter>
-nnoremap <leader>v :rightbelow vsplit<Enter>
 nnoremap <leader>s :rightbelow split<Enter>
 
 nnoremap <leader><right> <c-w><right>

@@ -8,7 +8,7 @@
 # https://gist.github.com/cryzed/e002e7057435f02cc7894b9e748c5671
 
 # SSH Agent
-echo 'SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"' >'$HOME'/.pam_environment
+echo 'SSH_AUTH_SOCK DEFAULT="${XDG_RUNTIME_DIR}/ssh-agent.socket"' > '$HOME'/.pam_environment
 systemctl enable ssh-agent --user
 
 # Docker Setup
@@ -18,9 +18,16 @@ sudo gpasswd -a taylon docker
 
 # Reminders of last setup
 
-# - Add the following to /etc/modprobe.d/50-blacklist-kvm.conf since we don't need it 
+# - Add the following to /etc/modprobe.d/50-blacklist-kvm.conf since we don't need it
 #   - blacklist kvm
 #   - blacklist kvm_intel
 #   - blacklist kvm_amd
 
 # - Saved nvidia xorg settings manually to /etc/X11/xorg.conf.d
+
+# xrandr --output DP-5 --scale 1.5x1.5
+# gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+# gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Xft/DPI': <153600>}"
+
+# sudo efibootmgr --disk /dev/nvme0n1 --part 2 --create --label "Arch Linux Silent" --loader /vmlinuz-linux --unicode "root=PARTUUID=91dc333c-66a7-4e1a-b583-afa97241dc59 rw initrd=\intel-ucode.img initrd=\initramfs-linux.img nomodeset quiet vga=current" --verbose
+# sudo efibootmgr --disk /dev/nvme0n1 --part 2 --create --label "Arch Linux KMS" --loader /vmlinuz-linux --unicode "root=PARTUUID=91dc333c-66a7-4e1a-b583-afa97241dc59 rw initrd=\intel-ucode.img initrd=\initramfs-linux.img" --verbose

@@ -4,14 +4,15 @@
 ln -s "$DOTFILES_PATH"/systemd "$XDG_CONFIG_HOME"/systemd
 
 # Fonts
-mkdir -p "$HOME"/.config/fontconfig/conf.d/
-ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$XDG_CONFIG_HOME"/fontconfig/conf.d/90-operator-mono-ssm.conf
+# mkdir -p "$HOME"/.config/fontconfig/conf.d/
+# ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$XDG_CONFIG_HOME"/fontconfig/conf.d/90-operator-mono-ssm.conf
 
 # Kitty
 ln -s "$DOTFILES_PATH"/kitty/linux.conf "$XDG_CONFIG_HOME"/kitty_os_specific.conf
 
 # X11
 ln -s "$DOTFILES_PATH"/x11/xinitrc "$HOME"/.xinitrc
+ln -s "$DOTFILES_PATH"/x11/Xresources "$HOME"/.Xresources
 
 # i3
 ln -s "$DOTFILES_PATH"/i3/i3.config "$XDG_CONFIG_HOME"/i3/config
@@ -20,12 +21,15 @@ ln -s "$DOTFILES_PATH"/i3/i3.config "$XDG_CONFIG_HOME"/i3/config
 ln -s "$DOTFILES_PATH"/rofi "$XDG_CONFIG_HOME"/rofi
 
 # XDG
+mkdir -p "$HOME"/.local/share/applications
 ln -s "$DOTFILES_PATH"/xdg/shutdown.desktop "$HOME"/.local/share/applications/shutdown.desktop
 ln -s "$DOTFILES_PATH"/xdg/reboot.desktop "$HOME"/.local/share/applications/reboot.desktop
 ln -s "$DOTFILES_PATH"/xdg/logout.desktop "$HOME"/.local/share/applications/logout.desktop
 ln -s "$DOTFILES_PATH"/xdg/suspend.desktop "$HOME"/.local/share/applications/suspend.desktop
 
 # GTK
+mkdir -p "$XDG_CONFIG_HOME"/gtk-3.0
+ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme
 ln -s "$DOTFILES_PATH"/gtk/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 ln -s "$DOTFILES_PATH"/gtk/gtk.css "$XDG_CONFIG_HOME"/gtk-3.0/gtk.css
 
@@ -34,6 +38,7 @@ mkdir -p "$HOME"/.icons/default/
 ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme
 
 # Redshift
+mkdir "$XDG_CONFIG_HOME"/redshift
 cp "$DOTFILES_PATH"/redshift/redshift.conf.template "$DOTFILES_PATH"/redshift/redshift.conf
 ln -s "$DOTFILES_PATH"/redshift/redshift.conf "$XDG_CONFIG_HOME"/redshift/redshift.conf
 

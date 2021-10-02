@@ -21,3 +21,4 @@ autocmd BufWritePost * :call <SID>blink_cursor()
 
 highlight CleverFMark guibg=#e06c75 guifg=#000000 gui=bold
 
+highlight CocHighlightText guibg=#3E4452 guifg=NONE

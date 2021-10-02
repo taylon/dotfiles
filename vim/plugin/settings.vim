@@ -15,10 +15,6 @@ if v:progname !=# 'vi'
   set softtabstop=-1 " use 'shiftwidth' for tab/bs at end of line
 endif
 
-" Folding
-set foldmethod=syntax
-set nofoldenable
-
 set autoread " auto read files if it changes outside vim
 set ignorecase
 set smartcase

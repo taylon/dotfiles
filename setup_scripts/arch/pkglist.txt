@@ -2,7 +2,6 @@ i3-wm
 git
 openssh
 fish
-zsh
 yay
 sudo
 nvim
@@ -11,7 +10,6 @@ shellcheck
 shfmt
 go
 arc-gtk-theme
-diff-so-fancy
 git-delta
 autojump-rs
 ripgrep
@@ -19,7 +17,6 @@ httpie
 mlocate
 docker
 docker-compose
-yarn
 bpython
 mypy
 pipenv
@@ -44,14 +41,19 @@ AUR:
 
 reason-language-server
 google-chrome
-nodejs-n
+volta-bin
+glrnvim
 la-capitaine-icon-theme
+nerd-fonts-jetbrains-mono
 capitaine-cursors
 tealdeer
 rsstail
 fisher
 redshift-minimal
 dashbinsh
-franz
 dust
 viu
+
+
+Cargo:
+cargo install devicon-lookup

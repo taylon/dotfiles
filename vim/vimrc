@@ -8,9 +8,9 @@ syntax on
 " Disable cmd_opt movement mappings because they
 " conflict with other stuff, unfortunatelly this needs
 " to live in vimrc not gvimrc
-if has("gui_macvim")
-  let macvim_skip_cmd_opt_movement = 1
-endif
+" if has("gui_macvim")
+"   let macvim_skip_cmd_opt_movement = 1
+" endif
 
 if has("termguicolors")
   set termguicolors " Enable 24-bit (true-color) mode
@@ -23,12 +23,11 @@ nnoremap <C-y> 3<C-y>
 
 let g:clever_f_mark_char_color = "CleverFMark"
 
-if has('win32')
-  if executable('volta')
-    "let g:node_host_prog = trim(system("volta which neovim-node-host"))
-    "let g:coc_node_path = trim(system("volta which node"))
+if executable("volta")
+  if has('win32')
     let g:node_host_prog = "~/AppData/Local/Volta/tools/image/packages/neovim/node_modules/neovim/bin/cli.js"
-    "let g:node_host_prog = "C:\Users\tsilmer\AppData\Local\Volta\tools\image\packages\neovim\node_modules\neovim\bin\cli.js"
+  else
+    let g:node_host_prog = trim(system("volta which neovim-node-host"))
   endif
 endif
 

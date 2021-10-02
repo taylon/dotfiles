@@ -5,7 +5,9 @@ xset r rate 200 25
 
 nvidia-settings --load-config-only &
 redshift &
-ulauncher --hide-window --no-window-shadow &
+
+# XRANDR_OUTPUT=$(xrandr | grep " connected " | awk '{ print$1 }')
+# xrandr --output "$XRANDR_OUTPUT" --mode 5120x1440
 
 xrdb -merge ~/.Xresources &&
   exec i3

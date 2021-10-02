@@ -1,6 +1,7 @@
 function s:vsplit_and_grow_window()
   :silent execute '!i3-msg resize grow width 10 px or 10 ppt'
-  sleep 105m
+  sleep 122m
+  " sleep 110m
   :rightbelow vsplit
 endfunction
 

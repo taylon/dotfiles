@@ -1,4 +1,5 @@
 {
+  "coc.preferences.semanticTokensHighlights": false, 
   "coc.preferences.formatOnType": true,
   "coc.preferences.formatOnSaveFiletypes": [
     "c",
@@ -80,21 +81,18 @@
     }
   },
 
+  "clangd.disableSnippetCompletion": true,
+  "clangd.semanticHighlighting": false,
+
   "tsserver.tsdk": "node_modules/typescript/lib",
   "tsserver.enable": true,
-  "typescript.preferences.importModuleSpecifier": "auto",
+  // "typescript.preferences.importModuleSpecifier": "auto",
 
   "prettier.requireConfig": true,
   "prettier.onlyUseLocalVersion": true,
   "prettier.disableSuccessMessage": true,
 
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
 
   "python.jediEnabled": false,
   "python.formatting.provider": "black",
