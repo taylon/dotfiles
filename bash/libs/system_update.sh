@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /home/taylon/Development/dotfiles/bash/libs/print.sh
+source /home/taylon/programming/dotfiles/bash/libs/print.sh
 
 system_update::common() {
   echo

@@ -45,7 +45,7 @@ if has("gui_macvim")
 
 else
 
-  set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ 16
+  set guifont=JetBrainsMono\ Nerd\ Font\ Mono:h16
   nnoremap <C-w> :q<Enter>
 
 endif

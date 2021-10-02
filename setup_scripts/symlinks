@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-DEV_PATH="$HOME/Development"
+DEV_PATH="$HOME/programming"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
 
 # Bash
@@ -10,7 +10,6 @@ ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 
 # Fish
 ln -s "$DOTFILES_PATH"/fish "$XDG_CONFIG_HOME"/fish
-ln -s "$DOTFILES_PATH"/fish/fishfile "$HOME"/.fisher_plugins/fishfile
 
 # ZSH
 ln -s "$DOTFILES_PATH"/zsh/zshenv "$HOME"/.zshenv
@@ -22,13 +21,11 @@ ln -s "$DOTFILES_PATH"/bat "$XDG_CONFIG_HOME"/bat
 # Rg
 ln -s "$DOTFILES_PATH"/ripgrep/ripgreprc "$XDG_CONFIG_HOME"/ripgreprc
 
-# Tmux
-TMUX_COFIG_PATH="$DOTFILES_PATH/tmux"
-ln -s "$TMUX_COFIG_PATH"/tmux.conf "$HOME"/tmux.conf
-ln -s "$TMUX_COFIG_PATH"/tmuxinator "$HOME"/.tmuxinator
-
 # Kitty
 ln -s "$DOTFILES_PATH"/kitty "$XDG_CONFIG_HOME"/kitty
+
+# glrnvim
+ln -s "$DOTFILES_PATH"/glrnvim "$XDG_CONFIG_HOME"/glrnvim
 
 # Git
 ln -s "$DOTFILES_PATH"/git/gitconfig "$HOME"/.gitconfig

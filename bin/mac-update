@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source /home/taylon/Development/dotfiles/bash/libs/print.sh
-source /home/taylon/Development/dotfiles/bash/libs/system_update.sh
+source /home/taylon/programming/dotfiles/bash/libs/print.sh
+source /home/taylon/programming/dotfiles/bash/libs/system_update.sh
 
 if [[ $(uname) == "Darwin" ]]; then
   print::fail "You should only run this on MacOS"

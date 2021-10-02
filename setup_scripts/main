@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DEV_PATH="$HOME/Development"
+DEV_PATH="$HOME/programming"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
 
 # Create private fish file
@@ -14,10 +14,6 @@ mkdir "$DOTFILES_PATH"/vim/.backups
 mkdir "$DOTFILES_PATH"/vim/.swaps
 mkdir "$DOTFILES_PATH"/vim/.undo
 
-# Create folders for N
-mkdir -p "$HOME"/.node/bin
-mkdir -p "$HOME"/.node/n/versions
-
 # Setup SSH keys at ~/.ssh/config
 #
 # Host github.com
@@ -25,9 +21,6 @@ mkdir -p "$HOME"/.node/n/versions
 #
 # Host gitlab.freedesktop.org
 #   IdentityFile ~/.ssh/...
-
-# NPM stuff - Do this after setting up N/Node
-yarn config set prefix "$HOME"/.node/
 
 yarn global add bash-language-server
 yarn global add trash-cli
