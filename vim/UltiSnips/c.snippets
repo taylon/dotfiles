@@ -1,5 +1,5 @@
 snippet p "printf"
-printf("$1\n");
+printf("$1\n"$2);
 endsnippet
 
 snippet pf "printf"
@@ -17,13 +17,13 @@ if ($1) {
 endsnippet
 
 snippet for "for"
-for (${1:int }$2 = 0; $2 < $3; $2++) {
+for (${1:int }$2 = 0; $2 < $3; $2 += 1) {
 	$4;
 }
 endsnippet
 
 snippet ts "typedef struct"
-typedef struct {
+typedef struct $1 {
 	$2;
 } $1;
 endsnippet
@@ -34,17 +34,15 @@ struct $1 {
 };
 endsnippet
 
-snippet te "enum"
+snippet te "typedef enum"
 typedef enum $1 {
-	snippet te "typedef enum"
-	$2
+	$2,
 } $1;
 endsnippet
 
 snippet e "enum"
 enum $1 {
-	snippet te "typedef enum"
-	$2
+	$2,
 };
 endsnippet
 
@@ -56,8 +54,24 @@ switch ($1) {
 
 	default: {
 		$4;
-	} break;
+	}
 }
+endsnippet
+
+snippet sc "case"
+
+case $1: {
+	$2
+} break;
+
+endsnippet
+
+snippet dc "default case"
+
+default: {
+	$1;
+}
+
 endsnippet
 
 snippet f "function"
@@ -74,6 +88,20 @@ int main(${1:int argc, char *argv[]}) {
 }
 endsnippet
 
+# Comments
+snippet w "WHERE_I_WAS"
+// WHERE_I_WAS(taylon): $1
+endsnippet
+
+snippet td "TODO"
+// TODO($1): $2
+endsnippet
+
+snippet nt "NOTE"
+// NOTE(taylon): $2
+endsnippet
+
+# Common includes
 snippet iio "#include <stdio.h>"
 #include <stdio.h>
 endsnippet
@@ -90,3 +118,6 @@ snippet ib "#include <stdbool.h>"
 #include <stdbool.h>
 endsnippet
 
+snippet ii "#include <stdint.h>"
+#include <stdint.h>
+endsnippet
