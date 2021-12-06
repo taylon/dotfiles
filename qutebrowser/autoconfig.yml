@@ -24,6 +24,9 @@ settings:
       normal:
         <F10>: tab-prev
         <F7>: tab-next
+      passthrough:
+        <Alt+x>: mode-leave
+        <Shift+Escape>: null
   colors.completion.category.bg:
     global: '#282c34'
   colors.completion.category.border.bottom:
@@ -105,6 +108,10 @@ settings:
     global: white
   colors.tabs.selected.odd.bg:
     global: '#61afef'
+  colors.webpage.darkmode.enabled:
+    global: false
+  colors.webpage.darkmode.grayscale.all:
+    global: false
   completion.delay:
     global: 0
   completion.height:
@@ -115,6 +122,10 @@ settings:
     global: 0
   completion.show:
     global: always
+  content.geolocation:
+    https://www.google.com: true
+  content.register_protocol_handler:
+    https://mail.google.com?extsrc=mailto&url=%25s: true
   editor.command:
     global:
     - gvim

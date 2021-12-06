@@ -46,6 +46,7 @@ systemd/user/default.target.wants
 # Qutebrowser
 bookmarks/
 quickmarks
+qutebrowser/qsettings/
 
 # General
 TODO
