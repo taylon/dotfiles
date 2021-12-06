@@ -12,7 +12,6 @@ go
 arc-gtk-theme
 git-delta
 autojump-rs
-ripgrep
 httpie
 mlocate
 docker
@@ -21,12 +20,9 @@ bpython
 mypy
 pipenv
 wget
-exa
 teensy-loader-cli
-bat
 jq
 kitty
-fd
 dash
 fzf
 xclip
@@ -36,6 +32,12 @@ pulseaudio-alsa
 checkbashisms
 ctags
 imagemagick
+ripgrep
+exa
+fd
+bat
+duf
+procs
 
 AUR:
 
