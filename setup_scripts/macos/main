@@ -10,6 +10,7 @@ mkdir -p "$DEV_PATH"/Development/go/pkg
 brew tap caskroom/drivers
 brew tap caskroom/fonts
 brew tap fisherman/tap
+brew tap universal-ctags/universal-ctags
 
 # Install with Cask:
 brew cask install google-chrome
@@ -23,6 +24,7 @@ brew cask install alfred
 brew cask install bartender
 brew cask install logitech-options
 brew cask install kitty
+brew cask install hammerspoon
 
 # Install with brew:
 brew install coreutils
@@ -61,7 +63,7 @@ brew install fzf
 brew install jq
 brew install yq
 brew install dust
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install --with-jansson --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # Remove outdated versions from the cellar
 brew cleanup
@@ -83,3 +85,5 @@ chsh -s /usr/local/bin/fish
 
 # Install Ubuntu font with ligatures - https://github.com/ToxicFrog/Ligaturizer
 wget https://github.com/ToxicFrog/Ligaturizer/blob/master/output-fonts/LigaUbuntuMono-Regular.ttf -O ~/Library/Fonts/LigaUbuntuMono-Regular.ttf
+
+# vimac: https://vimacapp.com/

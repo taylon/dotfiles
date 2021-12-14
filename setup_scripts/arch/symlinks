@@ -33,6 +33,9 @@ ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme
 ln -s "$DOTFILES_PATH"/gtk/settings.ini "$XDG_CONFIG_HOME"/gtk-3.0/settings.ini
 ln -s "$DOTFILES_PATH"/gtk/gtk.css "$XDG_CONFIG_HOME"/gtk-3.0/gtk.css
 
+# Qutebrowser
+ln -s "$DOTFILES_PATH/qutebrowser" "$XDG_CONFIG_HOME"/qutebrowser
+
 # Mouse cursor theme
 mkdir -p "$HOME"/.icons/default/
 ln -s "$DOTFILES_PATH"/i3/index.theme "$HOME"/.icons/default/index.theme

@@ -19,6 +19,7 @@
 	l = log --graph --decorate --pretty=oneline --abbrev-commit --all -n 20
 	c = commit -m
 	ca = commit --amend
+	caa = commit --amend --no-edit
 	co = checkout
 	s = status
 	st = stash

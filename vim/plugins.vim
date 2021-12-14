@@ -137,7 +137,7 @@ nmap <leader>rr <Plug>(coc-rename)
 nnoremap <silent> <leader>t :CocCommand clangd.switchSourceHeader<Enter>
 
 " Golang auto format
-autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
 
 " clangd
 " autocmd BufReadPost,BufNewFile *.c,*.cpp nnoremap <silent> <leader>t :CocCommand clangd.switchSourceHeader<enter>
@@ -208,6 +208,9 @@ else
   " to figure out this enigma look at "showkeys -a" to see what comes
   " out of the <c-f12> keypress, then use terminfo (nvim -V3log) to see
   " what keycode matches the output of showkeys
+  "
+  " in MacOS you do "printf '\x1b[?1h'; cat -v" or "kitty +kitten show_key" 
+  " since we don't have showkeys there
   nnoremap <silent> <f36> :FzfSwitchProject<enter>
 endif
 

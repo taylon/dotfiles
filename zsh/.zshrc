@@ -1,3 +1,5 @@
+export PATH="$N_PREFIX/bin:$PATH"
+
 # Enable colors
 autoload -U colors && colors
 
@@ -36,3 +38,5 @@ fi
 
 # Setup opam
 test -r /home/taylon/.opam/opam-init/init.zsh && . /home/taylon/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+source "$ZDOTDIR"/private.zsh

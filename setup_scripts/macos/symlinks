@@ -15,3 +15,9 @@ ln -s "$DOTFILES_PATH"/keyboard/macos/remap_caps.plist "$HOME"/Library/LaunchAge
 
 # On MacOS teensy loader is installed with a name different from Arch, so let's link it for consistency
 ln -s /usr/local/bin/teensy_loader_cli /usr/local/bin/teensy-loader-cli
+
+# Hammerspoon
+ln -s "$DOTFILES_PATH"/hammerspoon "$HOME"/.hammerspoon
+
+# Qutebrowser
+ln -s "$DOTFILES_PATH/qutebrowser/autoconfig.yml" /Users/tsilmer/Library/Preferences/qutebrowser/autoconfig.yml

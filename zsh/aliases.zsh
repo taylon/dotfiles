@@ -18,6 +18,7 @@ alias ll='exa -al'
 alias g=git
 alias s='git status'
 alias clone='git clone'
+alias pull='git pull origin master'
 
 # bat
 alias cat=bat
@@ -28,3 +29,4 @@ alias gvim=glrnvim
 
 # Yarn
 alias ys='yarn start'
+alias yi='yarn install'
