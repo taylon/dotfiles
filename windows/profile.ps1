@@ -1,10 +1,9 @@
 $DEV_PATH = "T:\Development"
 $DOTFILES_PATH = "$DEV_PATH\dotfiles"
 
-# Rg
-$RIPGREP_CONFIG_PATH = "$DOTFILES_PATH\ripgrep\ripgreprc"
-
 set-location $DEV_PATH
+
+. $DOTFILES_PATH\windows\private.ps1
 
 # Import-Module "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
 # Enter-VsDevShell -InstanceId 0f691196
@@ -16,8 +15,12 @@ Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
 Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -PredictionSource History
 
-# Fzf
+# fzf
+$FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git --exclude External --exclude tmp"
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+p' 
+
+# Rg
+$RIPGREP_CONFIG_PATH = "$DOTFILES_PATH\ripgrep\ripgreprc"
 
 # Aliases
 function dot { cd $DOTFILES_PATH }
@@ -35,6 +38,16 @@ function d { git diff }
 function clone { git clone $args }
 New-Alias open ii
 
+function Private:rg {
+  rg `
+    --glob="!.git/*" `
+    --glob="!yarn.lock" `
+    --glob="!*.min.js" `
+    --glob="!External/*" `
+    --glob="!tmp/*" `
+    $args
+}
+
 function vs($file) {
  Start-Process "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\Common7\IDE\devenv.exe" $file
 }
@@ -48,9 +61,17 @@ function sudo {
   }
 }
 
+function prompt {
+    Write-Host $($(Get-Location) -replace ("$DEV_PATH\").Replace('\','\\'), "") -NoNewline -ForegroundColor Blue
+    Write-Host ""
+
+    return "⮞ "
+}
+
 # Modules
-#Import-Module Get-ChildItemColor
+Import-Module Get-ChildItemColor
+Set-Alias ls Get-ChildItemColorFormatWide
+Set-Alias ll Get-ChildItem 
 # Import-Module -Name Terminal-Icons
 # Set-Alias ls Get-ChildItem | Format-List
 
-. $DOTFILES_PATH\windows\private.ps1

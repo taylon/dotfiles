@@ -8,6 +8,7 @@
 --glob=!resources/graphiql/*
 --glob=!External/*
 --glob=!vendor/*
+--glob=!tmp/*
 
 --max-columns=150
 --max-columns-preview
