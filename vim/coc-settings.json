@@ -94,8 +94,8 @@
 
   "eslint.autoFixOnSave": true,
 
-  "python.jediEnabled": false,
   "python.formatting.provider": "black",
+  "python.formatting.blackPath": "/usr/bin/black",
   "python.linting.mypyEnabled": true,
 
   "css.validate": false,

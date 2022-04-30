@@ -5,16 +5,28 @@ call plug#begin('~/.vim/plugged')
 
 " Visuals related stuff
 Plug 'joshdick/onedark.vim'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 if has('nvim')
+  Plug 'kyazdani42/nvim-web-devicons'
+
+  Plug 'tami5/sqlite.lua'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzy-native.nvim'
+  Plug 'nvim-telescope/telescope-frecency.nvim'
+  Plug 'nvim-telescope/telescope-project.nvim'
+  Plug 'nvim-telescope/telescope-vimspector.nvim'
+  Plug 'fannheyward/telescope-coc.nvim'
+
   Plug 'norcalli/nvim-colorizer.lua'
 
-  Plug 'nvim-treesitter/nvim-treesitter'
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
   Plug 'windwp/nvim-autopairs'
   Plug 'ggandor/lightspeed.nvim'
+  Plug 'numToStr/Comment.nvim'
 
   " Plug 'Olical/conjure', {'tag': 'v4.6.0'}
   " Plug 'Olical/aniseed', { 'tag': 'v3.8.0' }
@@ -55,7 +67,7 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
   " coc-eslint
   " coc-json
   " coc-prettier
-  " coc-python
+  " coc-pyright
   " coc-stylelintplus
   " coc-tsserver
   " coc-rls
@@ -64,7 +76,6 @@ Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 " General
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-commentary'
 Plug 'alvan/vim-closetag'
 Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
@@ -144,8 +155,10 @@ autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.org
 
 " Gotos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
-nnoremap <silent> ge :CocFzfList diagnostics<enter>
+" nmap <silent> gr <Plug>(coc-references)
+nmap <silent> gr :Telescope coc references<enter>
+" nnoremap <silent> ge :CocFzfList diagnostics<enter>
+nnoremap <silent> ge :Telescope coc workspace_diagnostics<enter>
 
 " A normal mapping for this for whatever reason does not work
 " when you try to go to a definition that is in another file.
@@ -186,12 +199,16 @@ let g:closetag_regions =  {
 
 
 " FZF
-nnoremap <leader>rg :Rg<space>
+" nnoremap <leader>rg :Rg<space>
+nnoremap <leader>rg :Telescope live_grep<enter>
 nnoremap <leader>wi :Rg WHERE_I_WAS\(taylon\)<enter>
+
 if has('unix')
-  nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
+  " nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
+  nnoremap <silent> <f12> :lua require("telescope").extensions.frecency.frecency { sorter = require('telescope.config').values.file_sorter() }<enter>
 else
-  nnoremap <silent> <f12> :FZF<Enter>
+  nnoremap <silent> <f12> :lua require("telescope").extensions.frecency.frecency { sorter = require('telescope.config').values.file_sorter() }<enter>
+  " nnoremap <silent> <f12> :FZF
 endif
 
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
@@ -202,7 +219,8 @@ let g:fzfSwitchProjectGitInitBehavior = 'none'
 let g:fzfSwitchProjectWorkspaces = ['~/programming']
 
 if has('win32')
-  nnoremap <silent> <c-f12> :FzfSwitchProject<enter>
+  " nnoremap <silent> <c-f12> :FzfSwitchProject<enter>
+  nnoremap <silent> <f36> :Telescope project<enter>
 else
   " f36 maps to <c-f12> which in my keyboard is close to home row
   " to figure out this enigma look at "showkeys -a" to see what comes
@@ -225,6 +243,7 @@ autocmd FileType c,cpp setlocal commentstring=\/\/\ %s
 
 " Git
 nmap <leader>gr <Plug>(GitGutterUndoHunk)
+nmap <leader>gp <Plug>(GitGutterPreviewHunk)
 
 
 " splitjoin
@@ -237,7 +256,8 @@ nmap <leader>gr <Plug>(GitGutterUndoHunk)
 let g:vista_keep_fzf_colors = 1
 let g:vista_fzf_show_line_numbers = 0
 let g:vista_fzf_show_source_line = 0
-noremap <silent> <leader><F12> :call vista#finder#fzf#Run('coc')<Enter>
+noremap <silent> <leader><F12> :Telescope coc workspace_symbols<enter>
+" noremap <silent> <leader><F12> :call vista#finder#fzf#Run('coc')<Enter>
 " noremap <silent> <leader><F12> :Vista finder<Enter>
 " let g:vista_default_executive = 'coc'
 
@@ -248,6 +268,7 @@ noremap <silent> <leader><F12> :call vista#finder#fzf#Run('coc')<Enter>
 
 " vimspector
 nmap <f9><enter> <Plug>VimspectorContinue
+" nmap <f9><enter> :Telescope vimspector configurations<enter>
 nmap <silent> <f9>s :call vimspector#Reset()<enter>
 nmap <f9>r <Plug>VimpectorRestart
 nmap <f9>b <Plug>VimspectorToggleBreakpoint
@@ -310,7 +331,7 @@ if has('nvim')
 
   lua <<
     -- autopairs
-    local nvim_autopairs = require('nvim-autopairs')
+    local nvim_autopairs = require("nvim-autopairs")
     nvim_autopairs.setup()
 
     _G.MUtils= {}
@@ -322,15 +343,58 @@ if has('nvim')
       end
     end
 
-    vim.api.nvim_set_keymap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+    vim.api.nvim_set_keymap("i" , "<CR>", "v:lua.MUtils.completion_confirm()", {expr = true , noremap = true})
     -- autopairs
 
-    require'lightspeed'.setup {
-      highlight_unique_chars = true,
-      grey_out_search_area = false,
+    -- telescope
+    require("telescope").setup {
+      defaults = {
+        prompt_prefix = "",
+        selection_caret = "⮞ ",
+
+        -- sorting_strategy = "ascending",
+
+        layout_strategy = "horizontal",
+        layout_config = {
+          -- prompt_position = "top",
+          height = 0.95,
+          width  = 0.99,
+          preview_width = 0.60,
+        },
+      },
+
+      extensions = {
+        frecency = {
+          default_workspace = "CWD",
+          show_filter_column = false,
+          show_unindexed = true,
+        },
+
+        project = {
+          base_dirs = {
+            "~/programming",
+          },
+        },
+      },
     }
 
-    require'nvim-treesitter.configs'.setup {
+    require("telescope").load_extension("fzy_native")
+    require("telescope").load_extension("project")
+    require("telescope").load_extension("coc")
+    require("telescope").load_extension("vimspector")
+    require("telescope").load_extension("frecency")
+    -- telescope
+
+    require("lightspeed").setup {
+      -- highlight_unique_chars = true,
+
+      -- :hi LightspeedGreywash guifg=none guibg=none 
+      -- grey_out_search_area = false,
+    }
+
+    require("Comment").setup()
+
+    require("nvim-treesitter.configs").setup {
       ensure_installed = "all",
 
       highlight = {

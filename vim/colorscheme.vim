@@ -10,15 +10,8 @@ colorscheme onedark
 
 highlight TextYankHighlight guibg=#3E4452 guifg=NONE
 
-" Blink cursor every time files are saved
-function! s:blink_cursor()
-  highlight Cursor guibg=#a6d7ff
-  sleep 150m
-  highlight Cursor guibg=#61afef
-endfunction
-
-autocmd BufWritePost * :call <SID>blink_cursor()
-
 highlight CleverFMark guibg=#e06c75 guifg=#000000 gui=bold
 
 highlight CocHighlightText guibg=#3E4452 guifg=NONE
+
+highlight default link TelescopeSelection CursorLine
