@@ -13,7 +13,7 @@ if has('nvim')
 
   Plug 'tami5/sqlite.lua'
   if has('win32')
-    let g:sqlite_clib_path = $DEV_PATH . '/dotfiles/windows/dlls/sqlite3/sqlite3.dll'
+    let g:sqlite_clib_path = $DOTFILES_PATH . '/windows/dlls/sqlite3/sqlite3.dll'
   endif
 
   Plug 'nvim-lua/plenary.nvim'

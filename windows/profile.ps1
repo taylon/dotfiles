@@ -30,12 +30,14 @@ function .. { cd .. }
 function ... { cd ..\.. }
 function .... { cd ..\..\.. }
 function cat { bat $args }
-function v { nvim $args }
 function gvim { nvim-qt $args }
+function v { nvim $args }
 function g { git $args }
 function s { git status }
 function d { git diff }
 function clone { git clone $args }
+New-Alias touch New-Item
+New-Alias which Get-Command
 New-Alias open ii
 
 function Private:rg {
@@ -44,6 +46,7 @@ function Private:rg {
     --glob="!yarn.lock" `
     --glob="!*.min.js" `
     --glob="!External/*" `
+    --glob="!vendor/*" `
     --glob="!tmp/*" `
     $args
 }
@@ -62,7 +65,7 @@ function sudo {
 }
 
 function prompt {
-    Write-Host $($(Get-Location) -replace ("$DEV_PATH\").Replace('\','\\'), "") -NoNewline -ForegroundColor Blue
+    Write-Host $($(Get-Location) -replace "$DEV_PATH\".Replace('\','\\'), "" -replace ("$HOME\").Replace('\','\\'), "~\") -NoNewline -ForegroundColor Blue
     Write-Host ""
 
     return "⮞ "
