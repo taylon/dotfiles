@@ -1,16 +1,21 @@
 " polyglot
-let g:polyglot_disabled = ['lifelines']
+" TODO(taylon): figure out what this is and add a comment
+let g:polyglot_disabled = ['lifelines'] 
 
 call plug#begin('~/.vim/plugged')
 
 " Visuals related stuff
+" TODO(taylon): update this to taylon/theme.vim
 Plug 'joshdick/onedark.vim'
-" Plug 'ryanoasis/vim-devicons'
 
 if has('nvim')
   Plug 'kyazdani42/nvim-web-devicons'
 
   Plug 'tami5/sqlite.lua'
+  if has('win32')
+    let g:sqlite_clib_path = $DEV_PATH . '/dotfiles/windows/dlls/sqlite3/sqlite3.dll'
+  endif
+
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
@@ -85,7 +90,7 @@ Plug 'romainl/vim-cool'
 Plug 'puremourning/vimspector'
 
 " Under evaluation/wanting to remove soon
-Plug 'vimwiki/vimwiki'
+" Plug 'vimwiki/vimwiki'
 Plug 'matze/vim-move'
 Plug 'scrooloose/nerdtree'
 
@@ -203,11 +208,11 @@ let g:closetag_regions =  {
 nnoremap <leader>rg :Telescope live_grep<enter>
 nnoremap <leader>wi :Rg WHERE_I_WAS\(taylon\)<enter>
 
-if has('unix')
-  " nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
-  nnoremap <silent> <f12> :lua require("telescope").extensions.frecency.frecency { sorter = require('telescope.config').values.file_sorter() }<enter>
+if has('win32')
+  nnoremap <silent> <f12> :Telescope find_files<enter>
 else
   nnoremap <silent> <f12> :lua require("telescope").extensions.frecency.frecency { sorter = require('telescope.config').values.file_sorter() }<enter>
+  " nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
   " nnoremap <silent> <f12> :FZF
 endif
 
@@ -354,20 +359,21 @@ if has('nvim')
 
         -- sorting_strategy = "ascending",
 
-        layout_strategy = "horizontal",
+        layout_strategy = "vertical",
         layout_config = {
           -- prompt_position = "top",
-          height = 0.95,
+          height = 0.99,
           width  = 0.99,
-          preview_width = 0.60,
+          -- preview_width = 0.60,
         },
       },
 
       extensions = {
         frecency = {
+          ignore_patterns = {"*.git/*", "*/tmp/*", "External/*"},
           default_workspace = "CWD",
           show_filter_column = false,
-          show_unindexed = true,
+          show_unindexed = false,
         },
 
         project = {
