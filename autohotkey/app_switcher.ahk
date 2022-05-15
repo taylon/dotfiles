@@ -33,6 +33,15 @@ is_running(app) {
   return ErrorLevel
 }
 
+f1::
+  WinActivate, ahk_exe p4v.exe
+
+  window_size := window_sizes["middle"]
+  window_position := window_positions["middle"]
+
+  WinMove, ahk_exe p4v.exe, , window_position, 0, window_size, A_ScreenHeight
+return
+
 ^f2::
 f2::
   if !is_running("qutebrowser.exe") or WinActive("ahk_exe qutebrowser.exe") {
