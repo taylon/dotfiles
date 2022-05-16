@@ -1,4 +1,5 @@
-$DEV_PATH = "T:\Development"
+$DEV_PATH = "$HOME\programming"
+# $DEV_PATH = "T:\programming"
 $DOTFILES_PATH = "$DEV_PATH\dotfiles"
 
 set-location $DEV_PATH
@@ -17,7 +18,7 @@ Set-PSReadLineOption -PredictionSource History
 
 # fzf
 $FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git --exclude External --exclude tmp"
-Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+p' 
+# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+p' 
 
 # Rg
 $RIPGREP_CONFIG_PATH = "$DOTFILES_PATH\ripgrep\ripgreprc"
@@ -29,16 +30,16 @@ function down { cd $HOME\Downloads }
 function .. { cd .. }
 function ... { cd ..\.. }
 function .... { cd ..\..\.. }
-function cat { bat $args }
 function gvim { nvim-qt $args }
 function v { nvim $args }
-function g { git $args }
-function s { git status }
-function d { git diff }
+function s { git status $args }
+function d { git diff $args }
 function clone { git clone $args }
+New-Alias g git
 New-Alias touch New-Item
 New-Alias which Get-Command
 New-Alias open ii
+Set-Alias cat bat
 
 function Private:rg {
   rg `

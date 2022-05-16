@@ -80,9 +80,13 @@ f4::
 return
 
 f5::
-  WinActivate, ahk_exe slack.exe
-
-  WinMove, ahk_exe slack.exe, , window_positions.middle, 0, window_sizes.middle, A_ScreenHeight
+  if !is_running("slack.exe") or WinActive("ahk_exe slack.exe") {
+    WinActivate, ahk_exe Discord.exe
+    WinMove, ahk_exe Discord.exe, , window_positions.middle, 0, window_sizes.middle, A_ScreenHeight
+  } else {
+    WinActivate, ahk_exe slack.exe
+    WinMove, ahk_exe slack.exe, , window_positions.middle, 0, window_sizes.middle, A_ScreenHeight
+  }
 return
 
 !left::
@@ -93,3 +97,5 @@ return
   WinMove, A, , window_positions.right, 0, window_sizes.right, A_ScreenHeight 
 return
 
+^q::Send !{F4}
+return
