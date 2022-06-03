@@ -13,5 +13,8 @@ highlight TextYankHighlight guibg=#3E4452 guifg=NONE
 highlight CleverFMark guibg=#e06c75 guifg=#000000 gui=bold
 
 highlight CocHighlightText guibg=#3E4452 guifg=NONE
+highlight CocErrorSign guifg=#e06c75
+highlight CocErrorFloat guifg=#e06c75 guibg=#282c34
+highlight CocFloating guibg=#282c34
 
 highlight default link TelescopeSelection CursorLine
