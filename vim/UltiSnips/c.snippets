@@ -89,6 +89,7 @@ int main(${1:int argc, char *argv[]}) {
 endsnippet
 
 # Comments
+# TODO(dotfiles,vim,snippets): move this a global thing, which requires figuring out how to get the proper comment string for each filetype
 snippet w "WHERE_I_WAS"
 // WHERE_I_WAS(taylon): $1
 endsnippet
@@ -98,7 +99,11 @@ snippet td "TODO"
 endsnippet
 
 snippet nt "NOTE"
-// NOTE(taylon): $2
+// NOTE(taylon): $1
+endsnippet
+
+snippet cu "CLEAN_UP"
+// CLEAN_UP($1): $2
 endsnippet
 
 # Common includes
