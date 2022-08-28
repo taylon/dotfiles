@@ -27,6 +27,7 @@ dash
 fzf
 xclip
 xorg-xset
+xorg-xsetroot
 pulseaudio
 pulseaudio-alsa
 checkbashisms
