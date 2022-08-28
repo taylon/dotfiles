@@ -9,5 +9,7 @@ redshift &
 # XRANDR_OUTPUT=$(xrandr | grep " connected " | awk '{ print$1 }')
 # xrandr --output "$XRANDR_OUTPUT" --mode 5120x1440
 
+xsetroot -solid "#282c34"
+
 xrdb -merge ~/.Xresources &&
   exec i3
