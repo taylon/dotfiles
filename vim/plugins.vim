@@ -21,7 +21,10 @@ if has('nvim')
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
   Plug 'nvim-telescope/telescope-frecency.nvim'
   Plug 'nvim-telescope/telescope-project.nvim'
-  Plug 'nvim-telescope/telescope-vimspector.nvim'
+  " TODO(plugins,vimspector,telescope): this plugin is currently not being
+  " used because it does not work as is for my use case, so we need to decide
+  " if we are just gonna ignore it or if we will fix it
+  " Plug 'nvim-telescope/telescope-vimspector.nvim'
   Plug 'fannheyward/telescope-coc.nvim'
 
   Plug 'norcalli/nvim-colorizer.lua'
@@ -91,10 +94,16 @@ Plug 'puremourning/vimspector'
 
 " Under evaluation/wanting to remove soon
 " Plug 'vimwiki/vimwiki'
+Plug 'wellle/context.vim'
 Plug 'matze/vim-move'
 Plug 'scrooloose/nerdtree'
 
 call plug#end()
+
+" context
+let g:context_enabled = 0
+let g:context_add_mappings = 0
+nnoremap <silent> <leader>c :ContextToggleWindow<enter>
 
 " CamelCaseMotion
 let g:camelcasemotion_key = '<localleader>'
@@ -173,10 +182,10 @@ function s:GoToDefinitionInSplit()
   execute "normal \<Plug>(coc-type-definition)"
 endfunction
 
-nnoremap <leader>gd :call <SID>GoToDefinitionInSplit()<Enter>
+nnoremap <leader>gd :call <SID>GoToDefinitionInSplit()<enter>
 
 " Actions
-nnoremap <leader>a :CocAction<Enter>
+nnoremap <silent> <leader>a <Plug>(coc-codeaction-selected)<enter>
 
 " Show documentation in preview window
 function! s:show_documentation()
@@ -337,21 +346,22 @@ if has('nvim')
   lua <<
     -- autopairs
     local nvim_autopairs = require("nvim-autopairs")
-    nvim_autopairs.setup()
+    nvim_autopairs.setup({ map_cr = false })
 
     _G.MUtils= {}
     MUtils.completion_confirm=function()
-      if vim.fn.pumvisible() ~= 0  then
-          return nvim_autopairs.esc("<cr>")
+      if vim.fn["coc#pum#visible"]() ~= 0  then
+          return vim.fn["coc#pum#confirm"]()
       else
-        return nvim_autopairs.autopairs_cr()
+          return nvim_autopairs.autopairs_cr()
       end
     end
 
-    vim.api.nvim_set_keymap("i" , "<CR>", "v:lua.MUtils.completion_confirm()", {expr = true , noremap = true})
+    vim.api.nvim_set_keymap("i" , "<enter>", "v:lua.MUtils.completion_confirm()", {expr = true , noremap = true})
     -- autopairs
 
     -- telescope
+    -- TODO(plugins,telescope): make it so we don't need to press esc twice to leave telescope
     require("telescope").setup {
       defaults = {
         prompt_prefix = "",
@@ -387,7 +397,7 @@ if has('nvim')
     require("telescope").load_extension("fzy_native")
     require("telescope").load_extension("project")
     require("telescope").load_extension("coc")
-    require("telescope").load_extension("vimspector")
+    -- require("telescope").load_extension("vimspector")
     require("telescope").load_extension("frecency")
     -- telescope
 
