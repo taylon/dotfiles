@@ -60,7 +60,7 @@ is_running(app) {
   return ErrorLevel
 }
 
-f2::
+f1::
   WinActivate, ahk_exe p4v.exe
 
   window_size := window_sizes["middle"]
@@ -69,8 +69,8 @@ f2::
   WinMove, ahk_exe p4v.exe, , window_position, 0, window_size, A_ScreenHeight
 return
 
-^f3::
-f3::
+^f2::
+f2::
   if !is_running("qutebrowser.exe") or WinActive("ahk_exe qutebrowser.exe") {
     WinActivate, ahk_exe chrome.exe
   } else {
@@ -85,7 +85,7 @@ f3::
   }
 return
 
-f4::
+f3::
   if !is_running("nvim-qt.exe") or WinActive("ahk_exe nvim-qt.exe") {
     WinActivate, ahk_exe devenv.exe
   } else {
@@ -98,7 +98,7 @@ f4::
   move_terminal("right")
 return
 
-f5::
+f4::
   WinActivate, ahk_exe WindowsTerminal.exe
 
   move_browsers("left")
@@ -106,7 +106,7 @@ f5::
   move_editors("right")
 return
 
-f6::
+f5::
   if !is_running("slack.exe") or WinActive("ahk_exe slack.exe") {
     WinActivate, ahk_exe Discord.exe
     WinMove, ahk_exe Discord.exe, , window_positions.middle, 0, window_sizes.middle, A_ScreenHeight
