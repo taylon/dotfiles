@@ -43,6 +43,8 @@ nnoremap <leader>e :vsc View.SolutionExplorer<enter>
 nnoremap <leader>i :vsc Edit.QuickInfo<enter>
 nnoremap <leader>a :vsc View.QuickActions<enter>
 
+nnoremap <leader>rr :vsc Refactor.Rename<enter>
+
 " Debug
 nnoremap <leader>ds :vsc Debug.Start<enter>
 nnoremap <leader>dp :vsc Debug.StopDebugging<enter>
