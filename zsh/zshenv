@@ -1,4 +1,4 @@
-export DEV_PATH="$HOME/Development"
+export DEV_PATH="$HOME/programming"
 export DOTFILES_PATH="$DEV_PATH/dotfiles"
 
 # PATH

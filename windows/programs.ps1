@@ -14,6 +14,13 @@ choco install get-childitemcolor
 choco install universal-ctags
 choco install llvm
 choco install delta
+choco install shellcheck
+
+npm install -g bash-language-server
+npm install -g neovim
+
+pip install pynvim
+pip install mypy
 
 # Maybe?
 # Install-Module -Name Terminal-Icons -Repository PSGallery
