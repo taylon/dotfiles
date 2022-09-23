@@ -6,7 +6,7 @@
     <key>Label</key>
     <string>com.user.loginscript</string>
     <key>ProgramArguments</key>
-    <array><string>/Users/tsilmer/Development/dotfiles/keyboard/macos/remap_caps</string></array>
+    <array><string>/Users/tsilmer/programming/dotfiles/keyboard/macos/remap_caps</string></array>
     <key>RunAtLoad</key>
     <true/>
   </dict>

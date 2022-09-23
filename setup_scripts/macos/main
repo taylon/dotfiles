@@ -4,7 +4,7 @@
 # https://golang.org/dl/
 mkdir -p "$DEV_PATH"/go/src
 mkdir -p "$DEV_PATH"/go/bin
-mkdir -p "$DEV_PATH"/Development/go/pkg
+mkdir -p "$DEV_PATH"/programming/go/pkg
 
 # Install homebrew (https://brew.sh/)
 brew tap caskroom/drivers

@@ -14,8 +14,8 @@ defaults write org.vim.MacVim AppleFontSmoothing -int 0
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # Save screenshots to the Downloads folder
-mkdir "$HOME"/Downloads/Screenshots
-defaults write com.apple.screencapture location -string "$HOME/Downloads/screenshots"
+mkdir "$HOME"/downloads/Screenshots
+defaults write com.apple.screencapture location -string "$HOME/downloads/screenshots"
 
 # Ask for password immediately after lock
 defaults write com.apple.screensaver askForPassword -int 1
@@ -53,9 +53,9 @@ defaults write com.apple.Finder AppleShowAllFiles -bool true
 # Finder: show all filename extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Finder: Set Development as the default location for new Finder windows
+# Finder: Set programming as the default location for new Finder windows
 defaults write com.apple.finder NewWindowTarget -string "PfLo"
-defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/Development/"
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/programming/"
 
 # Dock: Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
