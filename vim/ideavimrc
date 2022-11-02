@@ -1,6 +1,6 @@
 set number
 set relativenumber
-set scrolloff=3
+set scrolloff=5
 set hlsearch
 set incsearch
 set showmode
@@ -9,10 +9,11 @@ set smartcase
 
 set surround
 set commentary
-set easymotion
+"set easymotion
 set textobj-entire
 set argtextobj
 set highlightedyank
+set ideajoin
 
 let g:highlightedyank_highlight_color = "rgba(62, 68, 82, 1)"
 
@@ -22,84 +23,65 @@ set ideastatusicon=disabled
 " Integrate with system clipboard
 set clipboard+=unnamed
 
+
 " Keybindings
 
-" Remap j and h to work better with Colemak-DHm
-nmap k <Up>
-vmap k <Up>
-nmap h <Down>
-vmap h <Down>
-nmap l <Right>
-vmap l <Right>
-nmap j <Left>
-vmap j <Left>
-
-nmap dk d<Up>
-nmap ck c<Up>
-nmap yk y<Up>
-nmap dh d<Down>
-nmap ch c<Down>
-nmap yh y<Down>
-
-nmap gch gc<Down>
-nmap gck gc<Up>
-
-" Y should behave just like D or C
 nmap Y y$
 
+nmap <f12> <action>(SearchEverywhere)
+nmap <f6>t <action>(SwitchHeaderSource)
+nmap <f6>e <action>(ActivateProjectToolWindow)
+nmap <f6><esc> <action>(HideActiveWindow)
+nmap <f6>a <action>(ShowIntentionActions)
+nmap <f6>r <action>(RenameElement)
+" nmap <f6>d <action>(QuickJavaDoc)<enter>
+
 " Jumps
-nmap gr :action GotoDeclaration<Enter>
-nmap <F7> :action Back<Enter>
-nmap <F10> :action Forward<Enter>
-
-" Quick documentation
-nmap <F6>d :action QuickJavaDoc<Enter>
-
-" Action List
-nmap <F6>a :action ShowIntentionActions<Enter>
+nmap gr <action>(FindUsages)
+nmap <f7> <action>(Back)
+nmap <f10> <action>(Forward)
 
 " CamelCase navigation
-nmap <Space>w :action VimMotionCamelRight<Enter>
-nmap <Space>b :action VimMotionCamelLeft<Enter>
+nmap <space>w <action>(VimMotionCamelRight)
+nmap <space>b <action>(VimMotionCamelLeft)
 
-" Refactor
-nmap <F6>r :action RenameElement<Enter>
-
-" Save with Ctrl-s or Cmd-S
-nmap <M-s> :wa<Enter>
-imap <M-s> <Esc>:wa<Enter>
-nmap <C-s> :wa<Enter>
-imap <C-s> <Esc>:wa<Enter>
+" Save with ctrl-s or cmd-s
+" nmap <m-s> :wa<enter>
+" imap <m-s> <esc>:wa<enter>
+nnoremap <c-s> :wa<enter>
+inoremap <c-s> <esc>:wa<enter>
 
 " New line in Normal Mode
-nmap <Enter> o<Esc>
-nmap <S-Enter> O<Esc>
+nmap <enter> o<esc>
+nmap <s-enter> O<esc>
 
 " New line in Insert mode
-imap <D-Enter> <Esc>o
-imap <D-S-Enter> <Esc><S-o>
-imap <C-Enter> <Esc>o
-imap <C-S-Enter> <Esc><S-o>
+" imap <d-enter> <esc>o
+" imap <d-s-enter> <esc><s-o>
+inoremap <c-enter> <esc>o
+inoremap <c-s-enter> <esc><s-o>
 
 " Splits
-nmap <F6>v <C-w>v
-nmap <F6>s <C-w>s
+nnoremap <c-w> :q<enter>
 
-nmap <F6><Right> <C-w><Right>
-nmap <F6>l <C-w><Right>
+nnoremap <f6>v <c-w>v
+nnoremap <f6>s <c-w>s
 
-nmap <F6><Left> <C-w><Left>
-nmap <F6>j <C-w><Left>
+nnoremap <f6><right> <c-w><right>
+nnoremap <f6>l <c-w><right>
 
-nmap <F6><Up> <C-w><Up>
-nmap <F6>k <C-w><Up>
+nnoremap <f6><left> <c-w><left>
+nnoremap <f6>j <c-w><left>
 
-nmap <F6><Down> <C-w><Down>
-nmap <F6>h <C-w><Down>
+nnoremap <f6><up> <c-w><up>
+nnoremap <f6>k <c-w><up>
+
+nnoremap <f6><down> <c-w><down>
+nnoremap <f6>h <c-w><down>
 
 " EasyMotion
-map <Space>s <Plug>(easymotion-bd-w)
-map <Space> <Plug>(easymotion-s)
+" map <Space>s <Plug>(easymotion-bd-w)
+" map <Space> <Plug>(easymotion-s)
 " map <Space><Space>s <Plug>(easymotion-overwin-f)
 " nmap <Space><Space>w <Plug>(easymotion-overwin-w)
 

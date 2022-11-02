@@ -8,6 +8,7 @@ New-Item -ItemType SymbolicLink -Path $HOME\programming -Target $DEV_PATH
 New-Item -ItemType SymbolicLink -Path $env:LOCALAPPDATA\nvim -Target $DOTFILES_PATH\vim
 New-Item -ItemType SymbolicLink -Path $HOME\.vim -Target $DOTFILES_PATH\vim
 New-Item -ItemType SymbolicLink -Path $HOME\.vsvimrc -Target $DOTFILES_PATH\vim\vsvimrc
+New-Item -ItemType SymbolicLink -Path $HOME\.ideavimrc -Target $DOTFILES_PATH\vim\ideavimrc
 
 New-Item -ItemType SymbolicLink -Path $env:APPDATA\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json -Target $DOTFILES_PATH\windows_terminal\settings.json
 
