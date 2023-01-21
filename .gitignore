@@ -26,8 +26,6 @@ vim/.undo
 vim/.netrwhist
 vim/viminfo
 vim/plugged
-vim/autoload/plug.vim.old
-vim/autoload/plug.vim
 vim/sessions
 
 # QMK
