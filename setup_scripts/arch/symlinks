@@ -4,8 +4,8 @@
 ln -s "$DOTFILES_PATH"/systemd "$XDG_CONFIG_HOME"/systemd
 
 # Fonts
-# mkdir -p "$HOME"/.config/fontconfig/conf.d/
-# ln -s "$DOTFILES_PATH"/fonts/90-operator-mono-ssm.conf "$XDG_CONFIG_HOME"/fontconfig/conf.d/90-operator-mono-ssm.conf
+ln -s "$DOTFILES_PATH"/fonts "$HOME"/.local/share/fonts
+ln -s "$DOTFILES_PATH"/fontconfig "$XDG_CONFIG_HOME"/fontconfig
 
 # Kitty
 ln -s "$DOTFILES_PATH"/kitty/linux.conf "$XDG_CONFIG_HOME"/kitty_os_specific.conf
