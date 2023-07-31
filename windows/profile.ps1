@@ -1,6 +1,5 @@
-$DEV_PATH = "$HOME\programming"
-# $DEV_PATH = "T:\programming"
-$DOTFILES_PATH = "$DEV_PATH\dotfiles"
+$DEV_PATH = $env:DEV_PATH
+$DOTFILES_PATH = $env:DOTFILES_PATH
 
 set-location $DEV_PATH
 
@@ -18,7 +17,6 @@ Set-PSReadLineOption -PredictionSource History
 
 # fzf
 $FZF_DEFAULT_COMMAND = "fd --type f --hidden --follow --exclude .git --exclude External --exclude tmp"
-# Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+p' 
 
 # Rg
 $RIPGREP_CONFIG_PATH = "$DOTFILES_PATH\ripgrep\ripgreprc"
@@ -57,7 +55,7 @@ function vs($file) {
 }
 
 function sudo {
-  if ($args.Count -gt 0) {   
+  if ($args.Count -gt 0) {
     $argList = "& '" + $args + "'"
     Start-Process "$psHome\powershell.exe" -Verb runAs -ArgumentList $argList
   } else {
@@ -71,11 +69,4 @@ function prompt {
 
     return "⮞ "
 }
-
-# Modules
-Import-Module Get-ChildItemColor
-Set-Alias ls Get-ChildItemColorFormatWide
-Set-Alias ll Get-ChildItem 
-# Import-Module -Name Terminal-Icons
-# Set-Alias ls Get-ChildItem | Format-List
 
