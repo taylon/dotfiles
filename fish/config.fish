@@ -1,7 +1,10 @@
 # Variables
 set -gx DEV_PATH "$HOME/programming"
 set -gx DOTFILES_PATH "$DEV_PATH/dotfiles"
+
+# XDG variables
 set -gx XDG_CONFIG_HOME "$HOME/.config"
+set -gx XDG_STATE_HOME "$HOME/.local/state"
 
 # Keep private stuff in another file which is not checked into git
 source $HOME/.config/fish/private.fish
@@ -10,15 +13,18 @@ source $HOME/.config/fish/private.fish
 source $HOME/.config/fish/aliases.fish
 source $HOME/.config/fish/abbreviations.fish
 
-# Set NeoVim as default editor
+set -gx LANG en_US.UTF-8
+
+# Set default programs
 set -gx EDITOR nvim
+set -gx BROWSER qutebrowser
 
-# Add ~/.bin directory to $PATH
-set PATH $PATH $HOME/.bin
+# Additional bin directories
+set PATH $HOME/.bin $PATH
+set PATH $HOME/.local/bin $PATH
+set PATH /sbin $PATH
 
-# volta
-set -gx VOLTA_HOME $HOME/.volta
-set PATH $VOLTA_HOME/bin $PATH
+set -gx TZ "America/Los_Angeles"
 
 # fzf
 set -gx FZF_DEFAULT_COMMAND 'fd --type f --hidden --follow --exclude .git --exclude "*esy.lock" --exclude vendor'
@@ -66,17 +72,10 @@ if test (uname) = "Darwin"
     set -e ELECTRON_TRASH
 end
 
-# Source Autojump's init script
-source $autojump_path
-
 # Golang
 set -gx GOROOT $golang_path
 set -gx GOPATH $DEV_PATH/go
 set PATH $PATH $GOROOT/bin $GOPATH/bin
-
-# TODO: Apply this only on Arch Linux
-# SSH Agent on systemd
-# set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
 
 # Setup Fisher to save plugins in a different location
 set -g fisher_path $HOME/.fisher_plugins
@@ -91,17 +90,22 @@ end
 # Disable greeting message
 set fish_greeting
 
-if test (uname) = "Linux"
-    # start X at login
-    if status is-login
-        if test -z "$DISPLAY" -a $XDG_VTNR = 1
-            exec startx -- -keeptty > ~/.xorg.log 2>&1
-        end
-    end
-end
-
 # Rust
 set PATH $PATH $HOME/.cargo/bin
 
-# setup opam
-source /home/taylon/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+zoxide init fish --cmd cd | source
+
+# for foot terminal jump to prompt feature
+function mark_prompt_start --on-event fish_prompt
+    echo -en "\e]133;A\e\\"
+end
+
+# if test (uname) = "Linux"
+    # start X at login
+    # if status is-login
+    #     if test -z "$DISPLAY" -a $XDG_VTNR = 1
+    #         exec startx -- -keeptty > ~/.xorg.log 2>&1
+    #     end
+    # end
+# end
+

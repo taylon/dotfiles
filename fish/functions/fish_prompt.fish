@@ -10,7 +10,7 @@ end
 
 # Prints the newest file created within the Downloads folder
 function downloads_prompt
-    if test $PWD = "$HOME/Downloads"
+    if test $PWD = "$HOME/downloads"
         set_color yellow --bold
         echo -n ' ('
 

@@ -23,5 +23,4 @@ alias cat bat
 alias v nvim
 alias gvim glrnvim
 
-# ssh
-alias ssh 'kitty +kitten ssh'
+alias locate plocate
