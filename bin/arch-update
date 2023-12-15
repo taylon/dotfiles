@@ -28,15 +28,16 @@ fi
 read -n 1 -p "Should we update the mirrorlist? [y/N] " answer
 echo
 if [[ $answer =~ ^[Yy]$ ]]; then
-  mirrorlist_path="/etc/pacman.d/mirrorlist"
+  mirrorlist_path="/etc/pacman.d/mirrorlist-arch"
+  mirrorlist_bkp_path="$mirrorlist_path.bkp"
 
   # Remove old bkp file
-  if [ -f "$mirrorlist_path.bkp" ]; then
-    sudo rm -f /etc/pacman.d/mirrorlist.bkp
+  if [ -f "$mirrorlist_bkp_path" ]; then
+    sudo rm -f "$mirrorlist_bkp_path"
   fi
 
   # Backup current mirrorlist
-  sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bkp
+  sudo cp "$mirrorlist_path" "$mirrorlist_bkp_path"
 
   # Update mirrorlist
   print::note "Generating new mirrorlist..."

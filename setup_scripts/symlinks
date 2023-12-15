@@ -2,6 +2,7 @@
 
 DEV_PATH="$HOME/programming"
 DOTFILES_PATH="$DEV_PATH/dotfiles"
+XDG_CONFIG_HOME="$HOME/.config"
 
 # Bash
 ln -s "$DOTFILES_PATH"/bash/bashrc "$HOME"/.bashrc
@@ -11,18 +12,11 @@ ln -s "$DOTFILES_PATH"/bash/bash_profile "$HOME"/.bash_profile
 # Fish
 ln -s "$DOTFILES_PATH"/fish "$XDG_CONFIG_HOME"/fish
 
-# ZSH
-ln -s "$DOTFILES_PATH"/zsh/zshenv "$HOME"/.zshenv
-ln -s "$DOTFILES_PATH"/zsh "$XDG_CONFIG_HOME"/zsh
-
 # bat
 ln -s "$DOTFILES_PATH"/bat "$XDG_CONFIG_HOME"/bat
 
 # Rg
 ln -s "$DOTFILES_PATH"/ripgrep/ripgreprc "$XDG_CONFIG_HOME"/ripgreprc
-
-# Kitty
-ln -s "$DOTFILES_PATH"/kitty "$XDG_CONFIG_HOME"/kitty
 
 # glrnvim
 ln -s "$DOTFILES_PATH"/glrnvim "$XDG_CONFIG_HOME"/glrnvim
@@ -40,3 +34,9 @@ ln -s "$DOTFILES_PATH"/vim/ideavimrc "$HOME"/.ideavimrc
 
 # Executables
 ln -s "$DOTFILES_PATH/bin" "$HOME/.bin"
+
+# tofi
+ln -s $DOTFILES_PATH/tofi $XDG_CONFIG_HOME/tofi
+
+# foot
+ln -s $DOTFILES_PATH/foot/ $XDG_CONFIG_HOME/foot

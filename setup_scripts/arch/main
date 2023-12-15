@@ -31,3 +31,5 @@ sudo gpasswd -a taylon docker
 
 # sudo efibootmgr --disk /dev/nvme0n1 --part 2 --create --label "Arch Linux Silent" --loader /vmlinuz-linux --unicode "root=PARTUUID=91dc333c-66a7-4e1a-b583-afa97241dc59 rw initrd=\intel-ucode.img initrd=\initramfs-linux.img nomodeset quiet vga=current" --verbose
 # sudo efibootmgr --disk /dev/nvme0n1 --part 2 --create --label "Arch Linux KMS" --loader /vmlinuz-linux --unicode "root=PARTUUID=91dc333c-66a7-4e1a-b583-afa97241dc59 rw initrd=\intel-ucode.img initrd=\initramfs-linux.img" --verbose
+
+usermod -a -G video,input taylon

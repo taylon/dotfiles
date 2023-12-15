@@ -22,6 +22,8 @@ settings:
   bindings.commands:
     global:
       normal:
+        <Ctrl+j>: scroll-page 0 0.5
+        <Ctrl+k>: scroll-page 0 -0.5
         <F10>: tab-prev
         <F7>: tab-next
       passthrough:
@@ -122,8 +124,19 @@ settings:
     global: 0
   completion.show:
     global: always
+  content.desktop_capture:
+    https://discord.com: true
+    https://meet.google.com: true
   content.geolocation:
     https://www.google.com: true
+  content.media.audio_capture:
+    https://discord.com: true
+    https://meet.google.com: true
+  content.media.video_capture:
+    https://discord.com: true
+    https://meet.google.com: true
+  content.notifications.enabled:
+    https://meet.google.com: true
   content.register_protocol_handler:
     https://mail.google.com?extsrc=mailto&url=%25s: true
   downloads.location.directory:
@@ -144,9 +157,9 @@ settings:
   fonts.contextmenu:
     global: null
   fonts.default_family:
-    global: Ubuntu
+    global: Inter
   fonts.default_size:
-    global: 13pt
+    global: 14pt
   fonts.downloads:
     global: default_size default_family
   fonts.hints:
@@ -254,7 +267,7 @@ settings:
     global: false
   url.searchengines:
     global:
-      DEFAULT: https://www.google.com/search?q={}
+      DEFAULT: https://www.duckduckgo.com/?q={}
       am: https://www.amazon.com/s?k={}
       aur: https://aur.archlinux.org/packages/?K={}
       aw: https://wiki.archlinux.org/index.php?Search&search={}
