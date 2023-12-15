@@ -1,0 +1,38 @@
+snippet p "print"
+print("$1\n"$2);
+endsnippet
+
+snippet if "if"
+if $1 {
+	$2;
+}
+endsnippet
+
+snippet s "struct"
+$1 :: struct {
+	$2;
+}
+endsnippet
+
+snippet f "function"
+$1 :: ($2) ${3:-> }$4{
+	$5
+}
+endsnippet
+
+snippet e "enum"
+$1 :: enum {
+	$2;
+}
+endsnippet
+
+# Comments
+# TODO(dotfiles,vim,snippets): make this a global thing, which requires figuring out how to get the proper comment string for each filetype
+snippet w "WHERE_I_WAS"
+// WHERE_I_WAS(taylon): $1
+endsnippet
+
+snippet td "TODO"
+// TODO($1): $2
+endsnippet
+

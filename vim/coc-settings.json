@@ -1,4 +1,6 @@
 {
+  "inlayHint.enable": false,
+
   "suggest.floatConfig": {
     "border": true
   },
@@ -134,6 +136,8 @@
   },
 
   "clangd.disableSnippetCompletion": true,
+  "clangd.disableProgressNotifications": true,
+
 
   "tsserver.tsdk": "node_modules/typescript/lib",
 

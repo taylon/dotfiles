@@ -12,9 +12,14 @@ map Y y$
 nnoremap <f7> <c-o>
 nnoremap <f10> <c-i>
 
+nnoremap <F5> :w<enter> :!./run.sh<enter>
+inoremap <F5> <esc>:w<enter> :!./run.sh<enter>
+
 " Make scolling keybindings more consistent
 nnoremap <c-k> <c-u>
-nnoremap <c-h> <c-d>
+nnoremap <c-up> <c-u>
+nnoremap <c-j> <c-d>
+nnoremap <c-down> <c-d>
 
 " Prevent Alt-direction jumps to be stored in the jumplist
 nnoremap <silent> <m-Up> :<c-u>execute "keepjumps norm! " . v:count1 . "{"<Enter>

@@ -1,6 +1,6 @@
 " polyglot
 " TODO(taylon): figure out what this is and add a comment
-let g:polyglot_disabled = ['lifelines'] 
+let g:polyglot_disabled = ['lifelines']
 
 call plug#begin('~/.vim/plugged')
 
@@ -19,7 +19,6 @@ if has('nvim')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzy-native.nvim'
-  Plug 'nvim-telescope/telescope-frecency.nvim'
   Plug 'nvim-telescope/telescope-project.nvim'
   " TODO(plugins,vimspector,telescope): this plugin is currently not being
   " used because it does not work as is for my use case, so we need to decide
@@ -45,6 +44,7 @@ endif
 Plug 'sheerun/vim-polyglot'
 Plug 'guns/vim-sexp'
 Plug 'dummyunit/vim-fastbuild'
+Plug 'jansedivy/jai.vim'
 
 " Text Objects
 Plug 'wellle/targets.vim'
@@ -89,7 +89,7 @@ Plug 'andymass/vim-matchup'
 Plug 'SirVer/ultisnips'
 Plug 'mg979/vim-visual-multi'
 Plug 'liuchengxu/vista.vim'
-Plug 'romainl/vim-cool' 
+Plug 'romainl/vim-cool'
 Plug 'puremourning/vimspector'
 
 " Under evaluation/wanting to remove soon
@@ -131,7 +131,7 @@ let g:workspace_session_disable_on_args = 1 " Enable it only when calling vim wi
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/UltiSnips'
-let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips'] 
+let g:UltiSnipsSnippetDirectories = [$HOME.'/.vim/UltiSnips']
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 
@@ -213,17 +213,9 @@ let g:closetag_regions =  {
 
 
 " FZF
-" nnoremap <leader>rg :Rg<space>
 nnoremap <leader>rg :Telescope live_grep<enter>
-nnoremap <leader>wi :Rg WHERE_I_WAS\(taylon\)<enter>
-
-if has('win32')
-  nnoremap <silent> <f12> :Telescope find_files<enter>
-else
-  nnoremap <silent> <f12> :lua require("telescope").extensions.frecency.frecency { sorter = require('telescope.config').values.file_sorter() }<enter>
-  " nnoremap <silent> <f12> :FilesMru --tiebreak=end<Enter>
-  " nnoremap <silent> <f12> :FZF
-endif
+nnoremap <leader>wi :Rg WHERE_I_WAS<enter>
+nnoremap <silent> <f12> :Telescope find_files<enter>
 
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.7 } }
 
@@ -241,7 +233,7 @@ else
   " out of the <c-f12> keypress, then use terminfo (nvim -V3log) to see
   " what keycode matches the output of showkeys
   "
-  " in MacOS you do "printf '\x1b[?1h'; cat -v" or "kitty +kitten show_key" 
+  " in MacOS you do "printf '\x1b[?1h'; cat -v" or "kitty +kitten show_key"
   " since we don't have showkeys there
   nnoremap <silent> <f36> :FzfSwitchProject<enter>
 endif
@@ -331,7 +323,7 @@ augroup END
 
  " let g:vimwiki_list = [{
  " \  'path': '~/vimwiki/',
- " \  'syntax': 'markdown', 
+ " \  'syntax': 'markdown',
  " \  'ext': '.md',
  " \}]
 
@@ -379,13 +371,6 @@ if has('nvim')
       },
 
       extensions = {
-        frecency = {
-          ignore_patterns = {"*.git/*", "*/tmp/*", "External/*"},
-          default_workspace = "CWD",
-          show_filter_column = false,
-          show_unindexed = false,
-        },
-
         project = {
           base_dirs = {
             "~/programming",
@@ -398,13 +383,12 @@ if has('nvim')
     require("telescope").load_extension("project")
     require("telescope").load_extension("coc")
     -- require("telescope").load_extension("vimspector")
-    require("telescope").load_extension("frecency")
     -- telescope
 
     require("lightspeed").setup {
       -- highlight_unique_chars = true,
 
-      -- :hi LightspeedGreywash guifg=none guibg=none 
+      -- :hi LightspeedGreywash guifg=none guibg=none
       -- grey_out_search_area = false,
     }
 
@@ -414,14 +398,14 @@ if has('nvim')
       ensure_installed = "all",
 
       highlight = {
-        enable = true,              
+        enable = true,
       },
 
       textobjects = {
         select = {
           enable = true,
 
-          -- Automatically jump forward to textobj, similar to targets.vim 
+          -- Automatically jump forward to textobj, similar to targets.vim
           lookahead = true,
 
           keymaps = {
