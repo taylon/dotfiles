@@ -6,15 +6,9 @@ case $- in
   *) return ;;
 esac
 
-# Set PATH
 PATH="$PATH:$HOME/.bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# TODO: Apply this only on Arch Linux
-# SSH Agent on systemd
-# export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-
-# Let's keep aliases in a different file
 if [ -f ~/.bash_aliases ]; then
   if [[ $(uname) == "Linux" ]]; then
     source /home/taylon/.bash_aliases
@@ -22,20 +16,6 @@ if [ -f ~/.bash_aliases ]; then
     source /Users/tsilmer/.bash_aliases
   fi
 fi
-
-# Setup n
-export N_PREFIX="$HOME/.node"
-[[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
-
-# Setup Electron trash properly on Linux
-# This might no longer be necessary once apps adopt
-# Electon 3.0 so keep an eye on it
-if [[ $(uname) == "Linux" ]]; then
-  export ELECTRON_TRASH=gio
-fi
-
-# XXX: From here we have pretty much Arch's default bashrc, which is pretty
-# good but might cause issues in other systems:
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -52,37 +32,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-  xterm-color | *-256color) color_prompt=yes ;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-  if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
-  else
-    color_prompt=
-  fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-  PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
 # Enable color support of ls and also aliase
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -90,10 +39,5 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/tsilmer/.sdkman"
-[[ -s "/Users/tsilmer/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/tsilmer/.sdkman/bin/sdkman-init.sh"
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

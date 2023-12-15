@@ -9,5 +9,5 @@ system_update::common() {
 
   echo
   print::note "Updating global Node packages"
-  yarn global upgrade-interactive
+  npm update --global
 }
