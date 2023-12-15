@@ -1,0 +1,15 @@
+# setup user
+adduser -h /home/taylon -s /bin/bash taylon
+apk add doas
+echo 'permit persist :wheel' > /etc/doas.d/doas.conf
+useradd taylon wheel
+
+# setup cursor
+doas apk add capitaine-cursors gsettings-desktop-schemas
+
+# add index.theme, gtk-settins, etc
+gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors-dark
+gsettings set org.gnome.desktop.interface cursor-size 38
+
+
+
