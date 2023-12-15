@@ -1,0 +1,4 @@
+xinput list
+
+xinput float 13
+xinput float 19

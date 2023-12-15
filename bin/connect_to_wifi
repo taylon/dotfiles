@@ -1,0 +1,3 @@
+#!/bin/sh
+
+doas iwctl --passphrase "$2" station wlan0 connect "$1"
