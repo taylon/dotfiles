@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export XDG_RUNTIME_DIR=/tmp/1000-runtime-dir
+rm -rf $XDG_RUNTIME_DIR
+mkdir -p $XDG_RUNTIME_DIR
+chmod 0700 $XDG_RUNTIME_DIR
+
+export MOZ_ENABLE_WAYLAND=1
+export XDG_CURRENT_DESKTOP=sway
+export QT_QPA_PLATFORM=wayland-egl
+export SDL_VIDEODRIVER=wayland
+
+dbus-run-session -- sway
+# dbus-run-session -- ~/programming/dwl/dwl
